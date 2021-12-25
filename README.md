@@ -23,3 +23,35 @@ useful data is:
 1. ARBITRAGE: buy/sell price (compared to USD), for each market, for each crypto we want AND transaction fees
 
 2. TRIANGULAR: conversion rates between each crypto pair we want and for that crypto to USD
+
+
+
+
+BEFORE CODE SAVING HERE JUST IN CASE
+
+
+        #make sure we start from a stable currency
+        if (startingCurrency not in stable_currencies):
+            log(" > " + str(value) + " " + stableCurrency + " converts to: " + str(value*math.exp(-1*conversion_rates[stableCurrency][startingCurrency])) + " " + startingCurrency, False, False)
+            value = value*math.exp(-1*conversion_rates[stableCurrency][startingCurrency])
+            startingCurrency = stableCurrency
+
+        previousStartCurr = None
+        #do each conversion in the oppurtunity
+        for endCurr, startCurr in reversed(oppurtunity.items()):
+            if (startCurr != stableCurrency or previousStartCurr == None):
+                previousStartCurr = startCurr
+                log(" 1> " + str(value) + " " + startCurr + " converts to: " + str(value*math.exp(-1*conversion_rates[startCurr][endCurr])) + " " + endCurr, False, False)
+                value = value*math.exp(-1*conversion_rates[startCurr][endCurr])
+
+        #check if there is one more conversion we need
+        if ( startingCurrency != finalCurrency ): 
+            log(" 2> " + str(value) + " " + finalCurrency + " converts to: " + str(value*math.exp(-1*conversion_rates[finalCurrency][startingCurrency])) + " " + startingCurrency, False, False)
+            value = value*math.exp(-1*conversion_rates[finalCurrency][startingCurrency])
+            finalCurrency = startingCurrency
+        
+        #make sure we end up with a stable currency
+        if (finalCurrency not in stable_currencies):
+            log(" 3> " + str(value) + " " + finalCurrency + " converts to: " + str(value*math.exp(-1*conversion_rates[finalCurrency][stableCurrency])) + " " + stableCurrency, False, False)
+            value = value*math.exp(-1*conversion_rates[finalCurrency][stableCurrency])
+            finalCurrency = stableCurrency   
