@@ -17,7 +17,7 @@ from datetime import datetime
 
 currencies = ['ETH', 'BTC', 'ADA', 'XLM', 'XMR', 'SOL', 'LTC', 'USDK', 'DAI', 'USDC', 'USDT', 'AVAX', 'BNB', 'XRP', 'DOT', 'BCH', 'USD', 'UST', 'MATIC', 'SHIB', 'DOGE', 'LINK', 'BIX'] #currencies we care about
 quote_currencies = ['ETH', 'BTC', 'USDT', 'USDC', 'USDK', 'DAI', 'USD', 'UST'] #quote currencies
-stable_currencies = ['USDT', 'USD'] #all conversions start and end in these currencies (what we can trade with)
+stable_currencies = ['USDT'] #all conversions start and end in these currencies (what we can trade with)
 currency_pairs = [ x + '/'+ y for x in currencies for y in quote_currencies if x != y ]
 min_margin_percent = 0.05 #0.05% percent profit at least
 max_margin_percent = 50 #anything above 50% profit isnt realistic and shouldn't be acted upon
@@ -26,39 +26,39 @@ useAllExchangeCurrencies = False #uses all available currency pairs that have a 
 inf = 9999999
 lastLog = time.time()
 
-okex = ccxt.okex({
+# okex = ccxt.okex({
     #'apiKey': '64fbbcba-ac0a-4f03-9cd9-c63218e7226b',
     #'secret': '5C3E4309FD39552E6470FB649E0D3D71',
     #'password': 'Ilove2flyH1gh'
-    #'enableRateLimit': True,
-})
+    #'enableRateLimit': True })
+# itbit = ccxt.itbit()
+# ndax = ccxt.ndax()
+# eqonex = ccxt.eqonex()
+# poloniex = ccxt.poloniex()
+# bitmart = ccxt.bitmart()
+# bittrex = ccxt.bittrex()
+# gemini = ccxt.gemini()
+# kraken = ccxt.kraken()
+# ftxus = ccxt.ftxus()
+# bitflyer = ccxt.bitflyer()
+# kucoin = ccxt.kucoin()
+# gateio = ccxt.gateio()
+# aax = ccxt.aax()
+# bequant = ccxt.bequant()
+# bitbank = ccxt.bitbank()
+# bitbns = ccxt.bitbns()
+# bitfinex = ccxt.bitfinex()
+#, bittrex:0.0035, kraken:0.0026, eqonex:0.0009, gemini:0.0035, kucoin:0.001, poloniex:0.00155, bequant:0.001, aax:0.001, gateio:0.002, bitflyer:0.001, okex:0.001, bitfinex:0.002, bitbns:0.0025, bitbank:0.0012, bitmart:0.0025, ftxus:0.004, itbit:0.0035
+
+
+bibox = ccxt.bibox()
+bigone = ccxt.bigone()
 binanceus = ccxt.binanceus()
 idex = ccxt.idex()
-itbit = ccxt.itbit()
-ndax = ccxt.ndax()
-eqonex = ccxt.eqonex()
-poloniex = ccxt.poloniex()
-bitmart = ccxt.bitmart()
-bittrex = ccxt.bittrex()
-gemini = ccxt.gemini()
-kraken = ccxt.kraken()
-bibox = ccxt.bibox()
-ftxus = ccxt.ftxus()
 btcalpha = ccxt.btcalpha()
-bitflyer = ccxt.bitflyer()
-kucoin = ccxt.kucoin()
-gateio = ccxt.gateio()
-aax = ccxt.aax()
-bequant = ccxt.bequant()
-bigone = ccxt.bigone()
-bitbank = ccxt.bitbank()
-bitbns = ccxt.bitbns()
-bitfinex = ccxt.bitfinex()
 
-#, bittrex:0.0035, kraken:0.0026, gemini:0.0035, kucoin:0.001
-
-exchanges = { bibox:0.002, bitfinex:0.002, bitbns:0.0025, bitbank:0.0012, bigone:0.002, bequant:0.001, aax:0.001, gateio:0.002, bitflyer:0.001, okex:0.001, binanceus:0.001, eqonex:0.0009, bitmart:0.0025, ftxus:0.004, itbit:0.0035, idex:0.0025, poloniex:0.00155, btcalpha:0.002 }
-# { exchange_name : transaction_fee, name : fee, .... }
+exchanges = { bibox:0.002, bigone:0.002, binanceus:0.001, idex:0.0025, btcalpha:0.002 }
+# { exchange_name : transaction_fee, name : fee, etc.... }
 
 
 #always start and end conversions with USDT (so our portfolio does not depend on crypto markets but rather their imprecisions)
@@ -162,7 +162,7 @@ def log(text, showTimeElapsed=False, showTime=False, filename="log.txt"):
     log.close()
     lastLog = time.time()
 
-def exploreOppurtunities(oppurtunities, conversion_rates):
+def exploreOppurtunities(oppurtunities, conversion_rates, exchange):
     for oppurtunity in oppurtunities:
         log("!! FOUND OPPURTUNITY: " + str(oppurtunity), False, False)
         value = 1.0
@@ -183,30 +183,50 @@ def exploreOppurtunities(oppurtunities, conversion_rates):
                 previousStartCurr = startCurr
                 log(" 1> " + str(value) + " " + startCurr + " converts to: " + str(value*math.exp(-1*conversion_rates[startCurr][endCurr])) + " " + endCurr, False, False)
                 value = value*math.exp(-1*conversion_rates[startCurr][endCurr])
-
-        #check if there is one more conversion we need
-        if ( startingCurrency != finalCurrency ): 
-            log(" 2> " + str(value) + " " + finalCurrency + " converts to: " + str(value*math.exp(-1*conversion_rates[finalCurrency][startingCurrency])) + " " + startingCurrency, False, False)
-            value = value*math.exp(-1*conversion_rates[finalCurrency][startingCurrency])
-            finalCurrency = startingCurrency
         
         #make sure we end up with a stable currency
         if (finalCurrency not in stable_currencies):
-            log(" 3> " + str(value) + " " + finalCurrency + " converts to: " + str(value*math.exp(-1*conversion_rates[finalCurrency][stableCurrency])) + " " + stableCurrency, False, False)
+            log(" 2> " + str(value) + " " + finalCurrency + " converts to: " + str(value*math.exp(-1*conversion_rates[finalCurrency][stableCurrency])) + " " + stableCurrency, False, False)
             value = value*math.exp(-1*conversion_rates[finalCurrency][stableCurrency])
             finalCurrency = stableCurrency    
 
         growth = (value-1.0)*100
         log("So we can go from 1.0 " + startingCurrency + " to " + str(value) + " " + finalCurrency + ", an increase of " + str(growth) + "%", False, True)
         if growth >= min_margin_percent and growth < max_margin_percent:
-            doTransactions(oppurtunity)
+            doTransactions(oppurtunity, exchange)
             return True
         else:
             return False
 
 
-def doTransactions(oppurtunity):
+def doTransactions(oppurtunity, exchange):
     # do the actual money moving here
+
+    #print initial account balance
+
+    stableCurrency = oppurtunity.pop('stable', stable_currencies[0])
+    startingCurrency = list(oppurtunity.values())[len(list(oppurtunity.values())) - 1]
+    finalCurrency = list(oppurtunity.keys())[0]
+
+    #make sure we start from a stable currency
+    if (startingCurrency not in stable_currencies):
+        convert(stableCurrency, startingCurrency, exchange)
+        startingCurrency = stableCurrency
+
+    previousStartCurr = None
+    #do each conversion in the oppurtunity
+    for endCurr, startCurr in reversed(oppurtunity.items()):
+        if (startCurr != stableCurrency or previousStartCurr == None):
+            convert(startCurr, endCurr, exchange)
+            previousStartCurr = startCurr
+    
+    #make sure we end up with a stable currency
+    if (finalCurrency not in stable_currencies):
+        convert(finalCurrency, stableCurrency, exchange)
+        finalCurrency = stableCurrency
+
+    #print final account balance
+
     return
 
 def search():
@@ -220,7 +240,7 @@ def search():
                 if len(oppurtunities) == 0:
                     log("NO ARBITRAGE OPPURTUNITIES :(", False, False)
                 else:
-                    if (exploreOppurtunities(oppurtunities, conversion_rates)): keepExploitingOppurtunity(exchange, transactionFee)
+                    if (exploreOppurtunities(oppurtunities, conversion_rates, exchange)): keepExploitingOppurtunity(exchange, transactionFee)
             except Exception as e:
                 log("  >  ERROR: " + str(e), False, False)
 
@@ -232,9 +252,10 @@ def keepExploitingOppurtunity(exchange, transactionFee):
             log("CONVERSION RATES LOADED (" + str(len(conversion_rates.keys())) + ")", True, False)
             oppurtunities = findOppurtunity(conversion_rates)
             if len(oppurtunities) == 0:
+                log("NO ARBITRAGE OPPURTUNITIES :(", False, False)
                 return
             else:
-                if(not exploreOppurtunities(oppurtunities, conversion_rates)): return
+                if(not exploreOppurtunities(oppurtunities, conversion_rates, exchange)): return
         except Exception as e:
             log("  >  ERROR: " + str(e), False, False)
             return
