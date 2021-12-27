@@ -1,28 +1,55 @@
-from os import times
-from typing import final
 import ccxt
-from ccxt.base import exchange
-from ccxt.bitbank import bitbank
-from ccxt.bitbns import bitbns
 from ccxt.bitfinex import bitfinex
-from ccxt.btcalpha import btcalpha
+from ccxt.bitfinex2 import bitfinex2
+from ccxt.bitflyer import bitflyer
+from ccxt.bitforex import bitforex
+from ccxt.digifinex import digifinex
 from ccxt.eqonex import eqonex
+from ccxt.flowbtc import flowbtc
 from ccxt.ftxus import ftxus
+from ccxt.hitbtc3 import hitbtc3
+from ccxt.hollaex import hollaex
+from ccxt.huobijp import huobijp
+from ccxt.independentreserve import independentreserve
+from ccxt.indodax import indodax
+from ccxt.itbit import itbit
+from ccxt.kucoin import kucoin
+from ccxt.latoken import latoken
+from ccxt.latoken1 import latoken1
+from ccxt.lbank import lbank
+from ccxt.mercado import mercado
+from ccxt.novadax import novadax
+from ccxt.oceanex import oceanex
 from ccxt.okcoin import okcoin
+from ccxt.okex3 import okex3
+from ccxt.okex5 import okex5
+from ccxt.paymium import paymium
+from ccxt.poloniex import poloniex
+from ccxt.probit import probit
+from ccxt.ripio import ripio
+from ccxt.stex import stex
+from ccxt.therock import therock
+from ccxt.tidebit import tidebit
+from ccxt.timex import timex
+from ccxt.whitebit import whitebit
+from ccxt.xena import xena
+from ccxt.zipmex import zipmex
 import numpy as np
 import math
 import time
 from datetime import datetime
+import copy
 
 from numpy.core.numeric import count_nonzero
 
 currencies = ['ETH', 'BTC', 'ADA', 'XLM', 'XMR', 'SOL', 'LTC', 'USDK', 'DAI', 'USDC', 'USDT', 'AVAX', 'BNB', 'XRP', 'DOT', 'BCH', 'USD', 'UST', 'MATIC', 'SHIB', 'DOGE', 'LINK', 'BIX', 'TRX', 'SAND', 'BAC', 'JWL', 'WEC', 'AAVE', 'ZEC', '1INCH', 'GERA', 'REV', 'SPUT', 'EUR'] #currencies we care about
 quote_currencies = ['ETH', 'BTC', 'USDT', 'USDC', 'USDK', 'DAI', 'USD', 'UST', 'EUR'] #quote currencies
-stable_currencies = ['USDT', 'USDC', 'USD'] #all conversions start and end in these currencies (what we can trade with)
+stable_currencies = ['USDT', 'USDC', 'USD', 'EUR'] #all conversions start and end in these currencies (what we can trade with)
 currency_pairs = [ x + '/'+ y for x in currencies for y in quote_currencies if x != y ]
 min_margin_percent = 0.05 #0.05% percent profit at least
 max_margin_percent = 20 #anything above 20% profit isnt realistic and shouldn't be acted upon
 useAllExchangeCurrencies = False #uses all available currency pairs that have a quote currency in our quote currencies list
+useAllExchanges = True #try with every exchange that is offered by ccxt
 inf = 9999999
 lastLog = time.time()
 
@@ -30,14 +57,13 @@ bigone = ccxt.bigone()
 btcalpha = ccxt.btcalpha()
 bibox = ccxt.bibox({'password': 'Ilove2flyH1gh'})
 binance = ccxt.binance({
-    'apiKey':'CVmVNcQEK9JK3XxoDZq6KGuUmEkvJhhxuTpmyD35SDaey4ASetMEHLaXX4kLZTGk',
-    'secret':'ShmGL7VxeVlDTFjJuOGFGuFf2kHaki8Ub0LM08YINwFtyRIm7pcq9emuXzfgeMEn',
-    'enableRateLimit': True,
-    'options': {'createMarketBuyOrderRequiresPrice': False }
+    #'apiKey':'CVmVNcQEK9JK3XxoDZq6KGuUmEkvJhhxuTpmyD35SDaey4ASetMEHLaXX4kLZTGk',
+    #'secret':'ShmGL7VxeVlDTFjJuOGFGuFf2kHaki8Ub0LM08YINwFtyRIm7pcq9emuXzfgeMEn',
+    #'enableRateLimit': True,
+    #'options': {'createMarketBuyOrderRequiresPrice': False }
 })
-
+binanceus = ccxt.binanceus()
 #seed phrase: ripple solid doctor brass rural coyote hour hub pumpkin special canvas action
-
 idex = ccxt.idex({
     'walletAddress':'0x9583d682177b9019b1aed8043bb0e8c36c5ad87a',
     'privateKey': '0xf01eec48610b0cdffde1303c401e7ea87b82cab6a1483cecffea1cc3278fbc30',
@@ -45,8 +71,112 @@ idex = ccxt.idex({
     'enableRateLimit': True,
     'options': {'createMarketBuyOrderRequiresPrice': False }
 })
+upbit = ccxt.upbit()
 
-exchanges = { binance:0.001, binance:0.001, bibox:0.002, bigone:0.002, btcalpha:0.002, idex:0.0025 }
+aax = ccxt.aax()
+ascendex = ccxt.ascendex()
+bequant = ccxt.bequant()
+bit2c = ccxt.bit2c()
+bitbank = ccxt.bitbank()
+bitbns = ccxt.bitbns()
+bitcoincom = ccxt.bitcoincom()
+bitfinex = ccxt.bitfinex()
+bitfinex2 = ccxt.bitfinex2()
+bitflyer = ccxt.bitflyer()
+bitforex = ccxt.bitforex()
+bitget = ccxt.bitget()
+bithumb = ccxt.bithumb()
+bitmart = ccxt.bitmart()
+bitmex = ccxt.bitmex()
+bitpanda = ccxt.bitpanda()
+bitrue = ccxt.bitrue()
+bitso = ccxt.bitso()
+bitstamp = ccxt.bitstamp()
+bitstamp1 = ccxt.bitstamp1()
+bittrex = ccxt.bittrex()
+bitvavo = ccxt.bitvavo()
+bl3p = ccxt.bl3p()
+btcbox = ccxt.btcbox()
+btcmarkets = ccxt.btcmarkets()
+btctradeua = ccxt.btctradeua()
+btcturk = ccxt.btcturk()
+buda = ccxt.buda()
+bw = ccxt.bw()
+bybit = ccxt.bybit()
+bytetrade = ccxt.bytetrade()
+cdax = ccxt.cdax()
+cex = ccxt.cex()
+coinbasepro = ccxt.coinbasepro()
+coincheck = ccxt.coincheck()
+coinex = ccxt.coinex()
+coinfalcon = ccxt.coinfalcon()
+coinmate = ccxt.coinmate()
+coinone = ccxt.coinone()
+coinspot = ccxt.coinspot()
+crex24 = ccxt.crex24()
+currencycom = ccxt.currencycom()
+delta = ccxt.delta()
+deribit = ccxt.deribit()
+digifinex = ccxt.digifinex()
+eqonex = ccxt.eqonex()
+equos = ccxt.equos()
+exmo = ccxt.exmo()
+flowbtc = ccxt.flowbtc()
+ftx = ccxt.ftx()
+ftxus = ccxt.ftxus()
+gateio = ccxt.gateio()
+gemini = ccxt.gemini()
+hitbtc = ccxt.hitbtc()
+hitbtc3 = ccxt.hitbtc3()
+hollaex = ccxt.hollaex()
+huobi = ccxt.huobi()
+huobijp = ccxt.huobijp()
+independentreserve = ccxt.independentreserve()
+indodax = ccxt.indodax()
+itbit = ccxt.itbit()
+kraken = ccxt.kraken()
+kucoin = ccxt.kucoin()
+kuna = ccxt.kuna()
+latoken = ccxt.latoken()
+latoken1 = ccxt.latoken1()
+lbank = ccxt.lbank()
+liquid = ccxt.liquid()
+luno = ccxt.luno()
+lykke = ccxt.lykke()
+mercado = ccxt.mercado()
+mexc = ccxt.mexc()
+ndax = ccxt.ndax()
+novadax = ccxt.novadax()
+oceanex = ccxt.oceanex()
+okcoin = ccxt.okcoin()
+okex = ccxt.okex()
+okex3 = ccxt.okex3()
+okex5 = ccxt.okex5()
+paymium = ccxt.paymium()
+phemex = ccxt.phemex()
+poloniex = ccxt.poloniex()
+probit = ccxt.probit()
+qtrade = ccxt.qtrade()
+ripio = ccxt.ripio()
+stex = ccxt.stex()
+therock = ccxt.therock()
+tidebit = ccxt.tidebit()
+tidex = ccxt.tidex()
+timex = ccxt.timex()
+vcc = ccxt.vcc()
+wavesexchange = ccxt.wavesexchange()
+whitebit = ccxt.whitebit()
+xena = ccxt.xena()
+yobit = ccxt.yobit()
+zaif = ccxt.zaif()
+zb = ccxt.zb()
+zipmex = ccxt.zipmex()
+zonda = ccxt.zonda()
+
+
+test_exchanges = { aax:0.001, ascendex:0.002, bequant:0.001, bit2c:0.01, bitbank:0.0015, bitbns:0.0025, bitcoincom:0.0075, bitfinex:0.002, bitfinex2:0.002, bitflyer:0.002, bitforex:0.001, bitget:0.001, bithumb:0.0015, bitmart:0.0025, bitmex:0.0005, bitpanda:0.0015, bitrue:0.0015, bitso:0.001, bitstamp:0.005, bitstamp1:0.005, bittrex:0.0035, bitvavo:0.0025, bl3p:0.0026, btcbox:0.0005, btcmarkets:0.002, btctradeua:0.001, btcturk:0.0009, buda:0.008, bw:0.002, bybit:0.001, bytetrade:0.0008, cdax:0.002, cex:0.0025, coinbasepro:0.005, coincheck:0.002, coinex:0.002, coinfalcon:0.002, coinmate:0.0035, coinone:0.002, coinspot:0.002, crex24:0.002, currencycom:0.002, delta:0.002, deribit:0.002, digifinex:0.002, eqonex:0.002, equos:0.002, exmo:0.002, flowbtc:0.002, ftx:0.002, ftxus:0.002, gateio:0.002, gemini:0.002, hitbtc:0.002, hitbtc3:0.002, hollaex:0.002, huobi:0.002, huobijp:0.002, independentreserve:0.002, indodax:0.002, itbit:0.002, kraken:0.002, kucoin:0.002, kuna:0.002, latoken:0.002, latoken1:0.002, lbank:0.002, liquid:0.002, luno:0.002, lykke:0.002, mercado:0.002, mexc:0.002, ndax:0.002, novadax:0.002, oceanex:0.002, okcoin:0.002, okex:0.002, okex3:0.002, okex5:0.002, paymium:0.002, phemex:0.002, poloniex:0.002, probit:0.002, qtrade:0.002, ripio:0.002, stex:0.002, therock:0.002, tidebit:0.002, tidex:0.002, timex:0.002, vcc:0.002, wavesexchange:0.002, whitebit:0.002, xena:0.002, yobit:0.002, zaif:0.002, zb:0.002, zipmex:0.002, zonda:0.002 }
+
+confirmed_exchanges = { bibox:0.002, binanceus:0.001, upbit:0.002, binance:0.001, bigone:0.002, btcalpha:0.002, idex:0.0025 }
 
 def findOppurtunity(conversion_rates):
 
@@ -90,8 +220,8 @@ def findOppurtunity(conversion_rates):
           if hasCycle:
             conversion_path = {}
             vert = lastEditedVertex
-            while vert not in conversion_path.keys():
-                conversion_path[vert] = previous[vert]
+            while vert not in conversion_path.values():
+                conversion_path[previous[vert]] = vert
                 vert = previous[vert]
 
             conversion_path['stable'] = startVertex
@@ -105,7 +235,8 @@ def loadConversionRates(exchange, transactionFee):
     log("MARKETS LOADED", False, True)
     conversion_rates = {}
     conversion_rates['fee'] = transactionFee
-    conversion_rates['USDT'] = {'USDT': np.log(1-transactionFee)*-1 }
+    for stableCurr in stable_currencies:
+        conversion_rates[stableCurr] = {stableCurr: np.log(1-transactionFee)*-1 }
     maxSize = {}
 
     global currency_pairs
@@ -122,7 +253,6 @@ def loadConversionRates(exchange, transactionFee):
           bid = orderbook['bids'][0][0] if len (orderbook['bids']) > 0 else None
           ask = orderbook['asks'][0][0] if len (orderbook['asks']) > 0 else None
           if bid == None or ask == None: continue
-
 
           cur1 = pair.split("/")[0]
           cur2 = pair.split("/")[1]
@@ -152,7 +282,6 @@ def loadConversionRates(exchange, transactionFee):
           except:
             maxSize[cur2] = {} #in cur2
             maxSize[cur2][cur1] = askAmount #in cur2
-
           
     return conversion_rates, maxSize
 
@@ -170,48 +299,44 @@ def log(text, showTimeElapsed=False, showTime=False, filename="log.txt"):
     log.close()
     lastLog = time.time()
 
+def findStartingCurrency(oppurtunity):
+    for key in oppurtunity.keys():
+        if key in stable_currencies: return key
+
 def exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize):
     for oppurtunity in oppurtunities:
+        oppurtunityCopy = copy.deepcopy(oppurtunity)
         maxUSDT = 999999999
         value = 1.0
-        stableCurrency = oppurtunity.pop('stable', stable_currencies[0])
         log("FOUND OPPURTUNITY!  >  " + str(oppurtunity), False, False)
-        startingCurrency = list(oppurtunity.values())[len(list(oppurtunity.values())) - 1]
-        finalCurrency = list(oppurtunity.keys())[0]
+        stableCurrency = oppurtunity.pop('stable')
+        if stableCurrency not in oppurtunity.keys():
+            stableCurrency = findStartingCurrency(oppurtunity)
 
+        currentCurrency = stableCurrency
 
-        #check if one of the steps has USDT as its key and make sure it is first in the dictionary
+        #while there are still conversions left, pop the next step and convert
+        while(len(oppurtunity.items()) > 0):
+            nextCurrency = oppurtunity.pop(currentCurrency, None)
+            if nextCurrency == None: break
+            log(" > " + str(value) + " " + currentCurrency + " converts to: " + str(value*math.exp(-1*conversion_rates[currentCurrency][nextCurrency])) + " " + nextCurrency, False, False)
+            value = value*math.exp(-1*conversion_rates[currentCurrency][nextCurrency])
+            if (currentCurrency not in stable_currencies): maxUSDT = min(maxUSDT, maxSize[currentCurrency][nextCurrency] * math.exp(-1*conversion_rates[currentCurrency]['USDT']) / (1-conversion_rates['fee']))
+            currentCurrency = nextCurrency
 
-
-        #make sure we start from a stable currency
-        if (startingCurrency not in stable_currencies):
-            log(" 1> " + str(value) + " " + stableCurrency + " converts to: " + str(value*math.exp(-1*conversion_rates[stableCurrency][startingCurrency])) + " " + startingCurrency, False, False)
-            value = value*math.exp(-1*conversion_rates[stableCurrency][startingCurrency])
-            maxUSDT = min(maxUSDT, maxSize[stableCurrency][startingCurrency] * math.exp(-1*conversion_rates[stableCurrency]['USDT']) / (1-conversion_rates['fee']))
-            startingCurrency = stableCurrency
-
-        previousStartCurr = None
-        #do each conversion in the oppurtunity
-        for endCurr, startCurr in reversed(oppurtunity.items()):
-            if (startCurr != stableCurrency or previousStartCurr == None):
-                previousStartCurr = startCurr
-                log(" 2> " + str(value) + " " + startCurr + " converts to: " + str(value*math.exp(-1*conversion_rates[startCurr][endCurr])) + " " + endCurr, False, False)
-                value = value*math.exp(-1*conversion_rates[startCurr][endCurr])
-                maxUSDT = min(maxUSDT, maxSize[startCurr][endCurr]*math.exp(-1*conversion_rates[startCurr]['USDT'] / (1-conversion_rates['fee'])))
-        
         #make sure we end up with a stable currency
-        if (finalCurrency not in stable_currencies):
-            log(" 3> " + str(value) + " " + finalCurrency + " converts to: " + str(value*math.exp(-1*conversion_rates[finalCurrency][stableCurrency])) + " " + stableCurrency, False, False)
-            value = value*math.exp(-1*conversion_rates[finalCurrency][stableCurrency])
-            maxUSDT = min(maxUSDT, maxSize[finalCurrency][stableCurrency] * math.exp(-1*conversion_rates[finalCurrency]['USDT']) / (1-conversion_rates['fee']))
-            finalCurrency = stableCurrency    
+        if (currentCurrency != stableCurrency):
+            log(" 1> " + str(value) + " " + currentCurrency + " converts to: " + str(value*math.exp(-1*conversion_rates[currentCurrency][stableCurrency])) + " " + stableCurrency, False, False)
+            value = value*math.exp(-1*conversion_rates[currentCurrency][stableCurrency])
+            if (currentCurrency not in stable_currencies): maxUSDT = min(maxUSDT, maxSize[currentCurrency][stableCurrency] * math.exp(-1*conversion_rates[currentCurrency]['USDT']) / (1-conversion_rates['fee']))
+            currentCurrency = stableCurrency
 
         growth = (value-1.0)*100
-        log("So we can go from 1.0 " + startingCurrency + " to " + str(value) + " " + finalCurrency + ", an increase of " + str(growth) + "%", False, True)
+        log("So we can go from 1.0 " + stableCurrency + " to " + str(value) + " " + currentCurrency + ", an increase of " + str(growth) + "%", False, True)
         log("Maximum USDT we can move through this conversion: " + str(maxUSDT))
 
         if growth >= min_margin_percent and growth < max_margin_percent:
-            doTransactions(oppurtunity, exchange, maxUSDT)
+            doTransactions(oppurtunityCopy, exchange, maxUSDT)
             return True
         else:
             return False
@@ -247,53 +372,47 @@ def convert(fromCurrency, toCurrency, exchange, conversion_rates, maxSize=999999
         return False
 
 def doTransactions(oppurtunity, exchange, maxUSDT):
-    # do the actual money moving here
 
+    log(" >>>> EXPLOITING OPPURTUNITY!  >  " + str(oppurtunity), False, False)
+    
     #print initial account balance
     log(" >>>> INITIAL BALANCE: " + exchange.fetch_balance())
 
-    stableCurrency = oppurtunity.pop('stable', stable_currencies[0])
-    startingCurrency = list(oppurtunity.values())[len(list(oppurtunity.values())) - 1]
-    finalCurrency = list(oppurtunity.keys())[0]
+    stableCurrency = oppurtunity.pop('stable', None)
+    currentCurrency = stableCurrency
 
-    #make sure we start from a stable currency
-    if (startingCurrency not in stable_currencies):
-        convert(stableCurrency, startingCurrency, exchange, maxUSDT)
-        log(" > BALANCE AFTER " + stableCurrency + " TO " + startingCurrency + ": " + exchange.fetch_balance())
-        startingCurrency = stableCurrency
 
-    previousStartCurr = None
-    #do each conversion in the oppurtunity
-    for endCurr, startCurr in reversed(oppurtunity.items()):
-        if (startCurr != stableCurrency or previousStartCurr == None):
-          if (startCurr == stableCurrency and previousStartCurr == None): convert(startCurr, endCurr, exchange, maxUSDT)
-          else: convert(startCurr, endCurr, exchange)
-          log(" > BALANCE AFTER " + startCurr + " TO " + endCurr + ": " + exchange.fetch_balance())
-          previousStartCurr = startCurr
-    
+    #while there are still conversions left, pop the next step and convert
+    while(len(oppurtunity.items()) > 0):
+        nextCurrency = oppurtunity.pop(currentCurrency, None)
+        if nextCurrency == None: break
+        convert(currentCurrency, nextCurrency, exchange, maxUSDT)
+        log("  >>>>  BALANCE AFTER " + currentCurrency + " TO " + nextCurrency + ": " + exchange.fetch_balance())
+        currentCurrency = nextCurrency
+
     #make sure we end up with a stable currency
-    if (finalCurrency not in stable_currencies):
-        convert(finalCurrency, stableCurrency, exchange)
-        log(" > BALANCE AFTER " + finalCurrency + " TO " + stableCurrency + ": " + exchange.fetch_balance())
-        finalCurrency = stableCurrency
-
+    if (currentCurrency != stableCurrency):
+        convert(currentCurrency, stableCurrency, exchange, maxUSDT)
+        log("  >>>>  BALANCE AFTER " + currentCurrency + " TO " + stableCurrency + ": " + exchange.fetch_balance())
+        currentCurrency = stableCurrency
+    
     #print final account balance
     log(" >>>> FINAL BALANCE: " + exchange.fetch_balance(), False, True)
 
 def search():
     while True:
-        for exchange, transactionFee in exchanges.items():
-          log("\n" + exchange.id, False, True)
-          try:
-            conversion_rates, maxSize = loadConversionRates(exchange, transactionFee)
-            log("CONVERSION RATES LOADED (" + str(len(conversion_rates.keys())) + ")", True, False)
-            oppurtunities = findOppurtunity(conversion_rates)
-            if len(oppurtunities) == 0:
-                log("NO ARBITRAGE OPPURTUNITIES :(", False, False)
-            else:
-                if (exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize)): keepExploitingOppurtunity(exchange, transactionFee)
-          except Exception as e:
-            log("  >  ERROR: " + str(e), False, False)
+        for exchange, transactionFee in test_exchanges.items():
+            log("\n" + exchange.id, False, True)
+            try:
+                conversion_rates, maxSize = loadConversionRates(exchange, transactionFee)
+                log("CONVERSION RATES LOADED (" + str(len(conversion_rates.keys())) + ")", True, False)
+                oppurtunities = findOppurtunity(conversion_rates)
+                if len(oppurtunities) == 0:
+                    log("NO ARBITRAGE OPPURTUNITIES :(", False, False)
+                else:
+                    if (exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize)): keepExploitingOppurtunity(exchange, transactionFee)
+            except Exception as e:
+                log("  >  ERROR: " + str(e), False, False)
 
 def keepExploitingOppurtunity(exchange, transactionFee):
     while True:
@@ -315,10 +434,11 @@ def keepExploitingOppurtunity(exchange, transactionFee):
 ############################################
 
 if __name__ == "__main__":
-    #binance.set_sandbox_mode(True) #started with 'BNB': 1000.0, 'BTC': 1.0, 'BUSD': 10000.0, 'ETH': 100.0, 'LTC': 500.0, 'TRX': 500000.0, 'USDT': 10000.0, 'XRP': 50000.0
-
     search()
     exit()
+    
+    binance.set_sandbox_mode(True) #started with 'BNB': 1000.0, 'BTC': 1.0, 'BUSD': 10000.0, 'ETH': 100.0, 'LTC': 500.0, 'TRX': 500000.0, 'USDT': 10000.0, 'XRP': 50000.0
+
     fromCurr = 'TRX'
     toCurr = 'USDT'
 
