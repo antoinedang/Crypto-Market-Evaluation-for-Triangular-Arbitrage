@@ -1,0 +1,44 @@
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/28/2021, 14:23:28
+aax  >  profit of 0.04871954269170135 USDT with investment of 1.7067228480000014 USDT. (2.8545667358231386% increase)     >     12/28/2021, 14:24:18
+bitmex  >  profit of 6.374852097849384 USDT with investment of 4422.799999999999 USDT. (0.1441361150820608% increase)     >     12/28/2021, 14:34:05
+currencycom  >  profit of 150696.14699071334 USD with investment of 1951.5944214000003 USD. (7721.693879541304% increase)     >     12/28/2021, 14:43:41
+exmo  >  profit of 0.09077867382430735 USD with investment of 0.0074819999999999965 USD. (1213.2942237945388% increase)     >     12/28/2021, 14:44:43
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/28/2021, 15:15:17
+aax  >  profit of 0.04368693792079049 USDT with investment of 1.7031687239999993 USDT. (2.565038760117022% increase)     >     12/28/2021, 15:16:12
+bitmex  >  profit of 21.934617793103616 USDT with investment of 47845.35 USDT. (0.04584482670333401% increase)     >     12/28/2021, 15:25:26
+currencycom  >  profit of 150088.47341936332 USD with investment of 1945.93542205 USD. (7712.921596403668% increase)     >     12/28/2021, 15:34:36
+exmo  >  profit of 0.08955432132931061 USDT with investment of 0.007404000000000006 USDT. (1209.5397262197532% increase)     >     12/28/2021, 15:35:34
+binanceus  >  profit of 0.1487527767593821 USDC with investment of 577.5374400000004 USDC. (0.02575638676505232% increase)     >     12/28/2021, 16:01:46
+btcalpha  >  profit of 0.11537220698483285 USDT with investment of 8.3048 USDT. (1.3892231840000102% increase)     >     12/28/2021, 16:04:36
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/28/2021, 16:04:47
+aax  >  profit of 0.043308458640714594 USDT with investment of 1.7109841079999988 USDT. (2.53120168902905% increase)     >     12/28/2021, 16:05:33
+bitmex  >  profit of 31.699506808469888 USDT with investment of 67918.51999999999 USDT. (0.04667284682950967% increase)     >     12/28/2021, 16:14:47
+bitrue  >  profit of 0.03514788890748186 USDT with investment of 19.286260000000002 USDT. (0.18224315604726815% increase)     >     12/28/2021, 16:15:49
+currencycom  >  profit of 149401.68846442294 USD with investment of 1943.0208054000004 USD. (7689.14506984223% increase)     >     12/28/2021, 16:23:56
+exmo  >  profit of 0.08947604897371131 USDT with investment of 0.007404000000000006 USDT. (1208.4825631241388% increase)     >     12/28/2021, 16:24:52
+bigone  >  profit of 0.050681354463942944 USDT with investment of 446.7417299999999 USDT. (0.01134466539849388% increase)     >     12/28/2021, 16:52:23
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/28/2021, 16:53:50
+aax  >  profit of 0.03627422102732332 USDT with investment of 1.7016013319999987 USDT. (2.1317696657352725% increase)     >     12/28/2021, 16:54:31
+bitmex  >  profit of 9.159100757876981 USDT with investment of 8729.440000000002 USDT. (0.1049219738938234% increase)     >     12/28/2021, 17:03:39
+exmo  >  profit of 0.08908736061748758 USDT with investment of 0.007379999999999996 USDT. (1207.1458078250355% increase)     >     12/28/2021, 17:13:40
+stex  >  profit of 0.05839698524164819 USDT with investment of 19.898353886585024 USDT. (0.29347646330191157% increase)     >     12/28/2021, 17:31:48
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/28/2021, 17:42:26
+aax  >  profit of 0.04030107786477671 USDT with investment of 1.6880147160000003 USDT. (2.3874837987358344% increase)     >     12/28/2021, 17:43:11
+exmo  >  profit of 0.09012192021075294 USD with investment of 0.007470000000000003 USD. (1206.451408443814% increase)     >     12/28/2021, 18:02:14
+bibox  >  profit of 0.07795023172268829 USDT with investment of 21.3458671098 USDT. (0.36517716203199324% increase)     >     12/28/2021, 18:27:57
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/28/2021, 18:47:34
+aax  >  profit of 0.03240666396078199 USDT with investment of 1.6636728119999993 USDT. (1.9478988733261815% increase)     >     12/28/2021, 18:49:00
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/28/2021, 19:39:09
+aax  >  profit of 0.03992907652576774 USDT with investment of 1.6621878959999994 USDT. (2.402199933103577% increase)     >     12/28/2021, 19:40:36
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/28/2021, 20:27:52
+aax  >  profit of 0.04183128083204693 USDT with investment of 1.6530664680000013 USDT. (2.530526245726672% increase)     >     12/28/2021, 20:29:23
+gemini  >  profit of 0.03063849369588696 USD with investment of 12.75827395 USD. (0.2401460716078052% increase)     >     12/28/2021, 20:49:46
+binanceus  >  profit of 7.499566715154373 USDC with investment of 5306.812000000004 USDC. (0.14131962306473955% increase)     >     12/28/2021, 21:13:41
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/28/2021, 21:16:42
+aax  >  profit of 0.05092614228627982 USDT with investment of 1.6614323880000006 USDT. (3.065194988017761% increase)     >     12/28/2021, 21:18:04
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/28/2021, 22:05:32
+aax  >  profit of 0.054792825119136045 USDT with investment of 1.6588230839999991 USDT. (3.3031144579331206% increase)     >     12/28/2021, 22:06:57
+bitmex  >  profit of 8.976588079659379 USDT with investment of 31071.76 USDT. (0.028889860373726428% increase)     >     12/28/2021, 22:16:01
+gemini  >  profit of 0.04181534255102602 USD with investment of 13.225315289999994 USD. (0.31617652686619646% increase)     >     12/28/2021, 22:27:30
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/28/2021, 22:54:20
+aax  >  profit of 0.0436201875799 USDT with investment of 1.6568433120000003 USDT. (2.632728590807143% increase)     >     12/28/2021, 22:55:48
