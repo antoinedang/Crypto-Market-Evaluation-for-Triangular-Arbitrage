@@ -44,11 +44,10 @@ from numpy.core.numeric import count_nonzero
 
 currencies = ['ETH', 'BTC', 'ADA', 'XLM', 'XMR', 'SOL', 'LTC', 'USDK', 'DAI', 'USDC', 'USDT', 'AVAX', 'BNB', 'XRP', 'DOT', 'BCH', 'USD', 'UST', 'MATIC', 'SHIB', 'DOGE', 'LINK', 'BIX', 'TRX', 'SAND', 'BAC', 'JWL', 'WEC', 'AAVE', 'ZEC', '1INCH', 'GERA', 'REV', 'SPUT', 'EUR'] #currencies we care about
 quote_currencies = ['ETH', 'BTC', 'USDT', 'USDC', 'USDK', 'DAI', 'USD', 'UST', 'EUR'] #quote currencies
-stable_currencies = ['USDT', 'USD'] #all conversions start and end in these currencies (what we can trade with)
+stable_currencies = ['USDT', 'USD', 'USDC'] #all conversions start and end in these currencies (what we can trade with)
 maxTransactionSizeCurrency = 'USD'
 currency_pairs = [ x + '/'+ y for x in currencies for y in currencies if x != y ]
-min_margin_percent = 0.05 #0.05% percent profit at least
-max_margin_percent = 20 #anything above 20% profit isnt realistic and shouldn't be acted upon
+min_profit = 0.03 #the conversion must make at least this USD profit to be considered worht it
 useAllExchangeCurrencies = False #uses all available currency pairs that have a quote currency in our quote currencies list
 useAllExchanges = True #try with every exchange that is offered by ccxt
 inf = 9999999
@@ -249,8 +248,8 @@ def loadConversionRates(exchange, transactionFee):
         if pair in markets.keys():
             try:
                 orderbook = exchange.fetch_order_book (pair)
-            except Exception:
-                log(" > LOADING ERROR")
+            except Exception as e:
+                log("  >   CONVERSION LOADING ERROR")
                 continue
             if orderbook == None: continue
             #BTC/USD
@@ -339,12 +338,13 @@ def exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize):
             currentCurrency = stableCurrency
 
         growth = (value-1.0)*100
+        possible_profit = maxAmount*(value - 1)
         log("So we can go from 1.0 " + stableCurrency + " to " + str(value) + " " + currentCurrency + ", an increase of " + str(growth) + "%", False, True)
-        log("Maximum " + stableCurrency + " we can move through this conversion: " + str(maxAmount))
+        log("We can move "+ str(maxAmount) + " " + stableCurrency + " through this conversion for a final profit of approximately: " + str(possible_profit) + " " + stableCurrency )
 
-        if growth >= min_margin_percent and growth < max_margin_percent:
-            doTransactions(oppurtunityCopy, exchange, maxAmount, stableCurrency)
-            return True
+        if possible_profit >= min_profit:
+            log(exchange.id + "  >  profit of " + possible_profit + " " + stableCurrency, False, True, "profitable_exchanges.txt")
+            return doTransactions(oppurtunityCopy, exchange, maxAmount, stableCurrency)
         else:
             return False
 
@@ -375,7 +375,7 @@ def convert(fromCurrency, toCurrency, exchange, conversion_rates, maxSize, stabl
         print(status)
         return status['status']=="closed"
     except Exception as e:
-        log(" > " + fromCurrency + " - " + toCurrency + " CONVERSION ERROR: " + str(e))
+        log("  >   " + fromCurrency + " / " + toCurrency + " CONVERSION ERROR: " + str(e))
         return False
 
 def doTransactions(oppurtunity, exchange, maxAmount, stableCurrency):
@@ -385,7 +385,8 @@ def doTransactions(oppurtunity, exchange, maxAmount, stableCurrency):
     log(" >>>> EXPLOITING OPPURTUNITY!  >  " + str(oppurtunity), False, False)
     
     #print initial account balance
-    log(" >>>> INITIAL BALANCE: " + exchange.fetch_balance())
+    startingBalance = exchange.fetch_balance()[stableCurrency]['free']
+    log(" >>>> INITIAL BALANCE: " + startingBalance + " " + stableCurrency)
 
     stableCurrency = oppurtunity.pop('stable')
     currentCurrency = stableCurrency
@@ -394,18 +395,30 @@ def doTransactions(oppurtunity, exchange, maxAmount, stableCurrency):
     while(len(oppurtunity.items()) > 0):
         nextCurrency = oppurtunity.pop(currentCurrency, None)
         if nextCurrency == None: break
-        convert(currentCurrency, nextCurrency, exchange, maxAmount, stableCurrency)
-        log("  >>>>  BALANCE AFTER " + currentCurrency + " TO " + nextCurrency + ": " + exchange.fetch_balance())
-        currentCurrency = nextCurrency
+        success = convert(currentCurrency, nextCurrency, exchange, maxAmount, stableCurrency)
+        if not success:
+            if currentCurrency != stableCurrency: convert(currentCurrency, stableCurrency, exchange, exchange.fetch_balance()[currentCurrency]['free'], currentCurrency)
+            log("  >>>> CONVERSION FAILED FROM " + currentCurrency + " TO " + nextCurrency + ". ABORTING. CURRENT BALANCE AT: " + exchange.fetch_balance()) 
+            return False
+        else:
+            log("  >>>>  BALANCE AFTER " + currentCurrency + " TO " + nextCurrency + ": " + exchange.fetch_balance())
+            currentCurrency = nextCurrency
 
     #make sure we end up with a stable currency
     if (currentCurrency != stableCurrency):
-        convert(currentCurrency, stableCurrency, exchange, maxAmount, stableCurrency)
+        success = convert(currentCurrency, stableCurrency, exchange, exchange.fetch_balance()[currentCurrency]['free'], currentCurrency)
+        if not success:
+            convert(currentCurrency, stableCurrency, exchange, exchange.fetch_balance()[currentCurrency]['free'], currentCurrency)
+            log("  >>>> CONVERSION FAILED FROM " + currentCurrency + " TO " + stableCurrency + ". ABORTING. CURRENT BALANCE AT: " + exchange.fetch_balance()) 
+            return False
         log("  >>>>  BALANCE AFTER " + currentCurrency + " TO " + stableCurrency + ": " + exchange.fetch_balance())
         currentCurrency = stableCurrency
     
     #print final account balance
-    log(" >>>> FINAL BALANCE: " + exchange.fetch_balance(), False, True)
+    final_balance = exchange.fetch_balance()[stableCurrency]['free']
+    log(" >>>> FINAL BALANCE: " + final_balance + " " + stableCurrency, False, True)
+    if final_balance > startingBalance: return True
+    else: return False
 
 def search():
     while True:
@@ -420,7 +433,7 @@ def search():
                 else:
                     if (exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize)): keepExploitingOppurtunity(exchange, transactionFee)
             except Exception as e:
-                log("  >  ERROR: " + str('e'), False, False)
+                log("  >   SEARCH ERROR: " + str(e))
 
 def keepExploitingOppurtunity(exchange, transactionFee):
     while True:
@@ -435,7 +448,7 @@ def keepExploitingOppurtunity(exchange, transactionFee):
             else:
                 if(not exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize)): return
         except Exception as e:
-            log("  >  ERROR: " + str(e), False, False)
+            log("  >   KEEP EXPLOITING ERROR: " + str(e), False, False)
             return
 
 ############################################
