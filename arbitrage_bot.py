@@ -4,13 +4,13 @@ import math
 import time
 from datetime import datetime
 import copy
-
-from numpy.core.numeric import count_nonzero
+import traceback
 
 currencies = ['ETH', 'BTC', 'ADA', 'XLM', 'XMR', 'SOL', 'LTC', 'USDK', 'DAI', 'USDC', 'USDT', 'AVAX', 'BNB', 'XRP', 'DOT', 'BCH', 'USD', 'UST', 'MATIC', 'SHIB', 'DOGE', 'LINK', 'BIX', 'TRX', 'SAND', 'BAC', 'JWL', 'WEC', 'AAVE', 'ZEC', '1INCH', 'GERA', 'REV', 'SPUT', 'EUR'] #currencies we care about
 quote_currencies = ['ETH', 'BTC', 'USDT', 'USDC', 'USDK', 'DAI', 'USD', 'UST', 'EUR'] #quote currencies
 stable_currencies = ['USDT', 'USD', 'USDC'] #all conversions start and end in these currencies (what we can trade with)
 maxTransactionSizeCurrency = 'USD'
+maxCompromises = 5 # how many maximum compromises (a compromise is when we take the ith best prices rather than just the best price)
 currency_pairs = [ x + '/'+ y for x in currencies for y in currencies if x != y ]
 min_profit = 0.03 #the conversion must make at least this USD profit to be considered worht it
 min_investment = 0.10 #we'll only consider transactions we can invest at least 10 cents into
@@ -139,17 +139,20 @@ zipmex = ccxt.zipmex()
 zonda = ccxt.zonda()
 
 
-test_exchanges = { kucoin:0.001, lykke:0.0, ascendex:0.002, bequant:0.001, bitbank:0.0015, bitbns:0.0025, bitcoincom:0.0075, bitfinex:0.002, bitfinex2:0.002, bitflyer:0.002, bitforex:0.001, bitget:0.001, bithumb:0.0015, bitmart:0.0025, bitpanda:0.0015, bitso:0.001, bitstamp:0.005, bittrex:0.0035, bitvavo:0.0025, bl3p:0.0026, btcmarkets:0.002, btctradeua:0.001, btcturk:0.0009, buda:0.008, bw:0.002, bybit:0.001, cdax:0.002, cex:0.0025, coinbasepro:0.005, coinex:0.002, coinfalcon:0.002, coinmate:0.0035, crex24:0.001, delta:0.0005, digifinex:0.002, eqonex:0.0009, exmo:0.003, equos:0.0009, ftx:0.0007, ftxus:0.004, gateio:0.002, gemini:0.0035, hitbtc:0.0009, hitbtc3:0.0009, huobi:0.002, huobijp:0.002, independentreserve:0.005, indodax:0.003, itbit:0.0035, kraken:0.015, kuna:0.0025, latoken:0.005, latoken1:0.005, lbank:0.001, liquid:0.0015, luno:0.001, mexc:0.002, ndax:0.002, novadax:0.0025, oceanex:0.001, okcoin:0.0125, okex:0.001, okex3:0.001, okex5:0.001, paymium:0.005, phemex:0.001, poloniex:0.00155, probit:0.002, ripio:0, therock:0.002, tidebit:0.003, tidex:0.001, timex:0.005, whitebit:0.001, xena:0.001, yobit:0.002, zaif:0.002, zb:0.002, zipmex:0.002, zonda:0.0043 }
+other_exchanges = { kucoin:0.001, ascendex:0.002, bequant:0.001, bitbank:0.0015, bitbns:0.0025, bitcoincom:0.0075, bitfinex:0.002, bitfinex2:0.002, bitflyer:0.002, bitforex:0.001, bitget:0.001, bithumb:0.0015, bitmart:0.0025, bitpanda:0.0015, bitso:0.001, bitstamp:0.005, bittrex:0.0035, bitvavo:0.0025, bl3p:0.0026, btcmarkets:0.002, btctradeua:0.001, buda:0.008, bw:0.002, bybit:0.001, cdax:0.002, cex:0.0025, coinbasepro:0.005, coinex:0.002, coinfalcon:0.002, coinmate:0.0035, crex24:0.001, delta:0.0005, eqonex:0.0009, equos:0.0009, ftx:0.0007, ftxus:0.004, gateio:0.002, huobi:0.002, huobijp:0.002, independentreserve:0.005, indodax:0.003, itbit:0.0035, kraken:0.015, kuna:0.0025, latoken:0.005, latoken1:0.005, lbank:0.001, liquid:0.0015, luno:0.001, mexc:0.002, ndax:0.002, novadax:0.0025, oceanex:0.001, okcoin:0.0125, okex:0.001, okex3:0.001, okex5:0.001, paymium:0.005, phemex:0.001, poloniex:0.00155, probit:0.002, ripio:0, therock:0.002, tidebit:0.003, tidex:0.001, timex:0.005, xena:0.001, zaif:0.002, zb:0.002, zipmex:0.002, zonda:0.0043 }
 
-confirmed_exchanges = { bitrue:0.0015, bibox:0.002, binanceus:0.001, upbit:0.002, binance:0.001, bigone:0.002, btcalpha:0.002, idex:0.0025, aax:0.001, bitmex:0.0005, stex:0.002 }
+confirmed_exchanges = { exmo:0.003, bitrue:0.0015, bibox:0.002, binanceus:0.001, upbit:0.002, binance:0.001, bigone:0.002, btcalpha:0.002, idex:0.0025, aax:0.001, bitmex:0.0005, stex:0.002, lykke:0.0, yobit:0.002, gemini:0.0035, hitbtc:0.0009, whitebit:0.001, hitbtc3:0.0009, digifinex:0.002, btcturk:0.0009 }
 
-def findOppurtunity(conversion_rates):
+def findOppurtunity(conversion_rates, startingVertex=None):
 
     oppurtunities = []
 
     V = len(conversion_rates.keys())-1
 
-    for startVertex in stable_currencies:
+    if startingVertex != None: starting_currencies = [ startingVertex ]
+    else: starting_currencies = stable_currencies
+
+    for startVertex in starting_currencies:
         if startVertex in conversion_rates.keys():
           distance = {}
           previous = {}
@@ -194,15 +197,18 @@ def findOppurtunity(conversion_rates):
 
     return oppurtunities
 
-
-def loadConversionRates(exchange, transactionFee):
+def loadConversionRates(exchange, transactionFee, compromiseConversion=None, compromise_index=0, old_conversion_rates=None, old_max_size=None):
     markets = exchange.load_markets()
     log("MARKETS LOADED", False, True)
-    conversion_rates = {}
-    conversion_rates['fee'] = transactionFee
-    for stableCurr in stable_currencies:
-        conversion_rates[stableCurr] = {stableCurr: np.log(1-transactionFee)*-1 }
-    maxSize = {}
+    if old_conversion_rates != None:
+        conversion_rates = old_conversion_rates
+        maxSize = old_max_size
+    else:
+        conversion_rates = {}
+        conversion_rates['fee'] = transactionFee
+        for stableCurr in stable_currencies:
+            conversion_rates[stableCurr] = {stableCurr: np.log(1-transactionFee)*-1 }
+        maxSize = {}
 
     global currency_pairs
 
@@ -210,48 +216,68 @@ def loadConversionRates(exchange, transactionFee):
         currency_pairs = markets.keys()
 
     for pair in currency_pairs:
-        if pair in markets.keys():
-            try:
-                orderbook = exchange.fetch_order_book (pair)
-            except Exception as e:
-                log("  >   CONVERSION LOADING ERROR " + str(e))
-                continue
-            if orderbook == None: continue
-            #BTC/USD
-            #bid = best price (USD) you can sell 1 BTC at
-            #ask = best price (USD) you can buy 1 BTC at
-            bid = orderbook['bids'][0][0] if len (orderbook['bids']) > 0 else None
-            ask = orderbook['asks'][0][0] if len (orderbook['asks']) > 0 else None
-            if bid == None or ask == None: continue
+        if compromiseConversion == None or pair == compromiseConversion:
+            if pair in markets.keys():
+                try:
+                    orderbook = exchange.fetch_order_book (pair)
+                except Exception as e:
+                    log("  >   CONVERSION LOADING ERROR ")
+                    continue
+                if orderbook == None: continue
+                #BTC/USD
+                #bid = best price (USD) you can sell 1 BTC at
+                #ask = best price (USD) you can buy 1 BTC at
+                index = 0
+                maxBidSize = orderbook['bids'][index][1] if len (orderbook['bids']) > index else None
+                maxAskSize = orderbook['asks'][index][1] if len (orderbook['asks']) > index else None
+                if maxBidSize == None or maxAskSize == None: continue
 
-            cur1 = pair.split("/")[0]
-            cur2 = pair.split("/")[1]
+                if (compromiseConversion == pair):
+                    if len(orderbook['bids']) <= compromise_index or len(orderbook['asks']) <= compromise_index:
+                        log("  >   COMPROMISE IMPOSSIBLE. NO BETTER PRICE AVAILABLE.")
+                        return None, None
+                    try:
+                        while(index < compromise_index):
+                            index += 1
+                            maxBidSize += orderbook['bids'][index][1]
+                            maxAskSize += orderbook['asks'][index][1]
+                    except Exception as e:
+                        log("  >   COMPROMISE FAILED. ABORTING. " + str(traceback.format_exc()))
+                        return None, None
 
-            print("        " + exchange.id, { 'pair': pair, 'highest bid': bid, 'lowest ask': ask, 'maxBidSize':orderbook['bids'][0][1], 'maxAskSize':orderbook['asks'][0][1] })
+                bid = orderbook['bids'][index][0] if len (orderbook['bids']) > index else None
+                ask = orderbook['asks'][index][0] if len (orderbook['asks']) > index else None
+                if bid == None or ask == None: continue
 
-            try: conversion_rates[cur1][cur2] = np.log(bid*(1-transactionFee)) * -1
-            except Exception:
-                conversion_rates[cur1] = { }
-                conversion_rates[cur1][cur2] = np.log(bid*(1-transactionFee)) * -1
-          
-            try: conversion_rates[cur2][cur1] = np.log((1-transactionFee)/ask) * -1
-            except Exception:
-                conversion_rates[cur2] = { }
-                conversion_rates[cur2][cur1] = np.log((1-transactionFee)/ask) * -1
-          
-            bidAmount = orderbook['bids'][0][1]
-            askAmount = orderbook['asks'][0][1] * ask
 
-            try:
-                maxSize[cur1][cur2] = bidAmount #in cur1
-            except Exception:
-                maxSize[cur1] = {}
-                maxSize[cur1][cur2] = bidAmount #in cur1
-            try:
-                maxSize[cur2][cur1] = askAmount #in cur2
-            except Exception:
-                maxSize[cur2] = {} #in cur2
-                maxSize[cur2][cur1] = askAmount #in cur2
+                cur1 = pair.split("/")[0]
+                cur2 = pair.split("/")[1]
+
+                print("        " + exchange.id, { 'pair': pair, 'highest bid': bid, 'lowest ask': ask, 'maxBidSize':maxBidSize, 'maxAskSize':maxAskSize })
+
+                try: conversion_rates[cur1][cur2] = np.log(bid*(1-transactionFee)) * -1
+                except Exception:
+                    conversion_rates[cur1] = { }
+                    conversion_rates[cur1][cur2] = np.log(bid*(1-transactionFee)) * -1
+            
+                try: conversion_rates[cur2][cur1] = np.log((1-transactionFee)/ask) * -1
+                except Exception:
+                    conversion_rates[cur2] = { }
+                    conversion_rates[cur2][cur1] = np.log((1-transactionFee)/ask) * -1
+            
+                bidAmount = maxBidSize
+                askAmount = maxAskSize * ask
+
+                try:
+                    maxSize[cur1][cur2] = bidAmount #in cur1
+                except Exception:
+                    maxSize[cur1] = {}
+                    maxSize[cur1][cur2] = bidAmount #in cur1
+                try:
+                    maxSize[cur2][cur1] = askAmount #in cur2
+                except Exception:
+                    maxSize[cur2] = {} #in cur2
+                    maxSize[cur2][cur1] = askAmount #in cur2
           
     return conversion_rates, maxSize
 
@@ -274,44 +300,72 @@ def findStartingCurrency(oppurtunity):
         if key in stable_currencies: return key
     return None
 
-def exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize):
+def exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize, recursiveCall=0):
     for oppurtunity in oppurtunities:
-        oppurtunityCopy = copy.deepcopy(oppurtunity)
-        maxAmount = 999999999
-        value = 1.0
-        log("FOUND OPPURTUNITY!  >  " + str(oppurtunity), False, False)
-        stableCurrency = oppurtunity.pop('stable')
-        if stableCurrency not in oppurtunity.keys():
-            stableCurrency = findStartingCurrency(oppurtunity)
-
-        currentCurrency = stableCurrency
-
-        #while there are still conversions left, pop the next step and convert
-        while(len(oppurtunity.items()) > 0):
-            nextCurrency = oppurtunity.pop(currentCurrency, None)
-            if nextCurrency == None: break
-            log(" > " + str(value) + " " + currentCurrency + " converts to: " + str(value*math.exp(-1*conversion_rates[currentCurrency][nextCurrency])) + " " + nextCurrency, False, False)
-            value = value*math.exp(-1*conversion_rates[currentCurrency][nextCurrency])
-            if (currentCurrency not in stable_currencies): maxAmount = min(maxAmount, maxSize[currentCurrency][nextCurrency] * math.exp(-1*conversion_rates[currentCurrency][stableCurrency]) / (1-conversion_rates['fee']))
-            currentCurrency = nextCurrency
-
-        #make sure we end up with a stable currency
-        if (currentCurrency != stableCurrency):
-            log(" 1> " + str(value) + " " + currentCurrency + " converts to: " + str(value*math.exp(-1*conversion_rates[currentCurrency][stableCurrency])) + " " + stableCurrency, False, False)
-            value = value*math.exp(-1*conversion_rates[currentCurrency][stableCurrency])
-            if (currentCurrency not in stable_currencies): maxAmount = min(maxAmount, maxSize[currentCurrency][stableCurrency] * math.exp(-1*conversion_rates[currentCurrency][stableCurrency]) / (1-conversion_rates['fee']))
+        try:
+            limiting_conversion = ""
+            oppurtunityCopy = copy.deepcopy(oppurtunity)
+            maxAmount = 999999999
+            value = 1.0
+            if recursiveCall > 0: 
+                log("OPPURTUNITY FOUND AFTER " + str(recursiveCall) + " COMPROMISE(S)!  >  " + str(oppurtunity), False, False)
+            else:
+                log("OPPURTUNITY!  >  " + str(oppurtunity), False, False)
+            stableCurrency = 'USDT'
+            if stableCurrency not in oppurtunity.keys():
+                stableCurrency = findStartingCurrency(oppurtunity)
+            if stableCurrency == None:
+                log("  >   OPPURTUNITY HAS NO STABLE STARTING POINT.")
+                continue
             currentCurrency = stableCurrency
 
-        growth = (value-1.0)*100
-        possible_profit = maxAmount*(value - 1)
-        log("So we can go from 1.0 " + stableCurrency + " to " + str(value) + " " + currentCurrency + ", an increase of " + str(growth) + "%", False, True)
-        log("We can move "+ str(maxAmount) + " " + stableCurrency + " through this conversion for a final profit of approximately: " + str(possible_profit) + " " + stableCurrency )
+            #while there are still conversions left, pop the next step and convert
+            while(len(oppurtunity.items()) > 0):
+                nextCurrency = oppurtunity.pop(currentCurrency, None)
+                if nextCurrency == None: break
+                log(" > " + str(value) + " " + currentCurrency + " converts to: " + str(value*math.exp(-1*conversion_rates[currentCurrency][nextCurrency])) + " " + nextCurrency, False, False)
+                value = value*math.exp(-1*conversion_rates[currentCurrency][nextCurrency])
+                if (maxAmount > maxSize[currentCurrency][nextCurrency] * math.exp(-1*conversion_rates[currentCurrency][stableCurrency]) / (1-conversion_rates['fee'])): limiting_conversion = currentCurrency + " to " + nextCurrency
+                maxAmount = min(maxAmount, maxSize[currentCurrency][nextCurrency] * math.exp(-1*conversion_rates[currentCurrency][stableCurrency]) / (1-conversion_rates['fee']))
+                currentCurrency = nextCurrency
 
-        if possible_profit >= min_profit and maxAmount >= min_investment:
-            log(exchange.id + "  >  profit of " + str(possible_profit) + " " + stableCurrency + " with investment of " + str(maxAmount) + " " + stableCurrency + ". (" + str(growth) + '% increase)', False, True, "profitable_exchanges.txt")
-            return doTransactions(oppurtunityCopy, exchange, maxAmount, stableCurrency)
-        else:
-            return False
+            #make sure we end up with a stable currency
+            if (currentCurrency != stableCurrency):
+                log(" 1> " + str(value) + " " + currentCurrency + " converts to: " + str(value*math.exp(-1*conversion_rates[currentCurrency][stableCurrency])) + " " + stableCurrency, False, False)
+                value = value*math.exp(-1*conversion_rates[currentCurrency][stableCurrency])
+                if (maxAmount > maxSize[currentCurrency][nextCurrency] * math.exp(-1*conversion_rates[currentCurrency][stableCurrency]) / (1-conversion_rates['fee'])): limiting_conversion = currentCurrency + " to " + stableCurrency
+                maxAmount = min(maxAmount, maxSize[currentCurrency][stableCurrency] * math.exp(-1*conversion_rates[currentCurrency][stableCurrency]) / (1-conversion_rates['fee']))
+                currentCurrency = stableCurrency
+
+            growth = (value-1.0)*100
+            possible_profit = maxAmount*(value - 1)
+            log("So we can go from 1.0 " + stableCurrency + " to " + str(value) + " " + currentCurrency + ", an increase of " + str(growth) + "%", False, True)
+            log("We can move "+ str(maxAmount) + " " + stableCurrency + " through this conversion for a final profit of approximately: " + str(possible_profit) + " " + stableCurrency )
+            log("The conversion which limits our transaction size the most is: " + limiting_conversion)
+
+            if possible_profit >= min_profit and maxAmount >= min_investment:
+                log(exchange.id + "  >  profit of " + str(possible_profit) + " " + stableCurrency + " with investment of " + str(maxAmount) + " " + stableCurrency + ". (" + str(growth) + '% increase). Limited by ' + limiting_conversion + " conversion.", False, True, "profitable_exchanges.txt")
+                return doTransactions(oppurtunityCopy, exchange, maxAmount, stableCurrency)
+            else:
+                if recursiveCall < maxCompromises: 
+                    if (limiting_conversion.split(' to ')[0] + '/' + limiting_conversion.split(' to ')[1]) in exchange.symbols:
+                        compromiseConversion = limiting_conversion.split(' to ')[0] + '/' + limiting_conversion.split(' to ')[1]
+                    else:
+                        compromiseConversion = limiting_conversion.split(' to ')[1] + '/' + limiting_conversion.split(' to ')[0]
+                    
+                    log("SEARCHING FOR COMPROMISE ON " + compromiseConversion + " >  RECURSIVE CALLS: " + str(recursiveCall), False, False)
+                    new_conversion_rates, newMaxSize = loadConversionRates(exchange, conversion_rates['fee'], compromiseConversion, recursiveCall+1, conversion_rates, maxSize)
+                    if new_conversion_rates == None or newMaxSize == None: continue
+                    new_oppurtunities = findOppurtunity(new_conversion_rates, stableCurrency)
+                    if len(new_oppurtunities) != 0:
+                        if (exploreOppurtunities(new_oppurtunities, new_conversion_rates, exchange, newMaxSize, recursiveCall+1)): return True
+                    else:
+                        log("  >   NO OPPURTUNITIES POSSIBLE WITH COMPROMISE.")
+                continue
+        except Exception as e:
+            log("  >   OPPURTUNITY EXPLORATION ERROR ")
+            continue
+
 
 def convert(fromCurrency, toCurrency, exchange, conversion_rates, maxSize, stableCurrency):
     try:
@@ -340,7 +394,7 @@ def convert(fromCurrency, toCurrency, exchange, conversion_rates, maxSize, stabl
         print(status)
         return status['status']=="closed"
     except Exception as e:
-        log("  >   " + fromCurrency + " / " + toCurrency + " CONVERSION ERROR: " + str(e))
+        log("  >   " + fromCurrency + " / " + toCurrency + " CONVERSION ERROR: " + str(traceback.format_exc()))
         return False
 
 def doTransactions(oppurtunity, exchange, maxAmount, stableCurrency):
@@ -364,8 +418,9 @@ def doTransactions(oppurtunity, exchange, maxAmount, stableCurrency):
             if nextCurrency == None: break
             success = convert(currentCurrency, nextCurrency, exchange, maxAmount, stableCurrency)
             if not success:
-                if currentCurrency != stableCurrency: convert(currentCurrency, stableCurrency, exchange, exchange.fetch_balance()[currentCurrency]['free'], currentCurrency)
+                if currentCurrency != stableCurrency: success = convert(currentCurrency, stableCurrency, exchange, exchange.fetch_balance()[currentCurrency]['free'], currentCurrency)
                 log("  >>>> CONVERSION STEP FAILED: " + currentCurrency + " TO " + nextCurrency + ". ABORTING. CURRENT BALANCE AT: " + exchange.fetch_balance()) 
+                if not success: log("  >>>> COULD NOT RETURN TO STABLE CURRENCY!! (MANUAL FIX REQUIRED) CURRENT CURRENCY: " + currentCurrency + " CURRENT BALANCE AT: " + exchange.fetch_balance())
                 return False
             else:
                 log("  >>>>  BALANCE AFTER " + currentCurrency + " TO " + nextCurrency + ": " + exchange.fetch_balance())
@@ -375,9 +430,10 @@ def doTransactions(oppurtunity, exchange, maxAmount, stableCurrency):
         if (currentCurrency != stableCurrency):
             success = convert(currentCurrency, stableCurrency, exchange, exchange.fetch_balance()[currentCurrency]['free'], currentCurrency)
             if not success:
-                convert(currentCurrency, stableCurrency, exchange, exchange.fetch_balance()[currentCurrency]['free'], currentCurrency)
-                log("  >>>> CONVERSION STEP FAILED: " + currentCurrency + " TO " + stableCurrency + ". ABORTING. CURRENT BALANCE AT: " + exchange.fetch_balance()) 
-                return False
+                success = convert(currentCurrency, stableCurrency, exchange, exchange.fetch_balance()[currentCurrency]['free'], currentCurrency)
+                if not success: 
+                    log("  >>>> CONVERSION STEP FAILED: " + currentCurrency + " TO " + stableCurrency + ". ABORTING. CURRENT BALANCE AT: " + exchange.fetch_balance()) 
+                    return False
             log("  >>>>  BALANCE AFTER " + currentCurrency + " TO " + stableCurrency + ": " + exchange.fetch_balance())
             currentCurrency = stableCurrency
         
@@ -387,14 +443,14 @@ def doTransactions(oppurtunity, exchange, maxAmount, stableCurrency):
         if final_balance > startingBalance: return True
         else: return False
     except Exception as e:
-        log("  >   EXPLOITATION ERROR: " + str(e))
+        log("  >   EXPLOITATION ERROR: ")# + str(traceback.format_exc()))
         return False
 
 
 def search():
     while True:
         log(' >>>>>>>>>> NEXT ITERATION <<<<<<<<<<', False, True, "profitable_exchanges.txt")
-        for exchange, transactionFee in list(test_exchanges.items()) + list(confirmed_exchanges.items()):
+        for exchange, transactionFee in confirmed_exchanges.items():
             log("\n" + exchange.id, False, True)
             try:
                 conversion_rates, maxSize = loadConversionRates(exchange, transactionFee)
@@ -405,7 +461,7 @@ def search():
                 else:
                     if (exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize)): keepExploitingOppurtunity(exchange, transactionFee)
             except Exception as e:
-                log("  >   SEARCH ERROR: " + str(e))
+                log("  >   SEARCH ERROR: " + str(traceback.format_exc()))
 
 def keepExploitingOppurtunity(exchange, transactionFee):
     while True:
@@ -420,7 +476,7 @@ def keepExploitingOppurtunity(exchange, transactionFee):
             else:
                 if(not exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize)): return
         except Exception as e:
-            log("  >   KEEP EXPLOITING ERROR: " + str(e), False, False)
+            log("  >   KEEP EXPLOITING ERROR: " + str(traceback.format_exc()), False, False)
             return
 
 ############################################
