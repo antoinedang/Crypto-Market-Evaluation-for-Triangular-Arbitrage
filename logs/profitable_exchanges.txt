@@ -1,2 +1,67 @@
- >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 15:18:59
- >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 15:25:00
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 16:15:50
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 16:23:17
+bitmex  >  profit of 5.05077356326656 USDT with investment of 5208.599999999999 USDT. (0.09696988755647507% increase). Limited by BNB to USD conversion.     >     12/30/2021, 16:26:08
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 16:30:28
+bitmex  >  profit of 11.785897158796187 USDT with investment of 11447.7 USDT. (0.102954280412626% increase). Limited by BNB to USD conversion.     >     12/30/2021, 16:33:11
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 16:37:39
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 16:44:50
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 16:51:53
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 16:59:01
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 17:06:18
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 17:13:29
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 17:20:41
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 17:27:53
+bitmex  >  profit of 14.945284668776539 USDT with investment of 78335.25000000001 USDT. (0.019078619993906365% increase). Limited by ETH to USD conversion.     >     12/30/2021, 17:30:36
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 17:35:03
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 17:42:08
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 17:49:15
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 17:56:20
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 18:03:26
+bitmex  >  profit of 14.234840795164944 USDT with investment of 15131.910000000002 USDT. (0.09407167234780633% increase). Limited by BNB to USD conversion.     >     12/30/2021, 18:06:03
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 18:10:25
+bitmex  >  profit of 0.5278257397838949 USDT with investment of 521.7199999999998 USDT. (0.10117030970326901% increase). Limited by BNB to USD conversion.     >     12/30/2021, 18:13:10
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 18:17:35
+bitmex  >  profit of 0.17836737249464615 USDT with investment of 522.0300000000002 USDT. (0.03416803105082966% increase). Limited by BNB to USD conversion.     >     12/30/2021, 18:20:18
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 18:24:39
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 18:31:57
+bitmex  >  profit of 1.0820752996659309 USDT with investment of 1044.7799999999997 USDT. (0.10356967970921449% increase). Limited by BNB to USD conversion.     >     12/30/2021, 18:34:36
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 18:38:59
+bitmex  >  profit of 3.883183349112696 USDT with investment of 4172.080000000001 USDT. (0.0930754767193509% increase). Limited by BNB to USD conversion.     >     12/30/2021, 18:41:37
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 18:45:57
+bitmex  >  profit of 2.4756892239857398 USDT with investment of 4180.399999999998 USDT. (0.05922134781326527% increase). Limited by BNB to USD conversion.     >     12/30/2021, 18:48:37
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 18:52:59
+bitmex  >  profit of 6.816697433863377 USDT with investment of 18772.920000000002 USDT. (0.036311332674210384% increase). Limited by BNB to USD conversion.     >     12/30/2021, 18:55:38
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 18:59:57
+bitmex  >  profit of 0.5443962831144546 USDT with investment of 2605.999999999999 USDT. (0.020890110633708936% increase). Limited by BNB to USD conversion.     >     12/30/2021, 19:02:37
+bitrue  >  profit of 0.1218580834954557 USDT with investment of 22.371249704999997 USDT. (0.544708432038199% increase). Limited by XRP to XMR conversion.     >     12/30/2021, 19:03:34
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 19:06:57
+bitmex  >  profit of 2.206213064736212 USDT with investment of 3730.5499999999993 USDT. (0.0591390831039984% increase). Limited by ETH to USD conversion.     >     12/30/2021, 19:09:43
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 19:13:59
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 19:21:16
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 19:28:16
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 19:35:29
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 19:42:30
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 19:49:41
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 19:56:41
+bitmex  >  profit of 3.1722822160962023 USDT with investment of 37604.00000000003 USDT. (0.008436023338198595% increase). Limited by ETH to USD conversion.     >     12/30/2021, 19:59:26
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 20:03:53
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 20:11:02
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 20:18:03
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 20:25:06
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 20:32:11
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 20:39:16
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 20:46:12
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 20:53:21
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 21:00:31
+bibox  >  profit of 0.6384116277368378 USDT with investment of 53.48677619999999 USDT. (1.1935877857915056% increase). Limited by LINK to BIX conversion.     >     12/30/2021, 21:05:45
+bibox  >  profit of 0.6384116277368378 USDT with investment of 53.48677619999999 USDT. (1.1935877857915056% increase). Limited by LINK to BIX conversion.     >     12/30/2021, 21:05:45
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 21:07:38
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 21:14:35
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 21:21:38
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 21:28:35
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 21:36:34
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 21:43:27
+binance  >  profit of 0.3985378630883192 USDT with investment of 552.6003000000001 USDT. (0.07212045724338534% increase). Limited by USDT to DOT conversion.     >     12/30/2021, 21:49:03
+binance  >  profit of 0.3985378630883192 USDT with investment of 552.6003000000001 USDT. (0.07212045724338534% increase). Limited by USDT to DOT conversion.     >     12/30/2021, 21:49:03
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 21:50:26
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/30/2021, 22:00:48

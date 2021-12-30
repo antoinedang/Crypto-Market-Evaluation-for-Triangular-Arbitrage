@@ -1,70 +1,2785 @@
-btcalpha     >     12/30/2021, 15:18:59
-MARKETS LOADED     >     12/30/2021, 15:18:59
-CONVERSION RATES LOADED (24)     >      (79.98s elapsed)
+btcalpha     >     12/30/2021, 16:15:50
+MARKETS LOADED     >     12/30/2021, 16:15:50
+CONVERSION RATES LOADED (24)     >      (79.90s elapsed)
 NO ARBITRAGE OPPURTUNITIES :(
 
-aax     >     12/30/2021, 15:20:19
-MARKETS LOADED     >     12/30/2021, 15:20:22
-CONVERSION RATES LOADED (26)     >      (37.72s elapsed)
+aax     >     12/30/2021, 16:17:10
+MARKETS LOADED     >     12/30/2021, 16:17:15
+CONVERSION RATES LOADED (26)     >      (34.04s elapsed)
 NO ARBITRAGE OPPURTUNITIES :(
 
-bitmex     >     12/30/2021, 15:20:59
-MARKETS LOADED     >     12/30/2021, 15:21:00
-CONVERSION RATES LOADED (18)     >      (45.98s elapsed)
+bitmex     >     12/30/2021, 16:17:49
+MARKETS LOADED     >     12/30/2021, 16:17:49
+CONVERSION RATES LOADED (18)     >      (46.05s elapsed)
 NO ARBITRAGE OPPURTUNITIES :(
 
-bitrue     >     12/30/2021, 15:21:46
-MARKETS LOADED     >     12/30/2021, 15:21:47
-CONVERSION RATES LOADED (26)     >      (56.97s elapsed)
+bitrue     >     12/30/2021, 16:18:35
+MARKETS LOADED     >     12/30/2021, 16:18:37
+CONVERSION RATES LOADED (26)     >      (56.84s elapsed)
 NO ARBITRAGE OPPURTUNITIES :(
 
-bibox     >     12/30/2021, 15:22:44
-MARKETS LOADED     >     12/30/2021, 15:22:49
-CONVERSION RATES LOADED (27)     >      (90.40s elapsed)
-OPPURTUNITY!  >  {'BTC': 'USDC', 'USDT': 'BTC', 'USDC': 'USDT', 'stable': 'USDT'}
- > 1.0 USDT converts to: 2.111351582350117e-05 BTC
- > 2.111351582350117e-05 BTC converts to: 0.995695094906312 USDC
- > 0.995695094906312 USDC converts to: 1.007506544374429 USDT
-So we can go from 1.0 USDT to 1.007506544374429 USDT, an increase of 0.7506544374429103%     >     12/30/2021, 15:24:19
-We can move 0.11799999999999998 USDT through this conversion for a final profit of approximately: 0.0008857722361826339 USDT
+bibox     >     12/30/2021, 16:19:33
+MARKETS LOADED     >     12/30/2021, 16:19:38
+CONVERSION RATES LOADED (27)     >      (90.15s elapsed)
+OPPURTUNITY!  >  {'BIX': 'ETH', 'DOGE': 'BIX', 'USDT': 'DOGE', 'USDC': 'USDT', 'ETH': 'USDC', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 5.750272244853276 DOGE
+ > 5.750272244853276 DOGE converts to: 25.150453915428365 BIX
+ > 25.150453915428365 BIX converts to: 0.0002690736402414454 ETH
+ > 0.0002690736402414454 ETH converts to: 0.999706618550001 USDC
+ > 0.999706618550001 USDC converts to: 1.011565654783434 USDT
+So we can go from 1.0 USDT to 1.011565654783434 USDT, an increase of 1.1565654783433965%     >     12/30/2021, 16:21:08
+We can move 0.11799999999999998 USDT through this conversion for a final profit of approximately: 0.0013647472644452076 USDT
 The conversion which limits our transaction size the most is: USDC to USDT
 SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 0
-MARKETS LOADED     >     12/30/2021, 15:24:19
-OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'BTC': 'USDC', 'USDT': 'BTC', 'USDC': 'USDT', 'stable': 'USDT'}
- > 1.0 USDT converts to: 2.111351582350117e-05 BTC
- > 2.111351582350117e-05 BTC converts to: 0.995695094906312 USDC
- > 0.995695094906312 USDC converts to: 1.0018184340321599 USDT
-So we can go from 1.0 USDT to 1.0018184340321599 USDT, an increase of 0.18184340321598658%     >     12/30/2021, 15:24:22
-We can move 2.1443 USDT through this conversion for a final profit of approximately: 0.0038992680951604 USDT
+MARKETS LOADED     >     12/30/2021, 16:21:08
+OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'BIX': 'ETH', 'DOGE': 'BIX', 'USDT': 'DOGE', 'USDC': 'USDT', 'ETH': 'USDC', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 5.750272244853276 DOGE
+ > 5.750272244853276 DOGE converts to: 25.150453915428365 BIX
+ > 25.150453915428365 BIX converts to: 0.0002690736402414454 ETH
+ > 0.0002690736402414454 ETH converts to: 0.999706618550001 USDC
+ > 0.999706618550001 USDC converts to: 1.0058546277980653 USDT
+So we can go from 1.0 USDT to 1.0058546277980653 USDT, an increase of 0.5854627798065337%     >     12/30/2021, 16:21:10
+We can move 2.1443 USDT through this conversion for a final profit of approximately: 0.012554078387391502 USDT
 The conversion which limits our transaction size the most is: USDC to USDT
 SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 1
-MARKETS LOADED     >     12/30/2021, 15:24:22
+MARKETS LOADED     >     12/30/2021, 16:21:10
+OPPURTUNITY FOUND AFTER 2 COMPROMISE(S)!  >  {'BIX': 'ETH', 'DOGE': 'BIX', 'ETH': 'DOGE', 'stable': 'USDT'}
+  >   OPPURTUNITY HAS NO STABLE STARTING POINT.
+OPPURTUNITY!  >  {'USDT': 'DOGE', 'USDC': 'USDT', 'ETH': 'USDC', 'BIX': 'ETH', 'DOGE': 'BIX', 'stable': 'USDC'}
+ > 1.0 USDC converts to: 1.002410606669345 USDT
+ > 1.002410606669345 USDT converts to: 5.764133889477269 DOGE
+ > 5.764133889477269 DOGE converts to: 25.21108176737395 BIX
+ > 25.21108176737395 BIX converts to: 0.0002697222709531564 ETH
+ > 0.0002697222709531564 ETH converts to: 1.0021165179920661 USDC
+So we can go from 1.0 USDC to 1.0021165179920661 USDC, an increase of 0.2116517992066136%     >     12/30/2021, 16:21:12
+We can move 6.728862159999999 USDC through this conversion for a final profit of approximately: 0.014241757827773 USDC
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 16:21:12
+OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'BIX': 'ETH', 'DOGE': 'BIX', 'ETH': 'DOGE', 'stable': 'USDC'}
+  >   OPPURTUNITY HAS NO STABLE STARTING POINT.
+
+binance     >     12/30/2021, 16:21:14
+MARKETS LOADED     >     12/30/2021, 16:21:15
+CONVERSION RATES LOADED (28)     >      (35.34s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 16:21:50
+MARKETS LOADED     >     12/30/2021, 16:21:52
+CONVERSION RATES LOADED (26)     >      (73.15s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 16:23:05
+MARKETS LOADED     >     12/30/2021, 16:23:07
+CONVERSION RATES LOADED (25)     >      (9.96s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 16:23:17
+MARKETS LOADED     >     12/30/2021, 16:23:17
+CONVERSION RATES LOADED (24)     >      (78.48s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 16:24:35
+MARKETS LOADED     >     12/30/2021, 16:24:35
+CONVERSION RATES LOADED (26)     >      (48.52s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 16:25:24
+MARKETS LOADED     >     12/30/2021, 16:25:24
+CONVERSION RATES LOADED (18)     >      (44.23s elapsed)
+OPPURTUNITY!  >  {'BTC': 'USDT', 'USD': 'BTC', 'BNB': 'USD', 'USDT': 'BNB', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 0.0019174324246551686 BNB
+ > 0.0019174324246551686 BNB converts to: 1.0020666079335085 USD
+ > 1.0020666079335085 USD converts to: 2.1142341540546572e-05 BTC
+ > 2.1142341540546572e-05 BTC converts to: 1.0009696988755648 USDT
+So we can go from 1.0 USDT to 1.0009696988755648 USDT, an increase of 0.09696988755647507%     >     12/30/2021, 16:26:08
+We can move 5208.599999999999 USDT through this conversion for a final profit of approximately: 5.05077356326656 USDT
+The conversion which limits our transaction size the most is: BNB to USD
+
+bitrue     >     12/30/2021, 16:26:08
+MARKETS LOADED     >     12/30/2021, 16:26:08
+CONVERSION RATES LOADED (26)     >      (56.50s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 16:27:05
+MARKETS LOADED     >     12/30/2021, 16:27:05
+CONVERSION RATES LOADED (27)     >      (88.59s elapsed)
+OPPURTUNITY!  >  {'ETH': 'DOGE', 'BIX': 'ETH', 'DOGE': 'BIX', 'stable': 'USDT'}
+  >   OPPURTUNITY HAS NO STABLE STARTING POINT.
+OPPURTUNITY!  >  {'ETH': 'DOGE', 'BIX': 'ETH', 'DOGE': 'BIX', 'stable': 'USDC'}
+  >   OPPURTUNITY HAS NO STABLE STARTING POINT.
+
+binance     >     12/30/2021, 16:28:33
+MARKETS LOADED     >     12/30/2021, 16:28:34
+CONVERSION RATES LOADED (28)     >      (31.70s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 16:29:05
+MARKETS LOADED     >     12/30/2021, 16:29:05
+CONVERSION RATES LOADED (26)     >      (72.62s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 16:30:18
+MARKETS LOADED     >     12/30/2021, 16:30:18
+CONVERSION RATES LOADED (25)     >      (9.93s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 16:30:28
+MARKETS LOADED     >     12/30/2021, 16:30:28
+CONVERSION RATES LOADED (24)     >      (78.35s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 16:31:46
+MARKETS LOADED     >     12/30/2021, 16:31:46
+CONVERSION RATES LOADED (26)     >      (39.89s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 16:32:26
+MARKETS LOADED     >     12/30/2021, 16:32:26
+CONVERSION RATES LOADED (18)     >      (44.26s elapsed)
+OPPURTUNITY!  >  {'BTC': 'USDT', 'USD': 'BTC', 'BNB': 'USD', 'USDT': 'BNB', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 0.0019193470955352863 BNB
+ > 0.0019193470955352863 BNB converts to: 1.0014174181517048 USD
+ > 1.0014174181517048 USD converts to: 2.115856949916245e-05 BTC
+ > 2.115856949916245e-05 BTC converts to: 1.0010295428041263 USDT
+So we can go from 1.0 USDT to 1.0010295428041263 USDT, an increase of 0.102954280412626%     >     12/30/2021, 16:33:10
+We can move 11447.7 USDT through this conversion for a final profit of approximately: 11.785897158796187 USDT
+The conversion which limits our transaction size the most is: BNB to USD
+
+bitrue     >     12/30/2021, 16:33:11
+MARKETS LOADED     >     12/30/2021, 16:33:11
+CONVERSION RATES LOADED (26)     >      (56.80s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 16:34:07
+MARKETS LOADED     >     12/30/2021, 16:34:07
+CONVERSION RATES LOADED (27)     >      (88.57s elapsed)
+OPPURTUNITY!  >  {'ETH': 'BTC', 'BIX': 'ETH', 'DOGE': 'BIX', 'USDT': 'DOGE', 'USDC': 'USDT', 'BTC': 'USDC', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 5.768052617586203 DOGE
+ > 5.768052617586203 DOGE converts to: 25.22887768408641 BIX
+ > 25.22887768408641 BIX converts to: 0.0002699126616358596 ETH
+ > 0.0002699126616358596 ETH converts to: 2.117833482644834e-05 BTC
+ > 2.117833482644834e-05 BTC converts to: 0.9996408821103503 USDC
+ > 0.9996408821103503 USDC converts to: 1.011499138544185 USDT
+So we can go from 1.0 USDT to 1.011499138544185 USDT, an increase of 1.149913854418494%     >     12/30/2021, 16:35:36
+We can move 0.11799999999999998 USDT through this conversion for a final profit of approximately: 0.0013568983482138226 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 16:35:36
+OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'ETH': 'DOGE', 'BIX': 'ETH', 'DOGE': 'BIX', 'stable': 'USDT'}
+  >   OPPURTUNITY HAS NO STABLE STARTING POINT.
+OPPURTUNITY!  >  {'USDT': 'DOGE', 'USDC': 'USDT', 'ETH': 'USDC', 'BIX': 'ETH', 'DOGE': 'BIX', 'stable': 'USDC'}
+ > 1.0 USDC converts to: 1.006149813489263 USDT
+ > 1.006149813489263 USDT converts to: 5.803525065380613 DOGE
+ > 5.803525065380613 DOGE converts to: 25.384030576386973 BIX
+ > 25.384030576386973 BIX converts to: 0.00027157257416331074 ETH
+ > 0.00027157257416331074 ETH converts to: 1.0060639507979108 USDC
+So we can go from 1.0 USDC to 1.0060639507979108 USDC, an increase of 0.6063950797910778%     >     12/30/2021, 16:35:38
+We can move 2.1269311699999998 USDC through this conversion for a final profit of approximately: 0.012897605965422802 USDC
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 16:35:38
+OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'ETH': 'DOGE', 'BIX': 'ETH', 'DOGE': 'BIX', 'stable': 'USDC'}
+  >   OPPURTUNITY HAS NO STABLE STARTING POINT.
+
+binance     >     12/30/2021, 16:35:40
+MARKETS LOADED     >     12/30/2021, 16:35:40
+CONVERSION RATES LOADED (28)     >      (36.16s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 16:36:16
+MARKETS LOADED     >     12/30/2021, 16:36:16
+CONVERSION RATES LOADED (26)     >      (72.76s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 16:37:29
+MARKETS LOADED     >     12/30/2021, 16:37:29
+CONVERSION RATES LOADED (25)     >      (9.87s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 16:37:39
+MARKETS LOADED     >     12/30/2021, 16:37:39
+CONVERSION RATES LOADED (24)     >      (78.36s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 16:38:57
+MARKETS LOADED     >     12/30/2021, 16:38:57
+CONVERSION RATES LOADED (26)     >      (41.74s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 16:39:39
+MARKETS LOADED     >     12/30/2021, 16:39:39
+CONVERSION RATES LOADED (18)     >      (44.32s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 16:40:23
+MARKETS LOADED     >     12/30/2021, 16:40:23
+CONVERSION RATES LOADED (26)     >      (56.55s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 16:41:20
+MARKETS LOADED     >     12/30/2021, 16:41:20
+CONVERSION RATES LOADED (27)     >      (88.57s elapsed)
+OPPURTUNITY!  >  {'LINK': 'BTC', 'BIX': 'ETH', 'USDT': 'BIX', 'USDC': 'USDT', 'ETH': 'USDC', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 25.30425963488843 BIX
+ > 25.30425963488843 BIX converts to: 0.0002707191399594321 ETH
+ > 0.0002707191399594321 ETH converts to: 1.0047476441138412 USDC
+ > 1.0047476441138412 USDC converts to: 1.0166664795960798 USDT
+So we can go from 1.0 USDT to 1.0166664795960798 USDT, an increase of 1.6666479596079808%     >     12/30/2021, 16:42:49
+We can move 0.11799999999999998 USDT through this conversion for a final profit of approximately: 0.001966644592337417 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 16:42:49
+OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'LINK': 'USDT', 'BIX': 'LINK', 'USDT': 'BIX', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 25.30425963488843 BIX
+ > 25.30425963488843 BIX converts to: 0.04976949504866135 LINK
+ > 0.04976949504866135 LINK converts to: 1.0056676003177458 USDT
+So we can go from 1.0 USDT to 1.0056676003177458 USDT, an increase of 0.5667600317745825%     >     12/30/2021, 16:42:51
+We can move 0.6321333604698114 USDT through this conversion for a final profit of approximately: 0.003582679234656439 USDT
+The conversion which limits our transaction size the most is: BIX to LINK
+SEARCHING FOR COMPROMISE ON LINK/BIX >  RECURSIVE CALLS: 1
+MARKETS LOADED     >     12/30/2021, 16:42:51
+OPPURTUNITY FOUND AFTER 2 COMPROMISE(S)!  >  {'ETH': 'DOGE', 'BIX': 'ETH', 'DOGE': 'BIX', 'stable': 'USDT'}
+  >   OPPURTUNITY HAS NO STABLE STARTING POINT.
+OPPURTUNITY!  >  {'LINK': 'BTC', 'BIX': 'ETH', 'USDT': 'BIX', 'USDC': 'USDT', 'ETH': 'USDC', 'stable': 'USDC'}
+ > 1.0 USDC converts to: 1.006149813489263 USDT
+ > 1.006149813489263 USDT converts to: 25.45987611212688 BIX
+ > 25.45987611212688 BIX converts to: 0.0002723840121781563 ETH
+ > 0.0002723840121781563 ETH converts to: 1.0109266547289177 USDC
+So we can go from 1.0 USDC to 1.0109266547289177 USDC, an increase of 1.092665472891774%     >     12/30/2021, 16:42:53
+We can move 2.1269311699999998 USDC through this conversion for a final profit of approximately: 0.023240242526763037 USDC
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 16:42:53
+OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'ETH': 'DOGE', 'BIX': 'ETH', 'DOGE': 'BIX', 'stable': 'USDC'}
+  >   OPPURTUNITY HAS NO STABLE STARTING POINT.
+
+binance     >     12/30/2021, 16:42:55
+MARKETS LOADED     >     12/30/2021, 16:42:55
+CONVERSION RATES LOADED (28)     >      (32.17s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 16:43:27
+MARKETS LOADED     >     12/30/2021, 16:43:27
+CONVERSION RATES LOADED (26)     >      (73.33s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 16:44:40
+MARKETS LOADED     >     12/30/2021, 16:44:40
+CONVERSION RATES LOADED (25)     >      (10.05s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 16:44:50
+MARKETS LOADED     >     12/30/2021, 16:44:50
+CONVERSION RATES LOADED (24)     >      (78.33s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 16:46:09
+MARKETS LOADED     >     12/30/2021, 16:46:09
+CONVERSION RATES LOADED (26)     >      (35.22s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 16:46:44
+MARKETS LOADED     >     12/30/2021, 16:46:44
+CONVERSION RATES LOADED (18)     >      (44.29s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 16:47:28
+MARKETS LOADED     >     12/30/2021, 16:47:28
+CONVERSION RATES LOADED (26)     >      (56.57s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 16:48:25
+MARKETS LOADED     >     12/30/2021, 16:48:25
+CONVERSION RATES LOADED (27)     >      (88.56s elapsed)
+OPPURTUNITY!  >  {'ETH': 'BTC', 'BIX': 'ETH', 'DOGE': 'BIX', 'USDT': 'DOGE', 'USDC': 'USDT', 'BTC': 'USDC', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 5.773391491478751 DOGE
+ > 5.773391491478751 DOGE converts to: 25.22565574971943 BIX
+ > 25.22565574971943 BIX converts to: 0.0002698781915777184 ETH
+ > 0.0002698781915777184 ETH converts to: 2.117218803438643e-05 BTC
+ > 2.117218803438643e-05 BTC converts to: 0.999303627159337 USDC
+ > 0.999303627159337 USDC converts to: 1.0111578829007586 USDT
+So we can go from 1.0 USDT to 1.0111578829007586 USDT, an increase of 1.1157882900758587%     >     12/30/2021, 16:49:53
+We can move 0.11799999999999998 USDT through this conversion for a final profit of approximately: 0.001316630182289513 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 16:49:54
+OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'ETH': 'DOGE', 'BIX': 'ETH', 'DOGE': 'BIX', 'stable': 'USDT'}
+  >   OPPURTUNITY HAS NO STABLE STARTING POINT.
+OPPURTUNITY!  >  {'USDT': 'BTC', 'USDC': 'USDT', 'ETH': 'DOGE', 'BIX': 'ETH', 'DOGE': 'BIX', 'stable': 'USDC'}
+ > 1.0 USDC converts to: 1.006149813489263 USDT
+ > 1.006149813489263 USDT converts to: 2.121822222119046e-05 BTC
+ 1> 2.121822222119046e-05 BTC converts to: 1.0014763893590624 USDC
+  >   OPPURTUNITY EXPLORATION ERROR Traceback (most recent call last):
+  File "c:\Users\antoine\Documents\Projects\Git\crypto_bot\arbitrage_bot.py", line 364, in exploreOppurtunities
+    if (maxAmount > maxSize[currentCurrency][nextCurrency] * rate / (1-conversion_rates['fee'])): limiting_conversion = currentCurrency + " to " + stableCurrency
+KeyError: None
+
+
+binance     >     12/30/2021, 16:49:56
+MARKETS LOADED     >     12/30/2021, 16:49:56
+CONVERSION RATES LOADED (28)     >      (33.96s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 16:50:30
+MARKETS LOADED     >     12/30/2021, 16:50:30
+CONVERSION RATES LOADED (26)     >      (72.86s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 16:51:43
+MARKETS LOADED     >     12/30/2021, 16:51:43
+CONVERSION RATES LOADED (25)     >      (10.02s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 16:51:53
+MARKETS LOADED     >     12/30/2021, 16:51:53
+CONVERSION RATES LOADED (24)     >      (78.35s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 16:53:11
+MARKETS LOADED     >     12/30/2021, 16:53:11
+CONVERSION RATES LOADED (26)     >      (44.88s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 16:53:56
+MARKETS LOADED     >     12/30/2021, 16:53:56
+CONVERSION RATES LOADED (18)     >      (44.20s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 16:54:40
+MARKETS LOADED     >     12/30/2021, 16:54:40
+CONVERSION RATES LOADED (26)     >      (56.89s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 16:55:37
+MARKETS LOADED     >     12/30/2021, 16:55:37
+CONVERSION RATES LOADED (27)     >      (88.62s elapsed)
+OPPURTUNITY!  >  {'ETH': 'DOGE', 'BIX': 'ETH', 'DOGE': 'BIX', 'stable': 'USDT'}
+  >   OPPURTUNITY HAS NO STABLE STARTING POINT.
+OPPURTUNITY!  >  {'ETH': 'DOGE', 'BIX': 'ETH', 'DOGE': 'BIX', 'stable': 'USDC'}
+  >   OPPURTUNITY HAS NO STABLE STARTING POINT.
+
+binance     >     12/30/2021, 16:57:06
+MARKETS LOADED     >     12/30/2021, 16:57:06
+CONVERSION RATES LOADED (28)     >      (31.94s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 16:57:38
+MARKETS LOADED     >     12/30/2021, 16:57:38
+CONVERSION RATES LOADED (26)     >      (72.60s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 16:58:51
+MARKETS LOADED     >     12/30/2021, 16:58:51
+CONVERSION RATES LOADED (25)     >      (10.28s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 16:59:01
+MARKETS LOADED     >     12/30/2021, 16:59:01
+CONVERSION RATES LOADED (24)     >      (78.38s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 17:00:19
+MARKETS LOADED     >     12/30/2021, 17:00:19
+CONVERSION RATES LOADED (26)     >      (33.94s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 17:00:53
+MARKETS LOADED     >     12/30/2021, 17:00:53
+CONVERSION RATES LOADED (18)     >      (44.19s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 17:01:38
+MARKETS LOADED     >     12/30/2021, 17:01:38
+  >   CONVERSION LOADING ERROR 
+CONVERSION RATES LOADED (26)     >      (45.52s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 17:02:44
+MARKETS LOADED     >     12/30/2021, 17:02:44
+CONVERSION RATES LOADED (27)     >      (88.67s elapsed)
+OPPURTUNITY!  >  {'ETH': 'BTC', 'BIX': 'ETH', 'USDT': 'BIX', 'USDC': 'USDT', 'BTC': 'USDC', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 25.322879399152527 BIX
+ > 25.322879399152527 BIX converts to: 0.0002709183446245974 ETH
+ > 0.0002709183446245974 ETH converts to: 2.1263490090067524e-05 BTC
+ > 2.1263490090067524e-05 BTC converts to: 0.9997656215967439 USDC
+ > 0.9997656215967439 USDC converts to: 1.0116253577547911 USDT
+So we can go from 1.0 USDT to 1.0116253577547911 USDT, an increase of 1.1625357754791121%     >     12/30/2021, 17:04:13
+We can move 0.11799999999999998 USDT through this conversion for a final profit of approximately: 0.0013717922150653522 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 17:04:13
+OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'ETH': 'BTC', 'BIX': 'ETH', 'USDT': 'BIX', 'USDC': 'USDT', 'BTC': 'USDC', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 25.322879399152527 BIX
+ > 25.322879399152527 BIX converts to: 0.0002709183446245974 ETH
+ > 0.0002709183446245974 ETH converts to: 2.1263490090067524e-05 BTC
+ > 2.1263490090067524e-05 BTC converts to: 0.9997656215967439 USDC
+ > 0.9997656215967439 USDC converts to: 1.005913993702541 USDT
+So we can go from 1.0 USDT to 1.005913993702541 USDT, an increase of 0.5913993702540976%     >     12/30/2021, 17:04:14
+We can move 2.1443 USDT through this conversion for a final profit of approximately: 0.012681376696358614 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 1
+MARKETS LOADED     >     12/30/2021, 17:04:14
+OPPURTUNITY FOUND AFTER 2 COMPROMISE(S)!  >  {'ETH': 'DOGE', 'BIX': 'ETH', 'DOGE': 'BIX', 'stable': 'USDT'}
+  >   OPPURTUNITY HAS NO STABLE STARTING POINT.
+OPPURTUNITY!  >  {'USDT': 'BIX', 'USDC': 'USDT', 'ETH': 'USDC', 'BIX': 'ETH', 'stable': 'USDC'}
+ > 1.0 USDC converts to: 1.002410606669345 USDT
+ > 1.002410606669345 USDT converts to: 25.383922901119142 BIX
+ > 25.383922901119142 BIX converts to: 0.0002715714221929973 ETH
+ > 0.0002715714221929973 ETH converts to: 1.0045771585368013 USDC
+So we can go from 1.0 USDC to 1.0045771585368013 USDC, an increase of 0.45771585368012957%     >     12/30/2021, 17:04:17
+We can move 6.728862159999999 USDC through this conversion for a final profit of approximately: 0.030799068878603203 USDC
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 17:04:17
+OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'ETH': 'USDC', 'BIX': 'ETH', 'USDT': 'BIX', 'USDC': 'USDT', 'stable': 'USDC'}
+ > 1.0 USDC converts to: 1.006149813489263 USDT
+ > 1.006149813489263 USDT converts to: 25.478610384468414 BIX
+ > 25.478610384468414 BIX converts to: 0.0002725844419148585 ETH
+ > 0.0002725844419148585 ETH converts to: 1.0083244470604291 USDC
+So we can go from 1.0 USDC to 1.0083244470604291 USDC, an increase of 0.8324447060429119%     >     12/30/2021, 17:04:18
+We can move 2.1269311699999998 USDC through this conversion for a final profit of approximately: 0.017705525925841563 USDC
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 1
+MARKETS LOADED     >     12/30/2021, 17:04:18
+OPPURTUNITY FOUND AFTER 2 COMPROMISE(S)!  >  {'ETH': 'DOGE', 'BIX': 'ETH', 'DOGE': 'BIX', 'stable': 'USDC'}
+  >   OPPURTUNITY HAS NO STABLE STARTING POINT.
+
+binance     >     12/30/2021, 17:04:20
+MARKETS LOADED     >     12/30/2021, 17:04:20
+CONVERSION RATES LOADED (28)     >      (34.72s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 17:04:55
+MARKETS LOADED     >     12/30/2021, 17:04:55
+CONVERSION RATES LOADED (26)     >      (72.61s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 17:06:08
+MARKETS LOADED     >     12/30/2021, 17:06:08
+CONVERSION RATES LOADED (25)     >      (9.93s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 17:06:18
+MARKETS LOADED     >     12/30/2021, 17:06:18
+CONVERSION RATES LOADED (24)     >      (78.32s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 17:07:36
+MARKETS LOADED     >     12/30/2021, 17:07:36
+CONVERSION RATES LOADED (26)     >      (42.93s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 17:08:19
+MARKETS LOADED     >     12/30/2021, 17:08:19
+CONVERSION RATES LOADED (18)     >      (44.21s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 17:09:03
+MARKETS LOADED     >     12/30/2021, 17:09:03
+CONVERSION RATES LOADED (26)     >      (56.62s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 17:10:00
+MARKETS LOADED     >     12/30/2021, 17:10:00
+CONVERSION RATES LOADED (27)     >      (88.70s elapsed)
+OPPURTUNITY!  >  {'LINK': 'BIX', 'ETH': 'LINK', 'BIX': 'ETH', 'stable': 'USDT'}
+  >   OPPURTUNITY HAS NO STABLE STARTING POINT.
+OPPURTUNITY!  >  {'LINK': 'BIX', 'ETH': 'LINK', 'BIX': 'ETH', 'stable': 'USDC'}
+  >   OPPURTUNITY HAS NO STABLE STARTING POINT.
+
+binance     >     12/30/2021, 17:11:29
+MARKETS LOADED     >     12/30/2021, 17:11:29
+CONVERSION RATES LOADED (28)     >      (33.29s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 17:12:02
+MARKETS LOADED     >     12/30/2021, 17:12:02
+CONVERSION RATES LOADED (26)     >      (73.21s elapsed)
+OPPURTUNITY!  >  {'BTC': 'BNB', 'USDT': 'BTC', 'ETH': 'USDT', 'BNB': 'ETH', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 2.1194486463321232e-05 BTC
+ > 2.1194486463321232e-05 BTC converts to: 0.0019245857809001984 BNB
+ > 0.0019245857809001984 BNB converts to: 0.0002694354720085224 ETH
+ > 0.0002694354720085224 ETH converts to: 1.0003151998824729 USDT
+So we can go from 1.0 USDT to 1.0003151998824729 USDT, an increase of 0.03151998824728608%     >     12/30/2021, 17:13:15
+We can move 0.10371070992743997 USDT through this conversion for a final profit of approximately: 3.2689603580306034e-05 USDT
+The conversion which limits our transaction size the most is: BTC to BNB
+SEARCHING FOR COMPROMISE ON BNB/BTC >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 17:13:15
+OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'USDT': 'BNB', 'ETH': 'USDT', 'BNB': 'ETH', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 0.0019256780786706007 BNB
+ > 0.0019256780786706007 BNB converts to: 0.0002695883899861272 ETH
+ > 0.0002695883899861272 ETH converts to: 1.0008829283118186 USDT
+So we can go from 1.0 USDT to 1.0008829283118186 USDT, an increase of 0.0882928311818576%     >     12/30/2021, 17:13:17
+We can move 4.824481949999998 USDT through this conversion for a final profit of approximately: 0.00425967170351269 USDT
+The conversion which limits our transaction size the most is: BNB to ETH
+SEARCHING FOR COMPROMISE ON BNB/ETH >  RECURSIVE CALLS: 1
+MARKETS LOADED     >     12/30/2021, 17:13:17
+  >   NO OPPURTUNITIES POSSIBLE WITH COMPROMISE.
+OPPURTUNITY!  >  {'BNB': 'ETH', 'USDT': 'BNB', 'ETH': 'USDT', 'stable': 'USDC'}
+ > 1.0 USDT converts to: 0.0019256780786706007 BNB
+ > 0.0019256780786706007 BNB converts to: 0.0002673271344643755 ETH
+ > 0.0002673271344643755 ETH converts to: 0.9924877149705149 USDT
+So we can go from 1.0 USDT to 0.9924877149705149 USDT, an increase of -0.7512285029485088%     >     12/30/2021, 17:13:19
+We can move 300.89141399999994 USDT through this conversion for a final profit of approximately: -2.2603820648927995 USDT
+The conversion which limits our transaction size the most is: USDT to BNB
+  >   OPPURTUNITY EXPLORATION ERROR Traceback (most recent call last):
+  File "c:\Users\antoine\Documents\Projects\Git\crypto_bot\arbitrage_bot.py", line 379, in exploreOppurtunities
+    if possible_profit < 0 and not reverse and math.abs(possible_profit) > min_profit:
+AttributeError: module 'math' has no attribute 'abs'
+
+
+delta     >     12/30/2021, 17:13:19
+MARKETS LOADED     >     12/30/2021, 17:13:19
+CONVERSION RATES LOADED (25)     >      (10.18s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 17:13:29
+MARKETS LOADED     >     12/30/2021, 17:13:29
+CONVERSION RATES LOADED (24)     >      (78.35s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 17:14:48
+MARKETS LOADED     >     12/30/2021, 17:14:48
+CONVERSION RATES LOADED (26)     >      (45.07s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 17:15:33
+MARKETS LOADED     >     12/30/2021, 17:15:33
+CONVERSION RATES LOADED (18)     >      (44.23s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 17:16:17
+MARKETS LOADED     >     12/30/2021, 17:16:17
+CONVERSION RATES LOADED (26)     >      (56.53s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 17:17:14
+MARKETS LOADED     >     12/30/2021, 17:17:14
+CONVERSION RATES LOADED (27)     >      (88.61s elapsed)
+OPPURTUNITY!  >  {'BTC': 'USDC', 'USDT': 'BTC', 'USDC': 'USDT', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 2.112974254742549e-05 BTC
+ > 2.112974254742549e-05 BTC converts to: 0.9958608159900074 USDC
+ > 0.9958608159900074 USDC converts to: 1.0076742313272102 USDT
+So we can go from 1.0 USDT to 1.0076742313272102 USDT, an increase of 0.7674231327210235%     >     12/30/2021, 17:18:42
+We can move 0.11799999999999998 USDT through this conversion for a final profit of approximately: 0.0009055592966108075 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 17:18:42
+OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'BTC': 'USDC', 'USDT': 'BTC', 'USDC': 'USDT', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 2.112974254742549e-05 BTC
+ > 2.112974254742549e-05 BTC converts to: 0.9958608159900074 USDC
+ > 0.9958608159900074 USDC converts to: 1.0019851742696113 USDT
+So we can go from 1.0 USDT to 1.0019851742696113 USDT, an increase of 0.19851742696113117%     >     12/30/2021, 17:18:44
+We can move 2.1443 USDT through this conversion for a final profit of approximately: 0.004256809186327535 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 1
+MARKETS LOADED     >     12/30/2021, 17:18:44
   >   NO OPPURTUNITIES POSSIBLE WITH COMPROMISE.
 OPPURTUNITY!  >  {'ETH': 'BTC', 'USDT': 'ETH', 'USDC': 'USDT', 'BTC': 'USDC', 'stable': 'USDC'}
  > 1.0 USDC converts to: 1.002410606669345 USDT
- > 1.002410606669345 USDT converts to: 0.00026957994531256086 ETH
- > 0.00026957994531256086 ETH converts to: 2.1116693779640934e-05 BTC
- > 2.1116693779640934e-05 BTC converts to: 0.9958449645616855 USDC
-So we can go from 1.0 USDC to 0.9958449645616855 USDC, an increase of -0.4155035438314525%     >     12/30/2021, 15:24:23
-We can move 6.728862159999999 USDC through this conversion for a final profit of approximately: -0.027958660734333618 USDC
+ > 1.002410606669345 USDT converts to: 0.0002684305557897127 ETH
+ > 0.0002684305557897127 ETH converts to: 2.1131695740536368e-05 BTC
+ > 2.1131695740536368e-05 BTC converts to: 0.9959528714649294 USDC
+So we can go from 1.0 USDC to 0.9959528714649294 USDC, an increase of -0.404712853507061%     >     12/30/2021, 17:18:46
+We can move 6.728862159999999 USDC through this conversion for a final profit of approximately: -0.027232570056292857 USDC
 The conversion which limits our transaction size the most is: USDC to USDT
-SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 0
-MARKETS LOADED     >     12/30/2021, 15:24:23
-OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'USDT': 'ETH', 'USDC': 'USDT', 'ETH': 'USDC', 'stable': 'USDC'}
- > 1.0 USDC converts to: 1.006149813489263 USDT
- > 1.006149813489263 USDT converts to: 0.0002705855363980095 ETH
- > 0.0002705855363980095 ETH converts to: 1.0014244230410612 USDC
-So we can go from 1.0 USDC to 1.0014244230410612 USDC, an increase of 0.14244230410611625%     >     12/30/2021, 15:24:25
-We can move 2.1269311699999998 USDC through this conversion for a final profit of approximately: 0.003029649765299176 USDC
-The conversion which limits our transaction size the most is: USDC to USDT
-SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 1
-MARKETS LOADED     >     12/30/2021, 15:24:25
-  >   NO OPPURTUNITIES POSSIBLE WITH COMPROMISE.
+  >   OPPURTUNITY EXPLORATION ERROR Traceback (most recent call last):
+  File "c:\Users\antoine\Documents\Projects\Git\crypto_bot\arbitrage_bot.py", line 379, in exploreOppurtunities
+    if possible_profit < 0 and not reverse and math.abs(possible_profit) > min_profit:
+AttributeError: module 'math' has no attribute 'abs'
 
-binance     >     12/30/2021, 15:24:27
-MARKETS LOADED     >     12/30/2021, 15:24:29
-CONVERSION RATES LOADED (28)     >      (30.54s elapsed)
+
+binance     >     12/30/2021, 17:18:46
+MARKETS LOADED     >     12/30/2021, 17:18:46
+CONVERSION RATES LOADED (28)     >      (31.70s elapsed)
 NO ARBITRAGE OPPURTUNITIES :(
 
-btcalpha     >     12/30/2021, 15:25:00
-MARKETS LOADED     >     12/30/2021, 15:25:00
+lbank     >     12/30/2021, 17:19:18
+MARKETS LOADED     >     12/30/2021, 17:19:18
+CONVERSION RATES LOADED (26)     >      (72.61s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 17:20:31
+MARKETS LOADED     >     12/30/2021, 17:20:31
+CONVERSION RATES LOADED (25)     >      (10.28s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 17:20:41
+MARKETS LOADED     >     12/30/2021, 17:20:41
+CONVERSION RATES LOADED (24)     >      (78.32s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 17:21:59
+MARKETS LOADED     >     12/30/2021, 17:21:59
+CONVERSION RATES LOADED (26)     >      (47.87s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 17:22:47
+MARKETS LOADED     >     12/30/2021, 17:22:47
+CONVERSION RATES LOADED (18)     >      (44.24s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 17:23:32
+MARKETS LOADED     >     12/30/2021, 17:23:32
+CONVERSION RATES LOADED (26)     >      (56.51s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 17:24:28
+MARKETS LOADED     >     12/30/2021, 17:24:28
+CONVERSION RATES LOADED (27)     >      (88.52s elapsed)
+OPPURTUNITY!  >  {'BIX': 'BTC', 'USDT': 'BIX', 'USDC': 'USDT', 'BTC': 'USDC', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 25.854252480505686 BIX
+ > 25.854252480505686 BIX converts to: 2.1158086059946648e-05 BTC
+ > 2.1158086059946648e-05 BTC converts to: 0.9971029132459936 USDC
+ > 0.9971029132459936 USDC converts to: 1.00893106298236 USDT
+So we can go from 1.0 USDT to 1.00893106298236 USDT, an increase of 0.8931062982360016%     >     12/30/2021, 17:25:57
+We can move 0.11799999999999998 USDT through this conversion for a final profit of approximately: 0.0010538654319184818 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 17:25:57
+OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'BIX': 'BTC', 'USDT': 'BIX', 'USDC': 'USDT', 'BTC': 'USDC', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 25.854252480505686 BIX
+ > 25.854252480505686 BIX converts to: 2.1158086059946648e-05 BTC
+ > 2.1158086059946648e-05 BTC converts to: 0.9971029132459936 USDC
+ > 0.9971029132459936 USDC converts to: 1.0032349101920572 USDT
+So we can go from 1.0 USDT to 1.0032349101920572 USDT, an increase of 0.3234910192057239%     >     12/30/2021, 17:25:59
+We can move 2.1443 USDT through this conversion for a final profit of approximately: 0.006936617924828336 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 1
+MARKETS LOADED     >     12/30/2021, 17:25:59
+OPPURTUNITY FOUND AFTER 2 COMPROMISE(S)!  >  {'BIX': 'DOGE', 'USDT': 'BIX', 'DOGE': 'USDT', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 25.854252480505686 BIX
+ > 25.854252480505686 BIX converts to: 5.8226224888003815 DOGE
+ > 5.8226224888003815 DOGE converts to: 1.0032884650549785 USDT
+So we can go from 1.0 USDT to 1.0032884650549785 USDT, an increase of 0.32884650549784844%     >     12/30/2021, 17:26:01
+We can move 0.2402271112712 USDT through this conversion for a final profit of approximately: 0.0007899784606737692 USDT
+The conversion which limits our transaction size the most is: BIX to DOGE
+OPPURTUNITY!  >  {'ETH': 'BTC', 'USDT': 'ETH', 'USDC': 'USDT', 'BTC': 'USDC', 'stable': 'USDC'}
+ > 1.0 USDC converts to: 1.002410606669345 USDT
+ > 1.002410606669345 USDT converts to: 0.0002679768415817096 ETH
+ > 0.0002679768415817096 ETH converts to: 2.113065699417023e-05 BTC
+ > 2.113065699417023e-05 BTC converts to: 0.9958102820828634 USDC
+So we can go from 1.0 USDC to 0.9958102820828634 USDC, an increase of -0.4189717917136626%     >     12/30/2021, 17:26:01
+We can move 6.728862159999999 USDC through this conversion for a final profit of approximately: -0.028192034353694655 USDC
+The conversion which limits our transaction size the most is: USDC to USDT
+  >   OPPURTUNITY EXPLORATION ERROR Traceback (most recent call last):
+  File "c:\Users\antoine\Documents\Projects\Git\crypto_bot\arbitrage_bot.py", line 379, in exploreOppurtunities
+    if possible_profit < 0 and not reverse and math.abs(possible_profit) > min_profit:
+AttributeError: module 'math' has no attribute 'abs'
+
+
+binance     >     12/30/2021, 17:26:01
+MARKETS LOADED     >     12/30/2021, 17:26:01
+CONVERSION RATES LOADED (28)     >      (29.75s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 17:26:31
+MARKETS LOADED     >     12/30/2021, 17:26:31
+CONVERSION RATES LOADED (26)     >      (72.59s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 17:27:43
+MARKETS LOADED     >     12/30/2021, 17:27:43
+CONVERSION RATES LOADED (25)     >      (9.98s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 17:27:53
+MARKETS LOADED     >     12/30/2021, 17:27:53
+CONVERSION RATES LOADED (24)     >      (78.46s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 17:29:12
+MARKETS LOADED     >     12/30/2021, 17:29:12
+CONVERSION RATES LOADED (26)     >      (39.48s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 17:29:51
+MARKETS LOADED     >     12/30/2021, 17:29:51
+CONVERSION RATES LOADED (18)     >      (44.23s elapsed)
+OPPURTUNITY!  >  {'USDT': 'ETH', 'BTC': 'USDT', 'USD': 'BTC', 'ETH': 'USD', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 0.0002678224520692936 ETH
+ > 0.0002678224520692936 ETH converts to: 1.0005662279639327 USD
+ > 1.0005662279639327 USD converts to: 2.1192776809212966e-05 BTC
+ > 2.1192776809212966e-05 BTC converts to: 1.000190786199939 USDT
+So we can go from 1.0 USDT to 1.000190786199939 USDT, an increase of 0.019078619993906365%     >     12/30/2021, 17:30:36
+We can move 78335.25000000001 USDT through this conversion for a final profit of approximately: 14.945284668776539 USDT
+The conversion which limits our transaction size the most is: ETH to USD
+
+bitrue     >     12/30/2021, 17:30:36
+MARKETS LOADED     >     12/30/2021, 17:30:36
+CONVERSION RATES LOADED (26)     >      (56.47s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 17:31:32
+MARKETS LOADED     >     12/30/2021, 17:31:32
+CONVERSION RATES LOADED (27)     >      (88.53s elapsed)
+OPPURTUNITY!  >  {'BIX': 'DOGE', 'USDT': 'BTC', 'USDC': 'USDT', 'BTC': 'USDC', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 2.111512397201295e-05 BTC
+ > 2.111512397201295e-05 BTC converts to: 0.9957304738394621 USDC
+ > 0.9957304738394621 USDC converts to: 1.0075423429907566 USDT
+So we can go from 1.0 USDT to 1.0075423429907566 USDT, an increase of 0.7542342990756623%     >     12/30/2021, 17:33:01
+We can move 0.11799999999999998 USDT through this conversion for a final profit of approximately: 0.0008899964729092814 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 17:33:01
+OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'BIX': 'DOGE', 'USDT': 'BIX', 'USDC': 'USDT', 'ETH': 'USDC', 'DOGE': 'ETH', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 25.854252480505686 BIX
+ > 25.854252480505686 BIX converts to: 5.8226224888003815 DOGE
+ > 5.8226224888003815 DOGE converts to: 0.0002681184900299832 ETH
+ > 0.0002681184900299832 ETH converts to: 1.0013061700254653 USDC
+ > 1.0013061700254653 USDC converts to: 1.0074640162167703 USDT
+So we can go from 1.0 USDT to 1.0074640162167703 USDT, an increase of 0.7464016216770286%     >     12/30/2021, 17:33:03
+We can move 0.2402271112712 USDT through this conversion for a final profit of approximately: 0.0017930590542361167 USDT
+The conversion which limits our transaction size the most is: BIX to DOGE
+SEARCHING FOR COMPROMISE ON DOGE/BIX >  RECURSIVE CALLS: 1
+MARKETS LOADED     >     12/30/2021, 17:33:03
+OPPURTUNITY FOUND AFTER 2 COMPROMISE(S)!  >  {'BIX': 'DOGE', 'USDT': 'BTC', 'USDC': 'USDT', 'BTC': 'USDC', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 2.111512397201295e-05 BTC
+ > 2.111512397201295e-05 BTC converts to: 0.9957304738394621 USDC
+ > 0.9957304738394621 USDC converts to: 1.0018540305391503 USDT
+So we can go from 1.0 USDT to 1.0018540305391503 USDT, an increase of 0.1854030539150342%     >     12/30/2021, 17:33:05
+We can move 2.1443 USDT through this conversion for a final profit of approximately: 0.003975597685100078 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+OPPURTUNITY!  >  {'ETH': 'BTC', 'USDT': 'ETH', 'USDC': 'USDT', 'BTC': 'USDC', 'stable': 'USDC'}
+ > 1.0 USDC converts to: 1.006149813489263 USDT
+ > 1.006149813489263 USDT converts to: 0.00026818981014609144 ETH
+ > 0.00026818981014609144 ETH converts to: 2.1167936301871243e-05 BTC
+ > 2.1167936301871243e-05 BTC converts to: 0.9982209563156277 USDC
+So we can go from 1.0 USDC to 0.9982209563156277 USDC, an increase of -0.17790436843723167%     >     12/30/2021, 17:33:05
+We can move 2.1269311699999998 USDC through this conversion for a final profit of approximately: -0.003783903465083122 USDC
+The conversion which limits our transaction size the most is: USDC to USDT
+  >   OPPURTUNITY EXPLORATION ERROR Traceback (most recent call last):
+  File "c:\Users\antoine\Documents\Projects\Git\crypto_bot\arbitrage_bot.py", line 379, in exploreOppurtunities
+    if possible_profit < 0 and not reverse and math.abs(possible_profit) > min_profit:
+AttributeError: module 'math' has no attribute 'abs'
+
+
+binance     >     12/30/2021, 17:33:05
+MARKETS LOADED     >     12/30/2021, 17:33:05
+CONVERSION RATES LOADED (28)     >      (34.89s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 17:33:40
+MARKETS LOADED     >     12/30/2021, 17:33:40
+CONVERSION RATES LOADED (26)     >      (72.84s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 17:34:53
+MARKETS LOADED     >     12/30/2021, 17:34:53
+CONVERSION RATES LOADED (25)     >      (9.91s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 17:35:03
+MARKETS LOADED     >     12/30/2021, 17:35:03
+CONVERSION RATES LOADED (24)     >      (78.39s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 17:36:21
+MARKETS LOADED     >     12/30/2021, 17:36:21
+CONVERSION RATES LOADED (26)     >      (34.92s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 17:36:56
+MARKETS LOADED     >     12/30/2021, 17:36:56
+CONVERSION RATES LOADED (18)     >      (44.26s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 17:37:40
+MARKETS LOADED     >     12/30/2021, 17:37:40
+CONVERSION RATES LOADED (26)     >      (56.59s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 17:38:37
+MARKETS LOADED     >     12/30/2021, 17:38:37
+CONVERSION RATES LOADED (27)     >      (88.59s elapsed)
+OPPURTUNITY!  >  {'USDT': 'BTC', 'USDC': 'USDT', 'ETH': 'USDC', 'BTC': 'ETH', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 2.1052986866142666e-05 BTC
+ > 2.1052986866142666e-05 BTC converts to: 0.00026566754349393907 ETH
+ > 0.00026566754349393907 ETH converts to: 0.9948361270983097 USDC
+ > 0.9948361270983097 USDC converts to: 1.0066373870466523 USDT
+So we can go from 1.0 USDT to 1.0066373870466523 USDT, an increase of 0.6637387046652288%     >     12/30/2021, 17:40:06
+We can move 0.11799999999999998 USDT through this conversion for a final profit of approximately: 0.0007832116715049698 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 17:40:06
+OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'USDT': 'BTC', 'USDC': 'USDT', 'ETH': 'USDC', 'BTC': 'ETH', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 2.1052986866142666e-05 BTC
+ > 2.1052986866142666e-05 BTC converts to: 0.00026566754349393907 ETH
+ > 0.00026566754349393907 ETH converts to: 0.9948361270983097 USDC
+ > 0.9948361270983097 USDC converts to: 1.000954183732345 USDT
+So we can go from 1.0 USDT to 1.000954183732345 USDT, an increase of 0.09541837323450153%     >     12/30/2021, 17:40:08
+We can move 2.1443 USDT through this conversion for a final profit of approximately: 0.002046056177267416 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 1
+MARKETS LOADED     >     12/30/2021, 17:40:08
+  >   NO OPPURTUNITIES POSSIBLE WITH COMPROMISE.
+OPPURTUNITY!  >  {'ETH': 'BTC', 'USDT': 'ETH', 'USDC': 'USDT', 'BTC': 'USDC', 'stable': 'USDC'}
+ > 1.0 USDC converts to: 1.002410606669345 USDT
+ > 1.002410606669345 USDT converts to: 0.00026629270879021896 ETH
+ > 0.00026629270879021896 ETH converts to: 2.1018200110785433e-05 BTC
+ > 2.1018200110785433e-05 BTC converts to: 0.9915980063856387 USDC
+So we can go from 1.0 USDC to 0.9915980063856387 USDC, an increase of -0.8401993614361336%     >     12/30/2021, 17:40:10
+We can move 6.728862159999999 USDC through this conversion for a final profit of approximately: -0.05653585690023762 USDC
+The conversion which limits our transaction size the most is: USDC to USDT
+  >   OPPURTUNITY EXPLORATION ERROR Traceback (most recent call last):
+  File "c:\Users\antoine\Documents\Projects\Git\crypto_bot\arbitrage_bot.py", line 379, in exploreOppurtunities
+    if possible_profit < 0 and not reverse and math.abs(possible_profit) > min_profit:
+AttributeError: module 'math' has no attribute 'abs'
+
+
+binance     >     12/30/2021, 17:40:10
+MARKETS LOADED     >     12/30/2021, 17:40:10
+CONVERSION RATES LOADED (28)     >      (35.69s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 17:40:46
+MARKETS LOADED     >     12/30/2021, 17:40:46
+CONVERSION RATES LOADED (26)     >      (72.58s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 17:41:58
+MARKETS LOADED     >     12/30/2021, 17:41:58
+CONVERSION RATES LOADED (25)     >      (10.02s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 17:42:08
+MARKETS LOADED     >     12/30/2021, 17:42:08
+CONVERSION RATES LOADED (24)     >      (78.40s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 17:43:27
+MARKETS LOADED     >     12/30/2021, 17:43:27
+CONVERSION RATES LOADED (26)     >      (38.69s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 17:44:05
+MARKETS LOADED     >     12/30/2021, 17:44:05
+CONVERSION RATES LOADED (18)     >      (44.22s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 17:44:50
+MARKETS LOADED     >     12/30/2021, 17:44:50
+CONVERSION RATES LOADED (26)     >      (56.53s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 17:45:46
+MARKETS LOADED     >     12/30/2021, 17:45:46
+CONVERSION RATES LOADED (27)     >      (88.51s elapsed)
+OPPURTUNITY!  >  {'BTC': 'USDC', 'USDT': 'BTC', 'USDC': 'USDT', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 2.1036523029512265e-05 BTC
+ > 2.1036523029512265e-05 BTC converts to: 0.996090707078431 USDC
+ > 0.996090707078431 USDC converts to: 1.0079068495024577 USDT
+So we can go from 1.0 USDT to 1.0079068495024577 USDT, an increase of 0.790684950245768%     >     12/30/2021, 17:47:15
+We can move 0.11799999999999998 USDT through this conversion for a final profit of approximately: 0.0009330082412900061 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 17:47:15
+OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'BTC': 'USDC', 'USDT': 'BTC', 'USDC': 'USDT', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 2.1036523029512265e-05 BTC
+ > 2.1036523029512265e-05 BTC converts to: 0.996090707078431 USDC
+ > 0.996090707078431 USDC converts to: 1.0022164791453514 USDT
+So we can go from 1.0 USDT to 1.0022164791453514 USDT, an increase of 0.2216479145351391%     >     12/30/2021, 17:47:17
+We can move 2.1443 USDT through this conversion for a final profit of approximately: 0.004752796231376987 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 1
+MARKETS LOADED     >     12/30/2021, 17:47:17
+  >   NO OPPURTUNITIES POSSIBLE WITH COMPROMISE.
+OPPURTUNITY!  >  {'ETH': 'BTC', 'USDT': 'ETH', 'USDC': 'USDT', 'BTC': 'USDC', 'stable': 'USDC'}
+ > 1.0 USDC converts to: 1.002410606669345 USDT
+ > 1.002410606669345 USDT converts to: 0.00026643171207644726 ETH
+ > 0.00026643171207644726 ETH converts to: 2.1029171492237357e-05 BTC
+ > 2.1029171492237357e-05 BTC converts to: 0.9957426078249563 USDC
+So we can go from 1.0 USDC to 0.9957426078249563 USDC, an increase of -0.4257392175043728%     >     12/30/2021, 17:47:19
+We can move 6.728862159999999 USDC through this conversion for a final profit of approximately: -0.028647405106931836 USDC
+The conversion which limits our transaction size the most is: USDC to USDT
+  >   OPPURTUNITY EXPLORATION ERROR Traceback (most recent call last):
+  File "c:\Users\antoine\Documents\Projects\Git\crypto_bot\arbitrage_bot.py", line 379, in exploreOppurtunities
+    if possible_profit < 0 and not reverse and math.abs(possible_profit) > min_profit:
+AttributeError: module 'math' has no attribute 'abs'
+
+
+binance     >     12/30/2021, 17:47:19
+MARKETS LOADED     >     12/30/2021, 17:47:19
+CONVERSION RATES LOADED (28)     >      (33.40s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 17:47:52
+MARKETS LOADED     >     12/30/2021, 17:47:52
+CONVERSION RATES LOADED (26)     >      (73.09s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 17:49:05
+MARKETS LOADED     >     12/30/2021, 17:49:05
+CONVERSION RATES LOADED (25)     >      (10.01s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 17:49:15
+MARKETS LOADED     >     12/30/2021, 17:49:16
+CONVERSION RATES LOADED (24)     >      (78.29s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 17:50:34
+MARKETS LOADED     >     12/30/2021, 17:50:34
+CONVERSION RATES LOADED (26)     >      (37.74s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 17:51:12
+MARKETS LOADED     >     12/30/2021, 17:51:12
+CONVERSION RATES LOADED (18)     >      (44.17s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 17:51:56
+MARKETS LOADED     >     12/30/2021, 17:51:56
+CONVERSION RATES LOADED (26)     >      (56.53s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 17:52:52
+MARKETS LOADED     >     12/30/2021, 17:52:52
+CONVERSION RATES LOADED (27)     >      (88.54s elapsed)
+OPPURTUNITY!  >  {'BTC': 'USDC', 'USDT': 'BTC', 'USDC': 'USDT', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 2.0965946093569478e-05 BTC
+ > 2.0965946093569478e-05 BTC converts to: 0.995537394483309 USDC
+ > 0.995537394483309 USDC converts to: 1.00734697322756 USDT
+So we can go from 1.0 USDT to 1.00734697322756 USDT, an increase of 0.734697322755995%     >     12/30/2021, 17:54:21
+We can move 0.11799999999999998 USDT through this conversion for a final profit of approximately: 0.0008669428408520739 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 17:54:21
+OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'BTC': 'USDC', 'USDT': 'BTC', 'USDC': 'USDT', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 2.0965946093569478e-05 BTC
+ > 2.0965946093569478e-05 BTC converts to: 0.995537394483309 USDC
+ > 0.995537394483309 USDC converts to: 1.0016597637809683 USDT
+So we can go from 1.0 USDT to 1.0016597637809683 USDT, an increase of 0.16597637809683263%     >     12/30/2021, 17:54:23
+We can move 2.1443 USDT through this conversion for a final profit of approximately: 0.003559031475530382 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 1
+MARKETS LOADED     >     12/30/2021, 17:54:23
+  >   NO OPPURTUNITIES POSSIBLE WITH COMPROMISE.
+OPPURTUNITY!  >  {'ETH': 'BTC', 'USDT': 'ETH', 'USDC': 'USDT', 'BTC': 'USDC', 'stable': 'USDC'}
+ > 1.0 USDC converts to: 1.002410606669345 USDT
+ > 1.002410606669345 USDT converts to: 0.00026628491188373577 ETH
+ > 0.00026628491188373577 ETH converts to: 2.0965481305070065e-05 BTC
+ > 2.0965481305070065e-05 BTC converts to: 0.9955153246787971 USDC
+So we can go from 1.0 USDC to 0.9955153246787971 USDC, an increase of -0.4484675321202891%     >     12/30/2021, 17:54:25
+We can move 6.728862159999999 USDC through this conversion for a final profit of approximately: -0.030176762068727978 USDC
+The conversion which limits our transaction size the most is: USDC to USDT
+  >   OPPURTUNITY EXPLORATION ERROR Traceback (most recent call last):
+  File "c:\Users\antoine\Documents\Projects\Git\crypto_bot\arbitrage_bot.py", line 379, in exploreOppurtunities
+    if possible_profit < 0 and not reverse and math.abs(possible_profit) > min_profit:
+AttributeError: module 'math' has no attribute 'abs'
+
+
+binance     >     12/30/2021, 17:54:25
+MARKETS LOADED     >     12/30/2021, 17:54:25
+CONVERSION RATES LOADED (28)     >      (32.42s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 17:54:58
+MARKETS LOADED     >     12/30/2021, 17:54:58
+CONVERSION RATES LOADED (26)     >      (72.55s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 17:56:10
+MARKETS LOADED     >     12/30/2021, 17:56:10
+CONVERSION RATES LOADED (25)     >      (9.95s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 17:56:20
+MARKETS LOADED     >     12/30/2021, 17:56:20
+CONVERSION RATES LOADED (24)     >      (78.32s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 17:57:39
+MARKETS LOADED     >     12/30/2021, 17:57:39
+CONVERSION RATES LOADED (26)     >      (38.81s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 17:58:17
+MARKETS LOADED     >     12/30/2021, 17:58:17
+CONVERSION RATES LOADED (18)     >      (44.22s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 17:59:02
+MARKETS LOADED     >     12/30/2021, 17:59:02
+CONVERSION RATES LOADED (26)     >      (56.65s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 17:59:58
+MARKETS LOADED     >     12/30/2021, 17:59:58
+CONVERSION RATES LOADED (27)     >      (88.85s elapsed)
+OPPURTUNITY!  >  {'BTC': 'USDC', 'USDT': 'BTC', 'USDC': 'USDT', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 2.09613223695956e-05 BTC
+ > 2.09613223695956e-05 BTC converts to: 0.9956858159301859 USDC
+ > 0.9956858159301859 USDC converts to: 1.0074971553262957 USDT
+So we can go from 1.0 USDT to 1.0074971553262957 USDT, an increase of 0.749715532629569%     >     12/30/2021, 18:01:27
+We can move 0.11799999999999998 USDT through this conversion for a final profit of approximately: 0.0008846643285028913 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 18:01:27
+OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'BTC': 'USDC', 'USDT': 'BTC', 'USDC': 'USDT', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 2.09613223695956e-05 BTC
+ > 2.09613223695956e-05 BTC converts to: 0.9956858159301859 USDC
+ > 0.9956858159301859 USDC converts to: 1.0018090979920613 USDT
+So we can go from 1.0 USDT to 1.0018090979920613 USDT, an increase of 0.18090979920613037%     >     12/30/2021, 18:01:29
+We can move 2.1443 USDT through this conversion for a final profit of approximately: 0.0038792488243770532 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 1
+MARKETS LOADED     >     12/30/2021, 18:01:29
+  >   NO OPPURTUNITIES POSSIBLE WITH COMPROMISE.
+OPPURTUNITY!  >  {'ETH': 'BTC', 'USDT': 'ETH', 'USDC': 'USDT', 'BTC': 'USDC', 'stable': 'USDC'}
+ > 1.0 USDC converts to: 1.002410606669345 USDT
+ > 1.002410606669345 USDT converts to: 0.00026613544136780876 ETH
+ > 0.00026613544136780876 ETH converts to: 2.0963035674180453e-05 BTC
+ > 2.0963035674180453e-05 BTC converts to: 0.9957671997781812 USDC
+So we can go from 1.0 USDC to 0.9957671997781812 USDC, an increase of -0.4232800221818822%     >     12/30/2021, 18:01:31
+We can move 6.728862159999999 USDC through this conversion for a final profit of approximately: -0.028481929243436274 USDC
+The conversion which limits our transaction size the most is: USDC to USDT
+  >   OPPURTUNITY EXPLORATION ERROR Traceback (most recent call last):
+  File "c:\Users\antoine\Documents\Projects\Git\crypto_bot\arbitrage_bot.py", line 379, in exploreOppurtunities
+    if possible_profit < 0 and not reverse and math.abs(possible_profit) > min_profit:
+AttributeError: module 'math' has no attribute 'abs'
+
+
+binance     >     12/30/2021, 18:01:31
+MARKETS LOADED     >     12/30/2021, 18:01:31
+CONVERSION RATES LOADED (28)     >      (32.76s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 18:02:04
+MARKETS LOADED     >     12/30/2021, 18:02:04
+CONVERSION RATES LOADED (26)     >      (72.57s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 18:03:16
+MARKETS LOADED     >     12/30/2021, 18:03:16
+CONVERSION RATES LOADED (25)     >      (9.89s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 18:03:26
+MARKETS LOADED     >     12/30/2021, 18:03:26
+CONVERSION RATES LOADED (24)     >      (78.46s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 18:04:45
+MARKETS LOADED     >     12/30/2021, 18:04:45
+CONVERSION RATES LOADED (26)     >      (33.94s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 18:05:19
+MARKETS LOADED     >     12/30/2021, 18:05:19
+CONVERSION RATES LOADED (18)     >      (44.21s elapsed)
+OPPURTUNITY!  >  {'BTC': 'USDT', 'USD': 'BTC', 'BNB': 'USD', 'USDT': 'BNB', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 0.0019133947202174709 BNB
+ > 0.0019133947202174709 BNB converts to: 1.0015629169506293 USD
+ > 1.0015629169506293 USD converts to: 2.107233055808012e-05 BTC
+ > 2.107233055808012e-05 BTC converts to: 1.000940716723478 USDT
+So we can go from 1.0 USDT to 1.000940716723478 USDT, an increase of 0.09407167234780633%     >     12/30/2021, 18:06:03
+We can move 15131.910000000002 USDT through this conversion for a final profit of approximately: 14.234840795164944 USDT
+The conversion which limits our transaction size the most is: BNB to USD
+
+bitrue     >     12/30/2021, 18:06:03
+MARKETS LOADED     >     12/30/2021, 18:06:03
+CONVERSION RATES LOADED (26)     >      (57.00s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 18:07:00
+MARKETS LOADED     >     12/30/2021, 18:07:00
+CONVERSION RATES LOADED (27)     >      (88.87s elapsed)
+OPPURTUNITY!  >  {'BTC': 'USDC', 'USDT': 'BTC', 'USDC': 'USDT', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 2.097872698225848e-05 BTC
+ > 2.097872698225848e-05 BTC converts to: 0.9958547208332643 USDC
+ > 0.9958547208332643 USDC converts to: 1.0076680638665698 USDT
+So we can go from 1.0 USDT to 1.0076680638665698 USDT, an increase of 0.7668063866569819%     >     12/30/2021, 18:08:29
+We can move 0.11799999999999998 USDT through this conversion for a final profit of approximately: 0.0009048315362552385 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 18:08:29
+OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'BTC': 'USDC', 'USDT': 'BTC', 'USDC': 'USDT', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 2.097872698225848e-05 BTC
+ > 2.097872698225848e-05 BTC converts to: 0.9958547208332643 USDC
+ > 0.9958547208332643 USDC converts to: 1.001979041628791 USDT
+So we can go from 1.0 USDT to 1.001979041628791 USDT, an increase of 0.1979041628791034%     >     12/30/2021, 18:08:31
+We can move 2.1443 USDT through this conversion for a final profit of approximately: 0.004243658964616614 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 1
+MARKETS LOADED     >     12/30/2021, 18:08:31
+  >   NO OPPURTUNITIES POSSIBLE WITH COMPROMISE.
+OPPURTUNITY!  >  {'ETH': 'BTC', 'USDT': 'ETH', 'USDC': 'USDT', 'BTC': 'USDC', 'stable': 'USDC'}
+ > 1.0 USDC converts to: 1.002410606669345 USDT
+ > 1.002410606669345 USDT converts to: 0.00026644590424516044 ETH
+ > 0.00026644590424516044 ETH converts to: 2.09791645701091e-05 BTC
+ > 2.09791645701091e-05 BTC converts to: 0.9958754930148741 USDC
+So we can go from 1.0 USDC to 0.9958754930148741 USDC, an increase of -0.41245069851258975%     >     12/30/2021, 18:08:33
+We can move 6.728862159999999 USDC through this conversion for a final profit of approximately: -0.027753238980869333 USDC
+The conversion which limits our transaction size the most is: USDC to USDT
+  >   OPPURTUNITY EXPLORATION ERROR Traceback (most recent call last):
+  File "c:\Users\antoine\Documents\Projects\Git\crypto_bot\arbitrage_bot.py", line 379, in exploreOppurtunities
+    if possible_profit < 0 and not reverse and math.abs(possible_profit) > min_profit:
+AttributeError: module 'math' has no attribute 'abs'
+
+
+binance     >     12/30/2021, 18:08:33
+MARKETS LOADED     >     12/30/2021, 18:08:33
+CONVERSION RATES LOADED (28)     >      (29.44s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 18:09:02
+MARKETS LOADED     >     12/30/2021, 18:09:02
+CONVERSION RATES LOADED (26)     >      (72.61s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 18:10:15
+MARKETS LOADED     >     12/30/2021, 18:10:15
+CONVERSION RATES LOADED (25)     >      (9.91s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 18:10:25
+MARKETS LOADED     >     12/30/2021, 18:10:25
+CONVERSION RATES LOADED (24)     >      (78.55s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 18:11:44
+MARKETS LOADED     >     12/30/2021, 18:11:44
+CONVERSION RATES LOADED (26)     >      (42.15s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 18:12:26
+MARKETS LOADED     >     12/30/2021, 18:12:26
+CONVERSION RATES LOADED (18)     >      (44.27s elapsed)
+OPPURTUNITY!  >  {'BTC': 'USDT', 'USD': 'BTC', 'BNB': 'USD', 'USDT': 'BNB', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 0.0019139809655119584 BNB
+ > 0.0019139809655119584 BNB converts to: 1.0019080464420442 USD
+ > 1.0019080464420442 USD converts to: 2.1073381574470185e-05 BTC
+ > 2.1073381574470185e-05 BTC converts to: 1.0010117030970327 USDT
+So we can go from 1.0 USDT to 1.0010117030970327 USDT, an increase of 0.10117030970326901%     >     12/30/2021, 18:13:10
+We can move 521.7199999999998 USDT through this conversion for a final profit of approximately: 0.5278257397838949 USDT
+The conversion which limits our transaction size the most is: BNB to USD
+
+bitrue     >     12/30/2021, 18:13:10
+MARKETS LOADED     >     12/30/2021, 18:13:10
+CONVERSION RATES LOADED (26)     >      (56.60s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 18:14:07
+MARKETS LOADED     >     12/30/2021, 18:14:07
+CONVERSION RATES LOADED (27)     >      (88.53s elapsed)
+OPPURTUNITY!  >  {'BTC': 'USDC', 'USDT': 'BTC', 'USDC': 'USDT', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 2.099836936510442e-05 BTC
+ > 2.099836936510442e-05 BTC converts to: 0.9957280045725116 USDC
+ > 0.9957280045725116 USDC converts to: 1.008972026158358 USDT
+So we can go from 1.0 USDT to 1.008972026158358 USDT, an increase of 0.8972026158357904%     >     12/30/2021, 18:15:35
+We can move 0.1477 USDT through this conversion for a final profit of approximately: 0.0013251682635894624 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 18:15:35
+OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'BTC': 'USDC', 'USDT': 'BTC', 'USDC': 'USDT', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 2.099836936510442e-05 BTC
+ > 2.099836936510442e-05 BTC converts to: 0.9957280045725116 USDC
+ > 0.9957280045725116 USDC converts to: 1.0075398444320862 USDT
+So we can go from 1.0 USDT to 1.0075398444320862 USDT, an increase of 0.7539844432086218%     >     12/30/2021, 18:15:38
+We can move 0.26570000000000005 USDT through this conversion for a final profit of approximately: 0.0020033366656053084 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 1
+MARKETS LOADED     >     12/30/2021, 18:15:38
+OPPURTUNITY FOUND AFTER 2 COMPROMISE(S)!  >  {'BTC': 'USDC', 'USDT': 'BTC', 'USDC': 'USDT', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 2.099836936510442e-05 BTC
+ > 2.099836936510442e-05 BTC converts to: 0.9957280045725116 USDC
+ > 0.9957280045725116 USDC converts to: 1.0018515460866686 USDT
+So we can go from 1.0 USDT to 1.0018515460866686 USDT, an increase of 0.18515460866685984%     >     12/30/2021, 18:15:39
+We can move 2.292 USDT through this conversion for a final profit of approximately: 0.004243743630644428 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+OPPURTUNITY!  >  {'ETH': 'BTC', 'USDT': 'ETH', 'USDC': 'USDT', 'BTC': 'USDC', 'stable': 'USDC'}
+ > 1.0 USDC converts to: 1.006149813489263 USDT
+ > 1.006149813489263 USDT converts to: 0.00026813323485208905 ETH
+ > 0.00026813323485208905 ETH converts to: 2.1083697541879717e-05 BTC
+ > 2.1083697541879717e-05 BTC converts to: 0.9997742070998121 USDC
+So we can go from 1.0 USDC to 0.9997742070998121 USDC, an increase of -0.022579290018787113%     >     12/30/2021, 18:15:40
+We can move 2.2734348 USDC through this conversion for a final profit of approximately: -0.0005133254368800327 USDC
+The conversion which limits our transaction size the most is: USDC to USDT
+  >   OPPURTUNITY EXPLORATION ERROR Traceback (most recent call last):
+  File "c:\Users\antoine\Documents\Projects\Git\crypto_bot\arbitrage_bot.py", line 379, in exploreOppurtunities
+    if possible_profit < 0 and not reverse and math.abs(possible_profit) > min_profit:
+AttributeError: module 'math' has no attribute 'abs'
+
+
+binance     >     12/30/2021, 18:15:40
+MARKETS LOADED     >     12/30/2021, 18:15:40
+CONVERSION RATES LOADED (28)     >      (32.61s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 18:16:12
+MARKETS LOADED     >     12/30/2021, 18:16:12
+CONVERSION RATES LOADED (26)     >      (72.59s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 18:17:25
+MARKETS LOADED     >     12/30/2021, 18:17:25
+CONVERSION RATES LOADED (25)     >      (9.91s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 18:17:35
+MARKETS LOADED     >     12/30/2021, 18:17:35
+CONVERSION RATES LOADED (24)     >      (78.35s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 18:18:53
+MARKETS LOADED     >     12/30/2021, 18:18:53
+CONVERSION RATES LOADED (26)     >      (39.97s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 18:19:33
+MARKETS LOADED     >     12/30/2021, 18:19:33
+CONVERSION RATES LOADED (18)     >      (44.27s elapsed)
+OPPURTUNITY!  >  {'BTC': 'USDT', 'USD': 'BTC', 'BNB': 'USD', 'USDT': 'BNB', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 0.0019130651150327295 BNB
+ > 0.0019130651150327295 BNB converts to: 1.0012374170414957 USD
+ > 1.0012374170414957 USD converts to: 2.1060605642885173e-05 BTC
+ > 2.1060605642885173e-05 BTC converts to: 1.0003416803105083 USDT
+So we can go from 1.0 USDT to 1.0003416803105083 USDT, an increase of 0.03416803105082966%     >     12/30/2021, 18:20:18
+We can move 522.0300000000002 USDT through this conversion for a final profit of approximately: 0.17836737249464615 USDT
+The conversion which limits our transaction size the most is: BNB to USD
+
+bitrue     >     12/30/2021, 18:20:18
+MARKETS LOADED     >     12/30/2021, 18:20:18
+CONVERSION RATES LOADED (26)     >      (56.54s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 18:21:14
+MARKETS LOADED     >     12/30/2021, 18:21:14
+CONVERSION RATES LOADED (27)     >      (88.51s elapsed)
+OPPURTUNITY!  >  {'BTC': 'USDC', 'USDT': 'BTC', 'USDC': 'USDT', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 2.0972114232878726e-05 BTC
+ > 2.0972114232878726e-05 BTC converts to: 0.9956061174682156 USDC
+ > 0.9956061174682156 USDC converts to: 1.0088485178528572 USDT
+So we can go from 1.0 USDT to 1.0088485178528572 USDT, an increase of 0.884851785285723%     >     12/30/2021, 18:22:43
+We can move 0.1477 USDT through this conversion for a final profit of approximately: 0.0013069260868670129 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 18:22:43
+OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'BTC': 'USDC', 'USDT': 'BTC', 'USDC': 'USDT', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 2.0972114232878726e-05 BTC
+ > 2.0972114232878726e-05 BTC converts to: 0.9956061174682156 USDC
+ > 0.9956061174682156 USDC converts to: 1.0074165114400073 USDT
+So we can go from 1.0 USDT to 1.0074165114400073 USDT, an increase of 0.7416511440007323%     >     12/30/2021, 18:22:45
+We can move 0.26570000000000005 USDT through this conversion for a final profit of approximately: 0.001970567089609946 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 1
+MARKETS LOADED     >     12/30/2021, 18:22:45
+OPPURTUNITY FOUND AFTER 2 COMPROMISE(S)!  >  {'BTC': 'USDC', 'USDT': 'BTC', 'USDC': 'USDT', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 2.0972114232878726e-05 BTC
+ > 2.0972114232878726e-05 BTC converts to: 0.9956061174682156 USDC
+ > 0.9956061174682156 USDC converts to: 1.0017289093994144 USDT
+So we can go from 1.0 USDT to 1.0017289093994144 USDT, an increase of 0.17289093994143911%     >     12/30/2021, 18:22:47
+We can move 2.292 USDT through this conversion for a final profit of approximately: 0.003962660343457785 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+OPPURTUNITY!  >  {'ETH': 'BTC', 'USDT': 'ETH', 'USDC': 'USDT', 'BTC': 'USDC', 'stable': 'USDC'}
+ > 1.0 USDC converts to: 1.006149813489263 USDT
+ > 1.006149813489263 USDT converts to: 0.00026814397516063327 ETH
+ > 0.00026814397516063327 ETH converts to: 2.1062100486963815e-05 BTC
+ > 2.1062100486963815e-05 BTC converts to: 0.9998780217722036 USDC
+So we can go from 1.0 USDC to 0.9998780217722036 USDC, an increase of -0.012197822779635992%     >     12/30/2021, 18:22:47
+We can move 2.2734348 USDC through this conversion for a final profit of approximately: -0.00027730954791457195 USDC
+The conversion which limits our transaction size the most is: USDC to USDT
+  >   OPPURTUNITY EXPLORATION ERROR Traceback (most recent call last):
+  File "c:\Users\antoine\Documents\Projects\Git\crypto_bot\arbitrage_bot.py", line 379, in exploreOppurtunities
+    if possible_profit < 0 and not reverse and math.abs(possible_profit) > min_profit:
+AttributeError: module 'math' has no attribute 'abs'
+
+
+binance     >     12/30/2021, 18:22:47
+MARKETS LOADED     >     12/30/2021, 18:22:47
+CONVERSION RATES LOADED (28)     >      (29.30s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 18:23:16
+MARKETS LOADED     >     12/30/2021, 18:23:16
+CONVERSION RATES LOADED (26)     >      (72.60s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 18:24:29
+MARKETS LOADED     >     12/30/2021, 18:24:29
+CONVERSION RATES LOADED (25)     >      (9.87s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 18:24:39
+MARKETS LOADED     >     12/30/2021, 18:24:39
+CONVERSION RATES LOADED (24)     >      (78.34s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 18:25:57
+MARKETS LOADED     >     12/30/2021, 18:25:57
+CONVERSION RATES LOADED (26)     >      (50.38s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 18:26:48
+MARKETS LOADED     >     12/30/2021, 18:26:48
+CONVERSION RATES LOADED (18)     >      (44.20s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 18:27:32
+MARKETS LOADED     >     12/30/2021, 18:27:32
+CONVERSION RATES LOADED (26)     >      (56.53s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 18:28:28
+MARKETS LOADED     >     12/30/2021, 18:28:28
+CONVERSION RATES LOADED (27)     >      (88.58s elapsed)
+OPPURTUNITY!  >  {'XRP': 'BTC', 'ETH': 'XRP', 'USDT': 'ETH', 'USDC': 'USDT', 'BTC': 'USDC', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 0.0002660432333583029 ETH
+ > 0.0002660432333583029 ETH converts to: 1.1813621663696827 XRP
+ > 1.1813621663696827 XRP converts to: 2.093903009057613e-05 BTC
+ > 2.093903009057613e-05 BTC converts to: 0.9963676409768992 USDC
+ > 0.9963676409768992 USDC converts to: 1.0096201702659615 USDT
+So we can go from 1.0 USDT to 1.0096201702659615 USDT, an increase of 0.9620170265961514%     >     12/30/2021, 18:29:57
+We can move 0.1477 USDT through this conversion for a final profit of approximately: 0.0014208991482825156 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 18:29:57
+OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'XRP': 'BTC', 'ETH': 'XRP', 'USDT': 'ETH', 'USDC': 'USDT', 'BTC': 'USDC', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 0.0002660432333583029 ETH
+ > 0.0002660432333583029 ETH converts to: 1.1813621663696827 XRP
+ > 1.1813621663696827 XRP converts to: 2.093903009057613e-05 BTC
+ > 2.093903009057613e-05 BTC converts to: 0.9963676409768992 USDC
+ > 0.9963676409768992 USDC converts to: 1.0081870685338594 USDT
+So we can go from 1.0 USDT to 1.0081870685338594 USDT, an increase of 0.8187068533859421%     >     12/30/2021, 18:29:59
+We can move 0.26570000000000005 USDT through this conversion for a final profit of approximately: 0.0021753041094464483 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 1
+MARKETS LOADED     >     12/30/2021, 18:29:59
+OPPURTUNITY FOUND AFTER 2 COMPROMISE(S)!  >  {'XRP': 'BTC', 'ETH': 'XRP', 'USDT': 'ETH', 'USDC': 'USDT', 'BTC': 'USDC', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 0.0002660432333583029 ETH
+ > 0.0002660432333583029 ETH converts to: 1.1813621663696827 XRP
+ > 1.1813621663696827 XRP converts to: 2.093903009057613e-05 BTC
+ > 2.093903009057613e-05 BTC converts to: 0.9963676409768992 USDC
+ > 0.9963676409768992 USDC converts to: 1.0024951161356441 USDT
+So we can go from 1.0 USDT to 1.0024951161356441 USDT, an increase of 0.24951161356441265%     >     12/30/2021, 18:30:01
+We can move 0.49627596899999993 USDT through this conversion for a final profit of approximately: 0.0012382661779843241 USDT
+The conversion which limits our transaction size the most is: XRP to BTC
+OPPURTUNITY!  >  {'ETH': 'BTC', 'USDT': 'ETH', 'USDC': 'USDT', 'BTC': 'USDC', 'stable': 'USDC'}
+ > 1.0 USDC converts to: 1.006149813489263 USDT
+ > 1.006149813489263 USDT converts to: 0.00026767934962353693 ETH
+ > 0.00026767934962353693 ETH converts to: 2.10154136626012e-05 BTC
+ > 2.10154136626012e-05 BTC converts to: 1.0000022944989964 USDC
+So we can go from 1.0 USDC to 1.0000022944989964 USDC, an increase of 0.00022944989963580298%     >     12/30/2021, 18:30:01
+We can move 2.2734348 USDC through this conversion for a final profit of approximately: 5.216393866885418e-06 USDC
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 18:30:01
+OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'ETH': 'BTC', 'USDT': 'ETH', 'USDC': 'USDT', 'BTC': 'USDC', 'stable': 'USDC'}
+ > 1.0 USDC converts to: 1.0118625164757173 USDT
+ > 1.0118625164757173 USDT converts to: 0.00026919917559726884 ETH
+ > 0.00026919917559726884 ETH converts to: 2.1134734677009154e-05 BTC
+ > 2.1134734677009154e-05 BTC converts to: 1.005680093190261 USDC
+So we can go from 1.0 USDC to 1.005680093190261 USDC, an increase of 0.5680093190260971%     >     12/30/2021, 18:30:03
+We can move 0.26205991 USDC through this conversion for a final profit of approximately: 0.001488524710231403 USDC
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 1
+MARKETS LOADED     >     12/30/2021, 18:30:03
+OPPURTUNITY FOUND AFTER 2 COMPROMISE(S)!  >  {'XRP': 'BTC', 'ETH': 'USDC', 'USDT': 'ETH', 'USDC': 'USDT', 'stable': 'USDC'}
+ > 1.0 USDC converts to: 1.006149813489263 USDT
+ > 1.006149813489263 USDT converts to: 0.00026767934962353693 ETH
+ > 0.00026767934962353693 ETH converts to: 1.001410621498974 USDC
+So we can go from 1.0 USDC to 1.001410621498974 USDC, an increase of 0.1410621498973974%     >     12/30/2021, 18:30:05
+We can move 2.2734348 USDC through this conversion for a final profit of approximately: 0.0032069560053955967 USDC
+The conversion which limits our transaction size the most is: USDC to USDT
+
+binance     >     12/30/2021, 18:30:05
+MARKETS LOADED     >     12/30/2021, 18:30:05
+CONVERSION RATES LOADED (28)     >      (28.73s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 18:30:34
+MARKETS LOADED     >     12/30/2021, 18:30:34
+CONVERSION RATES LOADED (26)     >      (73.01s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 18:31:47
+MARKETS LOADED     >     12/30/2021, 18:31:47
+CONVERSION RATES LOADED (25)     >      (10.35s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 18:31:57
+MARKETS LOADED     >     12/30/2021, 18:31:57
+CONVERSION RATES LOADED (24)     >      (78.50s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 18:33:16
+MARKETS LOADED     >     12/30/2021, 18:33:16
+CONVERSION RATES LOADED (26)     >      (35.81s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 18:33:52
+MARKETS LOADED     >     12/30/2021, 18:33:52
+CONVERSION RATES LOADED (18)     >      (44.21s elapsed)
+OPPURTUNITY!  >  {'BTC': 'USDT', 'USD': 'BTC', 'BNB': 'USD', 'USDT': 'BNB', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 0.0019121135598408317 BNB
+ > 0.0019121135598408317 BNB converts to: 1.0023638872053868 USD
+ > 1.0023638872053868 USD converts to: 2.104775691471097e-05 BTC
+ > 2.104775691471097e-05 BTC converts to: 1.0010356967970921 USDT
+So we can go from 1.0 USDT to 1.0010356967970921 USDT, an increase of 0.10356967970921449%     >     12/30/2021, 18:34:36
+We can move 1044.7799999999997 USDT through this conversion for a final profit of approximately: 1.0820752996659309 USDT
+The conversion which limits our transaction size the most is: BNB to USD
+
+bitrue     >     12/30/2021, 18:34:36
+MARKETS LOADED     >     12/30/2021, 18:34:36
+CONVERSION RATES LOADED (26)     >      (56.52s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 18:35:33
+MARKETS LOADED     >     12/30/2021, 18:35:33
+CONVERSION RATES LOADED (27)     >      (89.57s elapsed)
+OPPURTUNITY!  >  {'BTC': 'USDC', 'USDT': 'BTC', 'USDC': 'USDT', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 2.097039560083967e-05 BTC
+ > 2.097039560083967e-05 BTC converts to: 0.9955891980256729 USDC
+ > 0.9955891980256729 USDC converts to: 1.0088313733674703 USDT
+So we can go from 1.0 USDT to 1.0088313733674703 USDT, an increase of 0.8831373367470308%     >     12/30/2021, 18:37:02
+We can move 0.1477 USDT through this conversion for a final profit of approximately: 0.0013043938463753644 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 18:37:02
+OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'BTC': 'USDC', 'USDT': 'BTC', 'USDC': 'USDT', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 2.097039560083967e-05 BTC
+ > 2.097039560083967e-05 BTC converts to: 0.9955891980256729 USDC
+ > 0.9955891980256729 USDC converts to: 1.0073993912902988 USDT
+So we can go from 1.0 USDT to 1.0073993912902988 USDT, an increase of 0.7399391290298762%     >     12/30/2021, 18:37:03
+We can move 0.26570000000000005 USDT through this conversion for a final profit of approximately: 0.0019660182658323816 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 1
+MARKETS LOADED     >     12/30/2021, 18:37:03
+OPPURTUNITY FOUND AFTER 2 COMPROMISE(S)!  >  {'BTC': 'USDC', 'USDT': 'BTC', 'USDC': 'USDT', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 2.097039560083967e-05 BTC
+ > 2.097039560083967e-05 BTC converts to: 0.9955891980256729 USDC
+ > 0.9955891980256729 USDC converts to: 1.0017118859054557 USDT
+So we can go from 1.0 USDT to 1.0017118859054557 USDT, an increase of 0.1711885905455679%     >     12/30/2021, 18:37:05
+We can move 2.292 USDT through this conversion for a final profit of approximately: 0.003923642495304416 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+OPPURTUNITY!  >  {'ETH': 'BTC', 'USDT': 'ETH', 'USDC': 'USDT', 'BTC': 'USDC', 'stable': 'USDC'}
+ > 1.0 USDC converts to: 1.006149813489263 USDT
+ > 1.006149813489263 USDT converts to: 0.0002682987310626231 ETH
+ > 0.0002682987310626231 ETH converts to: 2.1053212785646223e-05 BTC
+ > 2.1053212785646223e-05 BTC converts to: 0.9995210215436325 USDC
+So we can go from 1.0 USDC to 0.9995210215436325 USDC, an increase of -0.04789784563674626%     >     12/30/2021, 18:37:05
+We can move 2.2734348 USDC through this conversion for a final profit of approximately: -0.001088926291156071 USDC
+The conversion which limits our transaction size the most is: USDC to USDT
+  >   OPPURTUNITY EXPLORATION ERROR Traceback (most recent call last):
+  File "c:\Users\antoine\Documents\Projects\Git\crypto_bot\arbitrage_bot.py", line 379, in exploreOppurtunities
+    if possible_profit < 0 and not reverse and math.abs(possible_profit) > min_profit:
+AttributeError: module 'math' has no attribute 'abs'
+
+
+binance     >     12/30/2021, 18:37:05
+MARKETS LOADED     >     12/30/2021, 18:37:05
+CONVERSION RATES LOADED (28)     >      (31.12s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 18:37:36
+MARKETS LOADED     >     12/30/2021, 18:37:37
+CONVERSION RATES LOADED (26)     >      (72.60s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 18:38:49
+MARKETS LOADED     >     12/30/2021, 18:38:49
+CONVERSION RATES LOADED (25)     >      (9.96s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 18:38:59
+MARKETS LOADED     >     12/30/2021, 18:38:59
+CONVERSION RATES LOADED (24)     >      (78.46s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 18:40:18
+MARKETS LOADED     >     12/30/2021, 18:40:18
+CONVERSION RATES LOADED (26)     >      (35.07s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 18:40:53
+MARKETS LOADED     >     12/30/2021, 18:40:53
+CONVERSION RATES LOADED (18)     >      (44.24s elapsed)
+OPPURTUNITY!  >  {'BTC': 'USDT', 'USD': 'BTC', 'BNB': 'USD', 'USDT': 'BNB', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 0.0019148976933098317 BNB
+ > 0.0019148976933098317 BNB converts to: 1.0018902997691395 USD
+ > 1.0018902997691395 USD converts to: 2.1057941595223424e-05 BTC
+ > 2.1057941595223424e-05 BTC converts to: 1.0009307547671935 USDT
+So we can go from 1.0 USDT to 1.0009307547671935 USDT, an increase of 0.0930754767193509%     >     12/30/2021, 18:41:37
+We can move 4172.080000000001 USDT through this conversion for a final profit of approximately: 3.883183349112696 USDT
+The conversion which limits our transaction size the most is: BNB to USD
+
+bitrue     >     12/30/2021, 18:41:37
+MARKETS LOADED     >     12/30/2021, 18:41:37
+CONVERSION RATES LOADED (26)     >      (56.50s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 18:42:34
+MARKETS LOADED     >     12/30/2021, 18:42:34
+CONVERSION RATES LOADED (27)     >      (88.59s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+binance     >     12/30/2021, 18:44:02
+MARKETS LOADED     >     12/30/2021, 18:44:02
+CONVERSION RATES LOADED (28)     >      (32.18s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 18:44:35
+MARKETS LOADED     >     12/30/2021, 18:44:35
+CONVERSION RATES LOADED (26)     >      (72.59s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 18:45:47
+MARKETS LOADED     >     12/30/2021, 18:45:47
+CONVERSION RATES LOADED (25)     >      (10.09s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 18:45:57
+MARKETS LOADED     >     12/30/2021, 18:45:57
+CONVERSION RATES LOADED (24)     >      (78.38s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 18:47:16
+MARKETS LOADED     >     12/30/2021, 18:47:16
+CONVERSION RATES LOADED (26)     >      (36.56s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 18:47:52
+MARKETS LOADED     >     12/30/2021, 18:47:52
+CONVERSION RATES LOADED (18)     >      (44.32s elapsed)
+OPPURTUNITY!  >  {'BTC': 'USDT', 'USD': 'BTC', 'BNB': 'USD', 'USDT': 'BNB', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 0.0019112725882015494 BNB
+ > 0.0019112725882015494 BNB converts to: 1.0013308366813276 USD
+ > 1.0013308366813276 USD converts to: 2.1007087605876845e-05 BTC
+ > 2.1007087605876845e-05 BTC converts to: 1.0005922134781327 USDT
+So we can go from 1.0 USDT to 1.0005922134781327 USDT, an increase of 0.05922134781326527%     >     12/30/2021, 18:48:37
+We can move 4180.399999999998 USDT through this conversion for a final profit of approximately: 2.4756892239857398 USDT
+The conversion which limits our transaction size the most is: BNB to USD
+
+bitrue     >     12/30/2021, 18:48:37
+MARKETS LOADED     >     12/30/2021, 18:48:37
+CONVERSION RATES LOADED (26)     >      (56.54s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 18:49:33
+MARKETS LOADED     >     12/30/2021, 18:49:33
+CONVERSION RATES LOADED (27)     >      (88.57s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+binance     >     12/30/2021, 18:51:02
+MARKETS LOADED     >     12/30/2021, 18:51:02
+CONVERSION RATES LOADED (28)     >      (32.72s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 18:51:35
+MARKETS LOADED     >     12/30/2021, 18:51:35
+CONVERSION RATES LOADED (26)     >      (73.97s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 18:52:49
+MARKETS LOADED     >     12/30/2021, 18:52:49
+CONVERSION RATES LOADED (25)     >      (10.09s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 18:52:59
+MARKETS LOADED     >     12/30/2021, 18:52:59
+CONVERSION RATES LOADED (24)     >      (78.37s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 18:54:17
+MARKETS LOADED     >     12/30/2021, 18:54:17
+CONVERSION RATES LOADED (26)     >      (35.90s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 18:54:53
+MARKETS LOADED     >     12/30/2021, 18:54:53
+CONVERSION RATES LOADED (18)     >      (44.29s elapsed)
+OPPURTUNITY!  >  {'BTC': 'USDT', 'USD': 'BTC', 'BNB': 'USD', 'USDT': 'BNB', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 0.0019149710694715866 BNB
+ > 0.0019149710694715866 BNB converts to: 1.0014693275232787 USD
+ > 1.0014693275232787 USD converts to: 2.1009552045074704e-05 BTC
+ > 2.1009552045074704e-05 BTC converts to: 1.000363113326742 USDT
+So we can go from 1.0 USDT to 1.000363113326742 USDT, an increase of 0.036311332674210384%     >     12/30/2021, 18:55:38
+We can move 18772.920000000002 USDT through this conversion for a final profit of approximately: 6.816697433863377 USDT
+The conversion which limits our transaction size the most is: BNB to USD
+
+bitrue     >     12/30/2021, 18:55:38
+MARKETS LOADED     >     12/30/2021, 18:55:38
+CONVERSION RATES LOADED (26)     >      (56.49s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 18:56:34
+MARKETS LOADED     >     12/30/2021, 18:56:34
+CONVERSION RATES LOADED (27)     >      (88.51s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+binance     >     12/30/2021, 18:58:03
+MARKETS LOADED     >     12/30/2021, 18:58:03
+CONVERSION RATES LOADED (28)     >      (31.47s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 18:58:34
+MARKETS LOADED     >     12/30/2021, 18:58:34
+CONVERSION RATES LOADED (26)     >      (72.74s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 18:59:47
+MARKETS LOADED     >     12/30/2021, 18:59:47
+CONVERSION RATES LOADED (25)     >      (10.16s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 18:59:57
+MARKETS LOADED     >     12/30/2021, 18:59:57
+CONVERSION RATES LOADED (24)     >      (78.37s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 19:01:16
+MARKETS LOADED     >     12/30/2021, 19:01:16
+CONVERSION RATES LOADED (26)     >      (37.30s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 19:01:53
+MARKETS LOADED     >     12/30/2021, 19:01:53
+CONVERSION RATES LOADED (18)     >      (44.29s elapsed)
+OPPURTUNITY!  >  {'BTC': 'USDT', 'USD': 'BTC', 'BNB': 'USD', 'USDT': 'BNB', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 0.001916256063191395 BNB
+ > 0.001916256063191395 BNB converts to: 1.0009155479351592 USD
+ > 1.0009155479351592 USD converts to: 2.1011826643728305e-05 BTC
+ > 2.1011826643728305e-05 BTC converts to: 1.000208901106337 USDT
+So we can go from 1.0 USDT to 1.000208901106337 USDT, an increase of 0.020890110633708936%     >     12/30/2021, 19:02:37
+We can move 2605.999999999999 USDT through this conversion for a final profit of approximately: 0.5443962831144546 USDT
+The conversion which limits our transaction size the most is: BNB to USD
+
+bitrue     >     12/30/2021, 19:02:37
+MARKETS LOADED     >     12/30/2021, 19:02:37
+CONVERSION RATES LOADED (26)     >      (56.53s elapsed)
+OPPURTUNITY!  >  {'XMR': 'USDT', 'XRP': 'XMR', 'USDT': 'XRP', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 1.1860078394108564 XRP
+ > 1.1860078394108564 XRP converts to: 0.004455564250448161 XMR
+ > 0.004455564250448161 XMR converts to: 1.005447084320382 USDT
+So we can go from 1.0 USDT to 1.005447084320382 USDT, an increase of 0.544708432038199%     >     12/30/2021, 19:03:34
+We can move 22.371249704999997 USDT through this conversion for a final profit of approximately: 0.1218580834954557 USDT
+The conversion which limits our transaction size the most is: XRP to XMR
+
+bibox     >     12/30/2021, 19:03:34
+MARKETS LOADED     >     12/30/2021, 19:03:34
+CONVERSION RATES LOADED (27)     >      (88.54s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+binance     >     12/30/2021, 19:05:03
+MARKETS LOADED     >     12/30/2021, 19:05:03
+CONVERSION RATES LOADED (28)     >      (31.83s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 19:05:34
+MARKETS LOADED     >     12/30/2021, 19:05:34
+CONVERSION RATES LOADED (26)     >      (72.69s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 19:06:47
+MARKETS LOADED     >     12/30/2021, 19:06:47
+CONVERSION RATES LOADED (25)     >      (10.13s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 19:06:57
+MARKETS LOADED     >     12/30/2021, 19:06:57
+CONVERSION RATES LOADED (24)     >      (78.64s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 19:08:16
+MARKETS LOADED     >     12/30/2021, 19:08:16
+CONVERSION RATES LOADED (26)     >      (42.51s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 19:08:59
+MARKETS LOADED     >     12/30/2021, 19:08:59
+CONVERSION RATES LOADED (18)     >      (44.21s elapsed)
+OPPURTUNITY!  >  {'USDT': 'ETH', 'BTC': 'USDT', 'USD': 'BTC', 'ETH': 'USD', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 0.0002678691072816446 ETH
+ > 0.0002678691072816446 ETH converts to: 1.0006869815881863 USD
+ > 1.0006869815881863 USD converts to: 2.1053458187159634e-05 BTC
+ > 2.1053458187159634e-05 BTC converts to: 1.00059139083104 USDT
+So we can go from 1.0 USDT to 1.00059139083104 USDT, an increase of 0.0591390831039984%     >     12/30/2021, 19:09:43
+We can move 3730.5499999999993 USDT through this conversion for a final profit of approximately: 2.206213064736212 USDT
+The conversion which limits our transaction size the most is: ETH to USD
+
+bitrue     >     12/30/2021, 19:09:43
+MARKETS LOADED     >     12/30/2021, 19:09:43
+CONVERSION RATES LOADED (26)     >      (56.53s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 19:10:39
+MARKETS LOADED     >     12/30/2021, 19:10:39
+CONVERSION RATES LOADED (27)     >      (88.63s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+binance     >     12/30/2021, 19:12:08
+MARKETS LOADED     >     12/30/2021, 19:12:08
+CONVERSION RATES LOADED (28)     >      (28.30s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 19:12:36
+MARKETS LOADED     >     12/30/2021, 19:12:36
+CONVERSION RATES LOADED (26)     >      (72.78s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 19:13:49
+MARKETS LOADED     >     12/30/2021, 19:13:49
+CONVERSION RATES LOADED (25)     >      (10.06s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 19:13:59
+MARKETS LOADED     >     12/30/2021, 19:13:59
+CONVERSION RATES LOADED (24)     >      (78.36s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 19:15:18
+MARKETS LOADED     >     12/30/2021, 19:15:18
+CONVERSION RATES LOADED (26)     >      (47.65s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 19:16:05
+MARKETS LOADED     >     12/30/2021, 19:16:05
+CONVERSION RATES LOADED (18)     >      (44.25s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 19:16:50
+MARKETS LOADED     >     12/30/2021, 19:16:50
+CONVERSION RATES LOADED (26)     >      (56.68s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 19:17:46
+MARKETS LOADED     >     12/30/2021, 19:17:46
+CONVERSION RATES LOADED (27)     >      (88.57s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+binance     >     12/30/2021, 19:19:15
+MARKETS LOADED     >     12/30/2021, 19:19:15
+CONVERSION RATES LOADED (28)     >      (37.45s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 19:19:53
+MARKETS LOADED     >     12/30/2021, 19:19:53
+CONVERSION RATES LOADED (26)     >      (72.97s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 19:21:06
+MARKETS LOADED     >     12/30/2021, 19:21:06
+CONVERSION RATES LOADED (25)     >      (10.13s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 19:21:16
+MARKETS LOADED     >     12/30/2021, 19:21:16
+CONVERSION RATES LOADED (24)     >      (78.32s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 19:22:34
+MARKETS LOADED     >     12/30/2021, 19:22:34
+CONVERSION RATES LOADED (26)     >      (38.81s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 19:23:13
+MARKETS LOADED     >     12/30/2021, 19:23:13
+CONVERSION RATES LOADED (18)     >      (44.28s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 19:23:57
+MARKETS LOADED     >     12/30/2021, 19:23:57
+CONVERSION RATES LOADED (26)     >      (56.91s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 19:24:54
+MARKETS LOADED     >     12/30/2021, 19:24:54
+CONVERSION RATES LOADED (27)     >      (88.60s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+binance     >     12/30/2021, 19:26:23
+MARKETS LOADED     >     12/30/2021, 19:26:23
+CONVERSION RATES LOADED (28)     >      (30.32s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 19:26:53
+MARKETS LOADED     >     12/30/2021, 19:26:53
+CONVERSION RATES LOADED (26)     >      (72.88s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 19:28:06
+MARKETS LOADED     >     12/30/2021, 19:28:06
+CONVERSION RATES LOADED (25)     >      (9.88s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 19:28:16
+MARKETS LOADED     >     12/30/2021, 19:28:16
+CONVERSION RATES LOADED (24)     >      (78.33s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 19:29:34
+MARKETS LOADED     >     12/30/2021, 19:29:34
+CONVERSION RATES LOADED (26)     >      (45.84s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 19:30:20
+MARKETS LOADED     >     12/30/2021, 19:30:20
+CONVERSION RATES LOADED (18)     >      (44.25s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 19:31:04
+MARKETS LOADED     >     12/30/2021, 19:31:04
+CONVERSION RATES LOADED (26)     >      (56.50s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 19:32:01
+MARKETS LOADED     >     12/30/2021, 19:32:01
+CONVERSION RATES LOADED (27)     >      (88.51s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+binance     >     12/30/2021, 19:33:30
+MARKETS LOADED     >     12/30/2021, 19:33:30
+CONVERSION RATES LOADED (28)     >      (36.68s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 19:34:06
+MARKETS LOADED     >     12/30/2021, 19:34:06
+CONVERSION RATES LOADED (26)     >      (72.64s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 19:35:19
+MARKETS LOADED     >     12/30/2021, 19:35:19
+CONVERSION RATES LOADED (25)     >      (9.95s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 19:35:29
+MARKETS LOADED     >     12/30/2021, 19:35:29
+CONVERSION RATES LOADED (24)     >      (78.32s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 19:36:47
+MARKETS LOADED     >     12/30/2021, 19:36:47
+CONVERSION RATES LOADED (26)     >      (35.64s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 19:37:23
+MARKETS LOADED     >     12/30/2021, 19:37:23
+CONVERSION RATES LOADED (18)     >      (44.19s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 19:38:07
+MARKETS LOADED     >     12/30/2021, 19:38:07
+CONVERSION RATES LOADED (26)     >      (56.58s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 19:39:04
+MARKETS LOADED     >     12/30/2021, 19:39:04
+CONVERSION RATES LOADED (27)     >      (88.59s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+binance     >     12/30/2021, 19:40:32
+MARKETS LOADED     >     12/30/2021, 19:40:32
+CONVERSION RATES LOADED (28)     >      (35.13s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 19:41:07
+MARKETS LOADED     >     12/30/2021, 19:41:07
+CONVERSION RATES LOADED (26)     >      (72.59s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 19:42:20
+MARKETS LOADED     >     12/30/2021, 19:42:20
+CONVERSION RATES LOADED (25)     >      (10.00s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 19:42:30
+MARKETS LOADED     >     12/30/2021, 19:42:30
+CONVERSION RATES LOADED (24)     >      (78.46s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 19:43:49
+MARKETS LOADED     >     12/30/2021, 19:43:49
+CONVERSION RATES LOADED (26)     >      (38.07s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 19:44:27
+MARKETS LOADED     >     12/30/2021, 19:44:27
+CONVERSION RATES LOADED (18)     >      (44.23s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 19:45:11
+MARKETS LOADED     >     12/30/2021, 19:45:11
+CONVERSION RATES LOADED (26)     >      (56.59s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 19:46:08
+MARKETS LOADED     >     12/30/2021, 19:46:08
+CONVERSION RATES LOADED (27)     >      (88.47s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+binance     >     12/30/2021, 19:47:36
+MARKETS LOADED     >     12/30/2021, 19:47:36
+  >   CONVERSION LOADING ERROR 
+CONVERSION RATES LOADED (28)     >      (10.77s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 19:48:19
+MARKETS LOADED     >     12/30/2021, 19:48:19
+CONVERSION RATES LOADED (26)     >      (72.51s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 19:49:31
+MARKETS LOADED     >     12/30/2021, 19:49:31
+CONVERSION RATES LOADED (25)     >      (9.87s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 19:49:41
+MARKETS LOADED     >     12/30/2021, 19:49:41
+CONVERSION RATES LOADED (24)     >      (78.33s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 19:51:00
+MARKETS LOADED     >     12/30/2021, 19:51:00
+  >   CONVERSION LOADING ERROR 
+  >   CONVERSION LOADING ERROR 
+CONVERSION RATES LOADED (25)     >      (0.00s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 19:51:31
+MARKETS LOADED     >     12/30/2021, 19:51:31
+CONVERSION RATES LOADED (18)     >      (44.24s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 19:52:16
+MARKETS LOADED     >     12/30/2021, 19:52:16
+CONVERSION RATES LOADED (26)     >      (56.65s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 19:53:12
+MARKETS LOADED     >     12/30/2021, 19:53:12
+CONVERSION RATES LOADED (27)     >      (88.46s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+binance     >     12/30/2021, 19:54:41
+MARKETS LOADED     >     12/30/2021, 19:54:41
+CONVERSION RATES LOADED (28)     >      (36.70s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 19:55:18
+MARKETS LOADED     >     12/30/2021, 19:55:18
+CONVERSION RATES LOADED (26)     >      (72.78s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 19:56:30
+MARKETS LOADED     >     12/30/2021, 19:56:30
+CONVERSION RATES LOADED (25)     >      (10.16s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 19:56:41
+MARKETS LOADED     >     12/30/2021, 19:56:41
+CONVERSION RATES LOADED (24)     >      (78.43s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 19:57:59
+MARKETS LOADED     >     12/30/2021, 19:57:59
+CONVERSION RATES LOADED (26)     >      (42.69s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 19:58:42
+MARKETS LOADED     >     12/30/2021, 19:58:42
+CONVERSION RATES LOADED (18)     >      (44.22s elapsed)
+OPPURTUNITY!  >  {'USDT': 'ETH', 'BTC': 'USDT', 'USD': 'BTC', 'ETH': 'USD', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 0.000265725527729037 ETH
+ > 0.000265725527729037 ETH converts to: 1.0005938059897916 USD
+ > 1.0005938059897916 USD converts to: 2.0899722249577807e-05 BTC
+ > 2.0899722249577807e-05 BTC converts to: 1.000084360233382 USDT
+So we can go from 1.0 USDT to 1.000084360233382 USDT, an increase of 0.008436023338198595%     >     12/30/2021, 19:59:26
+We can move 37604.00000000003 USDT through this conversion for a final profit of approximately: 3.1722822160962023 USDT
+The conversion which limits our transaction size the most is: ETH to USD
+
+bitrue     >     12/30/2021, 19:59:26
+MARKETS LOADED     >     12/30/2021, 19:59:26
+CONVERSION RATES LOADED (26)     >      (56.51s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 20:00:23
+MARKETS LOADED     >     12/30/2021, 20:00:23
+CONVERSION RATES LOADED (27)     >      (88.70s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+binance     >     12/30/2021, 20:01:51
+MARKETS LOADED     >     12/30/2021, 20:01:51
+CONVERSION RATES LOADED (28)     >      (31.37s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 20:02:23
+MARKETS LOADED     >     12/30/2021, 20:02:23
+  >   CONVERSION LOADING ERROR 
+CONVERSION RATES LOADED (26)     >      (30.40s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 20:03:43
+MARKETS LOADED     >     12/30/2021, 20:03:43
+CONVERSION RATES LOADED (25)     >      (9.85s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 20:03:53
+MARKETS LOADED     >     12/30/2021, 20:03:53
+CONVERSION RATES LOADED (24)     >      (78.33s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 20:05:11
+MARKETS LOADED     >     12/30/2021, 20:05:11
+CONVERSION RATES LOADED (26)     >      (37.17s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 20:05:49
+MARKETS LOADED     >     12/30/2021, 20:05:49
+CONVERSION RATES LOADED (18)     >      (44.24s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 20:06:33
+MARKETS LOADED     >     12/30/2021, 20:06:33
+  >   CONVERSION LOADING ERROR 
+CONVERSION RATES LOADED (26)     >      (44.52s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 20:07:39
+MARKETS LOADED     >     12/30/2021, 20:07:39
+CONVERSION RATES LOADED (27)     >      (88.53s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+binance     >     12/30/2021, 20:09:07
+MARKETS LOADED     >     12/30/2021, 20:09:07
+CONVERSION RATES LOADED (28)     >      (32.17s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 20:09:39
+MARKETS LOADED     >     12/30/2021, 20:09:39
+CONVERSION RATES LOADED (26)     >      (72.88s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 20:10:52
+MARKETS LOADED     >     12/30/2021, 20:10:52
+CONVERSION RATES LOADED (25)     >      (10.23s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 20:11:02
+MARKETS LOADED     >     12/30/2021, 20:11:02
+CONVERSION RATES LOADED (24)     >      (78.37s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 20:12:21
+MARKETS LOADED     >     12/30/2021, 20:12:21
+CONVERSION RATES LOADED (26)     >      (33.01s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 20:12:54
+MARKETS LOADED     >     12/30/2021, 20:12:54
+CONVERSION RATES LOADED (18)     >      (44.21s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 20:13:38
+MARKETS LOADED     >     12/30/2021, 20:13:38
+CONVERSION RATES LOADED (26)     >      (56.54s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 20:14:35
+MARKETS LOADED     >     12/30/2021, 20:14:35
+CONVERSION RATES LOADED (27)     >      (88.47s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+binance     >     12/30/2021, 20:16:03
+MARKETS LOADED     >     12/30/2021, 20:16:03
+CONVERSION RATES LOADED (28)     >      (36.80s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 20:16:40
+MARKETS LOADED     >     12/30/2021, 20:16:40
+CONVERSION RATES LOADED (26)     >      (72.56s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 20:17:53
+MARKETS LOADED     >     12/30/2021, 20:17:53
+CONVERSION RATES LOADED (25)     >      (10.08s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 20:18:03
+MARKETS LOADED     >     12/30/2021, 20:18:03
+CONVERSION RATES LOADED (24)     >      (78.42s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 20:19:21
+MARKETS LOADED     >     12/30/2021, 20:19:21
+CONVERSION RATES LOADED (26)     >      (35.99s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 20:19:57
+MARKETS LOADED     >     12/30/2021, 20:19:57
+CONVERSION RATES LOADED (18)     >      (44.25s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 20:20:41
+MARKETS LOADED     >     12/30/2021, 20:20:41
+CONVERSION RATES LOADED (26)     >      (56.55s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 20:21:38
+MARKETS LOADED     >     12/30/2021, 20:21:38
+CONVERSION RATES LOADED (27)     >      (88.61s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+binance     >     12/30/2021, 20:23:07
+MARKETS LOADED     >     12/30/2021, 20:23:07
+CONVERSION RATES LOADED (28)     >      (35.87s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 20:23:43
+MARKETS LOADED     >     12/30/2021, 20:23:43
+CONVERSION RATES LOADED (26)     >      (73.12s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 20:24:56
+MARKETS LOADED     >     12/30/2021, 20:24:56
+CONVERSION RATES LOADED (25)     >      (10.08s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 20:25:06
+MARKETS LOADED     >     12/30/2021, 20:25:06
+CONVERSION RATES LOADED (24)     >      (78.39s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 20:26:24
+MARKETS LOADED     >     12/30/2021, 20:26:24
+CONVERSION RATES LOADED (26)     >      (42.25s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 20:27:06
+MARKETS LOADED     >     12/30/2021, 20:27:06
+CONVERSION RATES LOADED (18)     >      (44.18s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 20:27:51
+MARKETS LOADED     >     12/30/2021, 20:27:51
+CONVERSION RATES LOADED (26)     >      (56.53s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 20:28:47
+MARKETS LOADED     >     12/30/2021, 20:28:47
+CONVERSION RATES LOADED (27)     >      (88.56s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+binance     >     12/30/2021, 20:30:16
+MARKETS LOADED     >     12/30/2021, 20:30:16
+CONVERSION RATES LOADED (28)     >      (32.70s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 20:30:49
+MARKETS LOADED     >     12/30/2021, 20:30:49
+CONVERSION RATES LOADED (26)     >      (72.60s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 20:32:01
+MARKETS LOADED     >     12/30/2021, 20:32:01
+CONVERSION RATES LOADED (25)     >      (10.07s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 20:32:11
+MARKETS LOADED     >     12/30/2021, 20:32:11
+CONVERSION RATES LOADED (24)     >      (78.34s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 20:33:30
+MARKETS LOADED     >     12/30/2021, 20:33:30
+CONVERSION RATES LOADED (26)     >      (41.22s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 20:34:11
+MARKETS LOADED     >     12/30/2021, 20:34:11
+CONVERSION RATES LOADED (18)     >      (44.21s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 20:34:55
+MARKETS LOADED     >     12/30/2021, 20:34:55
+CONVERSION RATES LOADED (26)     >      (56.94s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 20:35:52
+MARKETS LOADED     >     12/30/2021, 20:35:52
+CONVERSION RATES LOADED (27)     >      (88.57s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+binance     >     12/30/2021, 20:37:21
+MARKETS LOADED     >     12/30/2021, 20:37:21
+CONVERSION RATES LOADED (28)     >      (31.49s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 20:37:52
+MARKETS LOADED     >     12/30/2021, 20:37:52
+CONVERSION RATES LOADED (26)     >      (73.81s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 20:39:06
+MARKETS LOADED     >     12/30/2021, 20:39:06
+CONVERSION RATES LOADED (25)     >      (10.03s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 20:39:16
+MARKETS LOADED     >     12/30/2021, 20:39:16
+CONVERSION RATES LOADED (24)     >      (78.37s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 20:40:35
+MARKETS LOADED     >     12/30/2021, 20:40:35
+CONVERSION RATES LOADED (26)     >      (31.48s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 20:41:06
+MARKETS LOADED     >     12/30/2021, 20:41:06
+CONVERSION RATES LOADED (18)     >      (44.47s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 20:41:51
+MARKETS LOADED     >     12/30/2021, 20:41:51
+CONVERSION RATES LOADED (26)     >      (56.62s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 20:42:47
+MARKETS LOADED     >     12/30/2021, 20:42:47
+CONVERSION RATES LOADED (27)     >      (88.65s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+binance     >     12/30/2021, 20:44:16
+MARKETS LOADED     >     12/30/2021, 20:44:16
+CONVERSION RATES LOADED (28)     >      (32.87s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 20:44:49
+MARKETS LOADED     >     12/30/2021, 20:44:49
+CONVERSION RATES LOADED (26)     >      (72.64s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 20:46:02
+MARKETS LOADED     >     12/30/2021, 20:46:02
+CONVERSION RATES LOADED (25)     >      (9.97s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 20:46:12
+MARKETS LOADED     >     12/30/2021, 20:46:12
+CONVERSION RATES LOADED (24)     >      (78.42s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 20:47:30
+MARKETS LOADED     >     12/30/2021, 20:47:30
+CONVERSION RATES LOADED (26)     >      (40.98s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 20:48:11
+MARKETS LOADED     >     12/30/2021, 20:48:11
+CONVERSION RATES LOADED (18)     >      (44.22s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 20:48:55
+MARKETS LOADED     >     12/30/2021, 20:48:55
+CONVERSION RATES LOADED (26)     >      (56.66s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 20:49:52
+MARKETS LOADED     >     12/30/2021, 20:49:52
+CONVERSION RATES LOADED (27)     >      (93.58s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+binance     >     12/30/2021, 20:51:25
+MARKETS LOADED     >     12/30/2021, 20:51:25
+CONVERSION RATES LOADED (28)     >      (33.16s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 20:51:59
+MARKETS LOADED     >     12/30/2021, 20:51:59
+CONVERSION RATES LOADED (26)     >      (72.58s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 20:53:11
+MARKETS LOADED     >     12/30/2021, 20:53:11
+CONVERSION RATES LOADED (25)     >      (10.07s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 20:53:21
+MARKETS LOADED     >     12/30/2021, 20:53:21
+CONVERSION RATES LOADED (24)     >      (78.41s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 20:54:40
+MARKETS LOADED     >     12/30/2021, 20:54:40
+CONVERSION RATES LOADED (26)     >      (41.21s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 20:55:21
+MARKETS LOADED     >     12/30/2021, 20:55:21
+CONVERSION RATES LOADED (18)     >      (44.22s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 20:56:05
+MARKETS LOADED     >     12/30/2021, 20:56:05
+CONVERSION RATES LOADED (26)     >      (56.73s elapsed)
+OPPURTUNITY!  >  {'BTC': 'USDT', 'LTC': 'BTC', 'XRP': 'LTC', 'USDT': 'XRP', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 1.1853038936372269 XRP
+ > 1.1853038936372269 XRP converts to: 0.00672037895518012 LTC
+ > 0.00672037895518012 LTC converts to: 2.0976392756972216e-05 BTC
+ > 2.0976392756972216e-05 BTC converts to: 1.0004765932423405 USDT
+So we can go from 1.0 USDT to 1.0004765932423405 USDT, an increase of 0.047659324234050615%     >     12/30/2021, 20:57:02
+We can move 20.895715665 USDT through this conversion for a final profit of approximately: 0.009958756879807656 USDT
+The conversion which limits our transaction size the most is: XRP to LTC
+SEARCHING FOR COMPROMISE ON LTC/XRP >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 20:57:02
+  >   NO OPPURTUNITIES POSSIBLE WITH COMPROMISE.
+OPPURTUNITY!  >  {'LTC': 'BTC', 'XRP': 'LTC', 'USDT': 'XRP', 'BTC': 'USDT', 'stable': 'USDC'}
+ > 1.0 USDT converts to: 1.1853038936372269 XRP
+ > 1.1853038936372269 XRP converts to: 0.006696802680907433 LTC
+ > 0.006696802680907433 LTC converts to: 2.0902803872745863e-05 BTC
+ > 2.0902803872745863e-05 BTC converts to: 0.9969667449550644 USDT
+So we can go from 1.0 USDT to 0.9969667449550644 USDT, an increase of -0.3033255044935568%     >     12/30/2021, 20:57:03
+We can move 187.68248828999998 USDT through this conversion for a final profit of approximately: -0.5692888544517031 USDT
+The conversion which limits our transaction size the most is: XRP to LTC
+  >   OPPURTUNITY EXPLORATION ERROR Traceback (most recent call last):
+  File "c:\Users\antoine\Documents\Projects\Git\crypto_bot\arbitrage_bot.py", line 379, in exploreOppurtunities
+    if possible_profit < 0 and not reverse and math.abs(possible_profit) > min_profit:
+AttributeError: module 'math' has no attribute 'abs'
+
+
+bibox     >     12/30/2021, 20:57:03
+MARKETS LOADED     >     12/30/2021, 20:57:03
+CONVERSION RATES LOADED (27)     >      (88.55s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+binance     >     12/30/2021, 20:58:32
+MARKETS LOADED     >     12/30/2021, 20:58:32
+CONVERSION RATES LOADED (28)     >      (36.16s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 20:59:08
+MARKETS LOADED     >     12/30/2021, 20:59:08
+CONVERSION RATES LOADED (26)     >      (72.77s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 21:00:21
+MARKETS LOADED     >     12/30/2021, 21:00:21
+CONVERSION RATES LOADED (25)     >      (10.03s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 21:00:31
+MARKETS LOADED     >     12/30/2021, 21:00:31
+CONVERSION RATES LOADED (24)     >      (78.41s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 21:01:49
+MARKETS LOADED     >     12/30/2021, 21:01:49
+CONVERSION RATES LOADED (26)     >      (34.48s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 21:02:24
+MARKETS LOADED     >     12/30/2021, 21:02:24
+CONVERSION RATES LOADED (18)     >      (44.24s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 21:03:08
+MARKETS LOADED     >     12/30/2021, 21:03:08
+  >   CONVERSION LOADING ERROR 
+CONVERSION RATES LOADED (26)     >      (49.88s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 21:04:14
+MARKETS LOADED     >     12/30/2021, 21:04:14
+CONVERSION RATES LOADED (27)     >      (88.54s elapsed)
+OPPURTUNITY!  >  {'LINK': 'BIX', 'USDT': 'LINK', 'BIX': 'USDT', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 0.04980785546738533 LINK
+ > 0.04980785546738533 LINK converts to: 25.585169764299053 BIX
+ > 25.585169764299053 BIX converts to: 1.0147211371403777 USDT
+So we can go from 1.0 USDT to 1.0147211371403777 USDT, an increase of 1.4721137140377705%     >     12/30/2021, 21:05:42
+We can move 0.3906044999999999 USDT through this conversion for a final profit of approximately: 0.005750142412148662 USDT
+The conversion which limits our transaction size the most is: LINK to BIX
+SEARCHING FOR COMPROMISE ON LINK/BIX >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 21:05:43
+OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'LINK': 'BIX', 'USDT': 'LINK', 'BIX': 'USDT', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 0.04980785546738533 LINK
+ > 0.04980785546738533 LINK converts to: 25.51494226142056 BIX
+ > 25.51494226142056 BIX converts to: 1.011935877857915 USDT
+So we can go from 1.0 USDT to 1.011935877857915 USDT, an increase of 1.1935877857915056%     >     12/30/2021, 21:05:44
+We can move 53.48677619999999 USDT through this conversion for a final profit of approximately: 0.6384116277368378 USDT
+The conversion which limits our transaction size the most is: LINK to BIX
+OPPURTUNITY!  >  {'LINK': 'BIX', 'USDT': 'LINK', 'BIX': 'USDT', 'stable': 'USDC'}
+ > 1.0 USDT converts to: 0.04980785546738533 LINK
+ > 0.04980785546738533 LINK converts to: 25.51494226142056 BIX
+ > 25.51494226142056 BIX converts to: 1.011935877857915 USDT
+So we can go from 1.0 USDT to 1.011935877857915 USDT, an increase of 1.1935877857915056%     >     12/30/2021, 21:05:45
+We can move 53.48677619999999 USDT through this conversion for a final profit of approximately: 0.6384116277368378 USDT
+The conversion which limits our transaction size the most is: LINK to BIX
+
+binance     >     12/30/2021, 21:05:45
+MARKETS LOADED     >     12/30/2021, 21:05:45
+CONVERSION RATES LOADED (28)     >      (31.02s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 21:06:16
+MARKETS LOADED     >     12/30/2021, 21:06:16
+CONVERSION RATES LOADED (26)     >      (72.61s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 21:07:28
+MARKETS LOADED     >     12/30/2021, 21:07:28
+CONVERSION RATES LOADED (25)     >      (10.05s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 21:07:38
+MARKETS LOADED     >     12/30/2021, 21:07:38
+CONVERSION RATES LOADED (24)     >      (78.35s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 21:08:57
+MARKETS LOADED     >     12/30/2021, 21:08:57
+  >   CONVERSION LOADING ERROR 
+CONVERSION RATES LOADED (25)     >      (24.54s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 21:09:33
+MARKETS LOADED     >     12/30/2021, 21:09:33
+CONVERSION RATES LOADED (18)     >      (44.39s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 21:10:17
+MARKETS LOADED     >     12/30/2021, 21:10:17
+CONVERSION RATES LOADED (26)     >      (56.78s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 21:11:14
+MARKETS LOADED     >     12/30/2021, 21:11:14
+CONVERSION RATES LOADED (27)     >      (88.50s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+binance     >     12/30/2021, 21:12:42
+MARKETS LOADED     >     12/30/2021, 21:12:42
+CONVERSION RATES LOADED (28)     >      (30.02s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 21:13:12
+MARKETS LOADED     >     12/30/2021, 21:13:12
+CONVERSION RATES LOADED (26)     >      (72.63s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 21:14:25
+MARKETS LOADED     >     12/30/2021, 21:14:25
+CONVERSION RATES LOADED (25)     >      (10.14s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 21:14:35
+MARKETS LOADED     >     12/30/2021, 21:14:35
+CONVERSION RATES LOADED (24)     >      (78.37s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 21:15:54
+MARKETS LOADED     >     12/30/2021, 21:15:54
+CONVERSION RATES LOADED (26)     >      (33.68s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 21:16:27
+MARKETS LOADED     >     12/30/2021, 21:16:27
+CONVERSION RATES LOADED (18)     >      (44.28s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 21:17:12
+MARKETS LOADED     >     12/30/2021, 21:17:12
+CONVERSION RATES LOADED (26)     >      (56.87s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 21:18:08
+MARKETS LOADED     >     12/30/2021, 21:18:08
+CONVERSION RATES LOADED (27)     >      (88.83s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+binance     >     12/30/2021, 21:19:37
+MARKETS LOADED     >     12/30/2021, 21:19:37
+CONVERSION RATES LOADED (28)     >      (37.80s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 21:20:15
+MARKETS LOADED     >     12/30/2021, 21:20:15
+CONVERSION RATES LOADED (26)     >      (72.65s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 21:21:28
+MARKETS LOADED     >     12/30/2021, 21:21:28
+CONVERSION RATES LOADED (25)     >      (10.06s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 21:21:38
+MARKETS LOADED     >     12/30/2021, 21:21:38
+CONVERSION RATES LOADED (24)     >      (78.38s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 21:22:56
+MARKETS LOADED     >     12/30/2021, 21:22:56
+  >   CONVERSION LOADING ERROR 
+CONVERSION RATES LOADED (25)     >      (3.34s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 21:23:32
+MARKETS LOADED     >     12/30/2021, 21:23:32
+CONVERSION RATES LOADED (18)     >      (44.22s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 21:24:16
+MARKETS LOADED     >     12/30/2021, 21:24:16
+CONVERSION RATES LOADED (26)     >      (56.63s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 21:25:12
+MARKETS LOADED     >     12/30/2021, 21:25:12
+CONVERSION RATES LOADED (27)     >      (88.57s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+binance     >     12/30/2021, 21:26:41
+MARKETS LOADED     >     12/30/2021, 21:26:41
+CONVERSION RATES LOADED (28)     >      (30.82s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 21:27:12
+MARKETS LOADED     >     12/30/2021, 21:27:12
+CONVERSION RATES LOADED (26)     >      (73.16s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 21:28:25
+MARKETS LOADED     >     12/30/2021, 21:28:25
+CONVERSION RATES LOADED (25)     >      (10.21s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 21:28:35
+MARKETS LOADED     >     12/30/2021, 21:28:35
+CONVERSION RATES LOADED (24)     >      (78.34s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 21:29:54
+MARKETS LOADED     >     12/30/2021, 21:29:54
+CONVERSION RATES LOADED (26)     >      (32.07s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 21:30:26
+MARKETS LOADED     >     12/30/2021, 21:30:26
+CONVERSION RATES LOADED (18)     >      (44.21s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 21:31:10
+MARKETS LOADED     >     12/30/2021, 21:31:10
+CONVERSION RATES LOADED (26)     >      (56.98s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 21:32:07
+MARKETS LOADED     >     12/30/2021, 21:32:07
+CONVERSION RATES LOADED (27)     >      (88.91s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+binance     >     12/30/2021, 21:33:36
+MARKETS LOADED     >     12/30/2021, 21:33:36
+  >   CONVERSION LOADING ERROR 
+  >   CONVERSION LOADING ERROR 
+CONVERSION RATES LOADED (28)     >      (20.96s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 21:35:11
+MARKETS LOADED     >     12/30/2021, 21:35:11
+CONVERSION RATES LOADED (26)     >      (72.55s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 21:36:24
+MARKETS LOADED     >     12/30/2021, 21:36:24
+CONVERSION RATES LOADED (25)     >      (9.98s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 21:36:34
+MARKETS LOADED     >     12/30/2021, 21:36:34
+CONVERSION RATES LOADED (24)     >      (78.31s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 21:37:52
+MARKETS LOADED     >     12/30/2021, 21:37:52
+CONVERSION RATES LOADED (26)     >      (31.69s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 21:38:24
+MARKETS LOADED     >     12/30/2021, 21:38:24
+CONVERSION RATES LOADED (18)     >      (44.21s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 21:39:08
+MARKETS LOADED     >     12/30/2021, 21:39:08
+CONVERSION RATES LOADED (26)     >      (56.57s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 21:40:05
+MARKETS LOADED     >     12/30/2021, 21:40:05
+CONVERSION RATES LOADED (27)     >      (88.53s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+binance     >     12/30/2021, 21:41:33
+MARKETS LOADED     >     12/30/2021, 21:41:33
+CONVERSION RATES LOADED (28)     >      (31.36s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 21:42:05
+MARKETS LOADED     >     12/30/2021, 21:42:05
+CONVERSION RATES LOADED (26)     >      (72.58s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 21:43:17
+MARKETS LOADED     >     12/30/2021, 21:43:17
+CONVERSION RATES LOADED (25)     >      (10.03s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 21:43:27
+MARKETS LOADED     >     12/30/2021, 21:43:27
+CONVERSION RATES LOADED (24)     >      (78.29s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 21:44:46
+MARKETS LOADED     >     12/30/2021, 21:44:46
+CONVERSION RATES LOADED (26)     >      (32.77s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitmex     >     12/30/2021, 21:45:18
+MARKETS LOADED     >     12/30/2021, 21:45:18
+CONVERSION RATES LOADED (18)     >      (44.17s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 21:46:03
+MARKETS LOADED     >     12/30/2021, 21:46:03
+CONVERSION RATES LOADED (26)     >      (56.51s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 21:46:59
+MARKETS LOADED     >     12/30/2021, 21:46:59
+CONVERSION RATES LOADED (27)     >      (88.52s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+binance     >     12/30/2021, 21:48:28
+MARKETS LOADED     >     12/30/2021, 21:48:28
+CONVERSION RATES LOADED (28)     >      (35.03s elapsed)
+OPPURTUNITY!  >  {'USDC': 'BNB', 'BTC': 'USDT', 'DOT': 'BTC', 'USDT': 'DOT', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 0.03649981731823164 DOT
+ > 0.03649981731823164 DOT converts to: 2.115237048227987e-05 BTC
+ > 2.115237048227987e-05 BTC converts to: 1.000203946885715 USDT
+So we can go from 1.0 USDT to 1.000203946885715 USDT, an increase of 0.02039468857149007%     >     12/30/2021, 21:49:03
+We can move 112.176 USDT through this conversion for a final profit of approximately: 0.0228779458519547 USDT
+The conversion which limits our transaction size the most is: DOT to BTC
+SEARCHING FOR COMPROMISE ON DOT/BTC >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 21:49:03
+OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'BTC': 'USDT', 'DOT': 'BTC', 'USDT': 'DOT', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 0.03649981731823164 DOT
+ > 0.03649981731823164 DOT converts to: 2.1163309477530144e-05 BTC
+ > 2.1163309477530144e-05 BTC converts to: 1.0007212045724339 USDT
+So we can go from 1.0 USDT to 1.0007212045724339 USDT, an increase of 0.07212045724338534%     >     12/30/2021, 21:49:03
+We can move 552.6003000000001 USDT through this conversion for a final profit of approximately: 0.3985378630883192 USDT
+The conversion which limits our transaction size the most is: USDT to DOT
+OPPURTUNITY!  >  {'DOT': 'BTC', 'USDT': 'DOT', 'BTC': 'USDT', 'stable': 'USDC'}
+ > 1.0 USDT converts to: 0.03649981731823164 DOT
+ > 0.03649981731823164 DOT converts to: 2.1163309477530144e-05 BTC
+ > 2.1163309477530144e-05 BTC converts to: 1.0007212045724339 USDT
+So we can go from 1.0 USDT to 1.0007212045724339 USDT, an increase of 0.07212045724338534%     >     12/30/2021, 21:49:03
+We can move 552.6003000000001 USDT through this conversion for a final profit of approximately: 0.3985378630883192 USDT
+The conversion which limits our transaction size the most is: USDT to DOT
+
+lbank     >     12/30/2021, 21:49:03
+MARKETS LOADED     >     12/30/2021, 21:49:03
+CONVERSION RATES LOADED (26)     >      (72.54s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 21:50:16
+MARKETS LOADED     >     12/30/2021, 21:50:16
+CONVERSION RATES LOADED (25)     >      (9.87s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 21:50:26
+MARKETS LOADED     >     12/30/2021, 21:50:26
+CONVERSION RATES LOADED (24)     >      (78.31s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 21:51:44
+MARKETS LOADED     >     12/30/2021, 21:51:44
+CONVERSION RATES LOADED (26)     >      (37.04s elapsed)
+OPPURTUNITY!  >  {'GERA': 'USDT', 'BTC': 'GERA', 'USDT': 'BTC', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 2.1197067802608845e-05 BTC
+ > 2.1197067802608845e-05 BTC converts to: 0.2570199142469505 GERA
+ > 0.2570199142469505 GERA converts to: 1.001991518843942 USDT
+So we can go from 1.0 USDT to 1.001991518843942 USDT, an increase of 0.19915188439421083%     >     12/30/2021, 21:52:21
+We can move 0.34938683217900024 USDT through this conversion for a final profit of approximately: 0.000695810460109718 USDT
+The conversion which limits our transaction size the most is: BTC to GERA
+SEARCHING FOR COMPROMISE ON GERA/BTC >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 21:52:21
+  >   NO OPPURTUNITIES POSSIBLE WITH COMPROMISE.
+OPPURTUNITY!  >  {'GERA': 'USDT', 'BTC': 'GERA', 'USDT': 'BTC', 'stable': 'USDC'}
+ > 1.0 USDT converts to: 2.1197067802608845e-05 BTC
+ > 2.1197067802608845e-05 BTC converts to: 0.2562113821513158 GERA
+ > 0.2562113821513158 GERA converts to: 0.9988394584095873 USDT
+So we can go from 1.0 USDT to 0.9988394584095873 USDT, an increase of -0.11605415904126781%     >     12/30/2021, 21:52:22
+We can move 0.4673192002200004 USDT through this conversion for a final profit of approximately: -0.0005423433678537 USDT
+The conversion which limits our transaction size the most is: BTC to GERA
+  >   OPPURTUNITY EXPLORATION ERROR Traceback (most recent call last):
+  File "c:\Users\antoine\Documents\Projects\Git\crypto_bot\arbitrage_bot.py", line 379, in exploreOppurtunities
+    if possible_profit < 0 and not reverse and math.abs(possible_profit) > min_profit:
+AttributeError: module 'math' has no attribute 'abs'
+
+
+bitmex     >     12/30/2021, 21:52:22
+MARKETS LOADED     >     12/30/2021, 21:52:22
+CONVERSION RATES LOADED (18)     >      (44.21s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 21:53:07
+MARKETS LOADED     >     12/30/2021, 21:53:07
+CONVERSION RATES LOADED (26)     >      (56.92s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 21:54:03
+MARKETS LOADED     >     12/30/2021, 21:54:03
+CONVERSION RATES LOADED (27)     >      (88.53s elapsed)
+OPPURTUNITY!  >  {'BIX': 'LINK', 'BTC': 'BIX', 'LINK': 'BTC', 'stable': 'USDT'}
+  >   OPPURTUNITY HAS NO STABLE STARTING POINT.
+OPPURTUNITY!  >  {'BIX': 'LINK', 'BTC': 'BIX', 'LINK': 'BTC', 'stable': 'USDC'}
+  >   OPPURTUNITY HAS NO STABLE STARTING POINT.
+
+binance     >     12/30/2021, 21:55:32
+MARKETS LOADED     >     12/30/2021, 21:55:32
+CONVERSION RATES LOADED (28)     >      (32.81s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+lbank     >     12/30/2021, 21:56:05
+MARKETS LOADED     >     12/30/2021, 21:56:05
+CONVERSION RATES LOADED (26)     >      (72.57s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+delta     >     12/30/2021, 21:57:18
+MARKETS LOADED     >     12/30/2021, 21:57:18
+CONVERSION RATES LOADED (25)     >      (9.96s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 22:00:48
+MARKETS LOADED     >     12/30/2021, 22:00:49
+CONVERSION RATES LOADED (24)     >      (79.92s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+aax     >     12/30/2021, 22:02:09
+MARKETS LOADED     >     12/30/2021, 22:02:12
+CONVERSION RATES LOADED (26)     >      (34.08s elapsed)
+OPPURTUNITY!  >  {'GERA': 'USDT', 'BTC': 'GERA', 'USDT': 'BTC', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 2.119161804685828e-05 BTC
+ > 2.119161804685828e-05 BTC converts to: 0.2569538345528758 GERA
+ > 0.2569538345528758 GERA converts to: 1.0017339073151832 USDT
+So we can go from 1.0 USDT to 1.0017339073151832 USDT, an increase of 0.17339073151831919%     >     12/30/2021, 22:02:46
+We can move 0.349463059407 USDT through this conversion for a final profit of approximately: 0.0006059365550920956 USDT
+The conversion which limits our transaction size the most is: BTC to GERA
+SEARCHING FOR COMPROMISE ON GERA/BTC >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 22:02:47
+  >   NO OPPURTUNITIES POSSIBLE WITH COMPROMISE.
+OPPURTUNITY!  >  {'GERA': 'USDT', 'BTC': 'GERA', 'USDT': 'BTC', 'stable': 'USDC'}
+ > 1.0 USDT converts to: 2.119161804685828e-05 BTC
+ > 2.119161804685828e-05 BTC converts to: 0.2561455103304469 GERA
+ > 0.2561455103304469 GERA converts to: 0.9985826572740224 USDT
+So we can go from 1.0 USDT to 0.9985826572740224 USDT, an increase of -0.14173427259775995%     >     12/30/2021, 22:02:47
+We can move 0.4674211572600001 USDT through this conversion for a final profit of approximately: -0.0006624959772104928 USDT
+The conversion which limits our transaction size the most is: BTC to GERA
+SEARCHING FOR COMPROMISE ON GERA/BTC >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 22:02:47
+  >   NO OPPURTUNITIES POSSIBLE WITH COMPROMISE.
+
+bitmex     >     12/30/2021, 22:02:48
+MARKETS LOADED     >     12/30/2021, 22:02:48

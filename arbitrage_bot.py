@@ -137,9 +137,9 @@ zonda = ccxt.zonda()
 
 other_exchanges = { kucoin:0.001, ascendex:0.002, bequant:0.001, bitbank:0.0015, bitbns:0.0025, bitcoincom:0.0075, bitfinex:0.002, bitfinex2:0.002, bitflyer:0.002, bitforex:0.001, bitget:0.001, bithumb:0.0015, bitmart:0.0025, bitpanda:0.0015, bitso:0.001, bitstamp:0.005, bittrex:0.0035, bitvavo:0.0025, bl3p:0.0026, btcmarkets:0.002, btctradeua:0.001, buda:0.008, bw:0.002, bybit:0.001, cdax:0.002, cex:0.0025, coinbasepro:0.005, coinex:0.002, coinfalcon:0.002, coinmate:0.0035, crex24:0.001, eqonex:0.0009, equos:0.0009, ftx:0.0007, ftxus:0.004, gateio:0.002, huobi:0.002, huobijp:0.002, independentreserve:0.005, indodax:0.003, itbit:0.0035, kraken:0.015, kuna:0.0025, latoken:0.005, latoken1:0.005, liquid:0.0015, luno:0.001, mexc:0.002, ndax:0.002, novadax:0.0025, oceanex:0.001, okcoin:0.0125, okex3:0.001, okex5:0.001, paymium:0.005, phemex:0.001, poloniex:0.00155, probit:0.002, ripio:0, therock:0.002, tidebit:0.003, tidex:0.001, timex:0.005, xena:0.001, zaif:0.002, zb:0.002, zipmex:0.002, zonda:0.0043, lykke:0.0, btcturk:0.0009 }
 
-tryout_exchanges = { exmo:0.003, hitbtc3:0.0009, hitbtc:0.0009, whitebit:0.001, yobit:0.002, gemini:0.0035, binanceus:0.001, upbit:0.002, bigone:0.002, idex:0.0025, stex:0.002, okex:0.001, lbank:0.001, delta:0.0005, digifinex:0.002 }
+tryout_exchanges = { exmo:0.003, hitbtc3:0.0009, hitbtc:0.0009, whitebit:0.001, yobit:0.002, gemini:0.0035, binanceus:0.001, upbit:0.002, bigone:0.002, idex:0.0025, stex:0.002, okex:0.001, digifinex:0.002 }
 
-confirmed_exchanges = { bitmex:0.0005, bitrue:0.0015, bibox:0.002, binance:0.001 }
+confirmed_exchanges = { bitmex:0.0005, bitrue:0.0015, bibox:0.002, binance:0.001, lbank:0.001, delta:0.0005 }
 
 usable_exchanges = { btcalpha:0.002, aax:0.001 }
 
@@ -316,14 +316,23 @@ def getConvRateToStable(fromC, toC, conversion_rates):
 
     return None
 
-def exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize, recursiveCall=0):
+def reverse_oppurtunity(oppurtunity):
+    new_oppurtunity = {}
+    new_oppurtunity['stable'] = oppurtunity.pop('stable')
+    for key, value in oppurtunity.items():
+        new_oppurtunity[value] = key
+    return new_oppurtunity
+
+def exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize, recursiveCall=0, reverse=False):
     for oppurtunity in oppurtunities:
         try:
             limiting_conversion = ""
             oppurtunityCopy = copy.deepcopy(oppurtunity)
             maxAmount = 999999999
             value = 1.0
-            if recursiveCall > 0: 
+            if reverse:
+                log("REVERSE OPPURTUNITY!  >  " + str(oppurtunity), False, False)
+            elif recursiveCall > 0: 
                 log("OPPURTUNITY FOUND AFTER " + str(recursiveCall) + " COMPROMISE(S)!  >  " + str(oppurtunity), False, False)
             else:
                 log("OPPURTUNITY!  >  " + str(oppurtunity), False, False)
@@ -366,6 +375,12 @@ def exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize, rec
                 if not actuallyMakeTransactions: return False
                 return doTransactions(oppurtunityCopy, exchange, maxAmount, stableCurrency, conversion_rates)
             else:
+                if possible_profit < 0 and not reverse and abs(possible_profit) > min_profit:
+                    log("DETECTED VIABLE NEGATIVE PROFIT. TRYING OPPURTUNITY IN REVERSE ORDER.")
+                    reverse_path = [ reverse_oppurtunity(oppurtunityCopy) ]
+                    if exploreOppurtunities(reverse_path, conversion_rates, exchange, maxSize, 0, True): return True
+                    log("  >   REVERSE OPPURTUNITY FAILED. MOVING ON.")
+                    continue
                 if recursiveCall < maxCompromises: 
                     if (limiting_conversion.split(' to ')[0] + '/' + limiting_conversion.split(' to ')[1]) in exchange.symbols:
                         compromiseConversion = limiting_conversion.split(' to ')[0] + '/' + limiting_conversion.split(' to ')[1]
