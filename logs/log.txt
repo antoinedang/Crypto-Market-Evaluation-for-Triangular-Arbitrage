@@ -1,47 +1,70 @@
-bitmex     >     12/29/2021, 19:46:29
-MARKETS LOADED     >     12/29/2021, 19:46:29
-CONVERSION RATES LOADED (18)     >      (46.00s elapsed)
+btcalpha     >     12/30/2021, 15:18:59
+MARKETS LOADED     >     12/30/2021, 15:18:59
+CONVERSION RATES LOADED (24)     >      (79.98s elapsed)
 NO ARBITRAGE OPPURTUNITIES :(
 
-exmo     >     12/29/2021, 19:47:15
-MARKETS LOADED     >     12/29/2021, 19:47:16
-CONVERSION RATES LOADED (20)     >      (19.02s elapsed)
-OPPURTUNITY!  >  {'USD': 'SHIB', 'BTC': 'USD', 'SHIB': 'BTC', 'stable': 'USDT'}
- > 1.0 USD converts to: 27571.90265486724 SHIB
- > 27571.90265486724 SHIB converts to: 0.0002748918694690265 BTC
- > 0.0002748918694690265 BTC converts to: 13.119952857459882 USD
-So we can go from 1.0 USD to 13.119952857459882 USD, an increase of 1211.9952857459882%     >     12/29/2021, 19:47:35
-We can move 0.007195999999999999 USD through this conversion for a final profit of approximately: 0.08721518076228131 USD
-The conversion which limits our transaction size the most is: SHIB to BTC
-SEARCHING FOR COMPROMISE ON SHIB/BTC >  RECURSIVE CALLS: 0
-MARKETS LOADED     >     12/29/2021, 19:47:35
-  >   COMPROMISE IMPOSSIBLE. NO BETTER PRICE AVAILABLE.
-OPPURTUNITY!  >  {'USD': 'SHIB', 'BTC': 'USD', 'SHIB': 'BTC', 'stable': 'USD'}
- > 1.0 USD converts to: 27571.90265486724 SHIB
- > 27571.90265486724 SHIB converts to: 0.0002748918694690265 BTC
- > 0.0002748918694690265 BTC converts to: 13.119952857459882 USD
-So we can go from 1.0 USD to 13.119952857459882 USD, an increase of 1211.9952857459882%     >     12/29/2021, 19:47:36
-We can move 0.007195999999999999 USD through this conversion for a final profit of approximately: 0.08721518076228131 USD
-The conversion which limits our transaction size the most is: SHIB to BTC
-SEARCHING FOR COMPROMISE ON SHIB/BTC >  RECURSIVE CALLS: 0
-MARKETS LOADED     >     12/29/2021, 19:47:36
-  >   COMPROMISE IMPOSSIBLE. NO BETTER PRICE AVAILABLE.
-OPPURTUNITY!  >  {'ETH': 'LTC', 'BTC': 'ETH', 'SHIB': 'BTC', 'USD': 'SHIB', 'LTC': 'USD', 'stable': 'USDC'}
- > 1.0 USD converts to: 27571.90265486724 SHIB
- > 27571.90265486724 SHIB converts to: 0.0002748918694690265 BTC
- > 0.0002748918694690265 BTC converts to: 0.003468699170204792 ETH
- > 0.003468699170204792 ETH converts to: 0.08710392733144913 LTC
- > 0.08710392733144913 LTC converts to: 13.02717721597756 USD
-So we can go from 1.0 USD to 13.02717721597756 USD, an increase of 1202.7177215977558%     >     12/29/2021, 19:47:36
-We can move 0.007195999999999999 USD through this conversion for a final profit of approximately: 0.0865475672461745 USD
-The conversion which limits our transaction size the most is: SHIB to BTC
-SEARCHING FOR COMPROMISE ON SHIB/BTC >  RECURSIVE CALLS: 0
-MARKETS LOADED     >     12/29/2021, 19:47:36
-  >   COMPROMISE IMPOSSIBLE. NO BETTER PRICE AVAILABLE.
-
-bitrue     >     12/29/2021, 19:47:36
-MARKETS LOADED     >     12/29/2021, 19:47:38
-CONVERSION RATES LOADED (26)     >      (56.57s elapsed)
+aax     >     12/30/2021, 15:20:19
+MARKETS LOADED     >     12/30/2021, 15:20:22
+CONVERSION RATES LOADED (26)     >      (37.72s elapsed)
 NO ARBITRAGE OPPURTUNITIES :(
 
-bibox     >     12/29/2021, 19:48:35
+bitmex     >     12/30/2021, 15:20:59
+MARKETS LOADED     >     12/30/2021, 15:21:00
+CONVERSION RATES LOADED (18)     >      (45.98s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bitrue     >     12/30/2021, 15:21:46
+MARKETS LOADED     >     12/30/2021, 15:21:47
+CONVERSION RATES LOADED (26)     >      (56.97s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+bibox     >     12/30/2021, 15:22:44
+MARKETS LOADED     >     12/30/2021, 15:22:49
+CONVERSION RATES LOADED (27)     >      (90.40s elapsed)
+OPPURTUNITY!  >  {'BTC': 'USDC', 'USDT': 'BTC', 'USDC': 'USDT', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 2.111351582350117e-05 BTC
+ > 2.111351582350117e-05 BTC converts to: 0.995695094906312 USDC
+ > 0.995695094906312 USDC converts to: 1.007506544374429 USDT
+So we can go from 1.0 USDT to 1.007506544374429 USDT, an increase of 0.7506544374429103%     >     12/30/2021, 15:24:19
+We can move 0.11799999999999998 USDT through this conversion for a final profit of approximately: 0.0008857722361826339 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 15:24:19
+OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'BTC': 'USDC', 'USDT': 'BTC', 'USDC': 'USDT', 'stable': 'USDT'}
+ > 1.0 USDT converts to: 2.111351582350117e-05 BTC
+ > 2.111351582350117e-05 BTC converts to: 0.995695094906312 USDC
+ > 0.995695094906312 USDC converts to: 1.0018184340321599 USDT
+So we can go from 1.0 USDT to 1.0018184340321599 USDT, an increase of 0.18184340321598658%     >     12/30/2021, 15:24:22
+We can move 2.1443 USDT through this conversion for a final profit of approximately: 0.0038992680951604 USDT
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 1
+MARKETS LOADED     >     12/30/2021, 15:24:22
+  >   NO OPPURTUNITIES POSSIBLE WITH COMPROMISE.
+OPPURTUNITY!  >  {'ETH': 'BTC', 'USDT': 'ETH', 'USDC': 'USDT', 'BTC': 'USDC', 'stable': 'USDC'}
+ > 1.0 USDC converts to: 1.002410606669345 USDT
+ > 1.002410606669345 USDT converts to: 0.00026957994531256086 ETH
+ > 0.00026957994531256086 ETH converts to: 2.1116693779640934e-05 BTC
+ > 2.1116693779640934e-05 BTC converts to: 0.9958449645616855 USDC
+So we can go from 1.0 USDC to 0.9958449645616855 USDC, an increase of -0.4155035438314525%     >     12/30/2021, 15:24:23
+We can move 6.728862159999999 USDC through this conversion for a final profit of approximately: -0.027958660734333618 USDC
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 0
+MARKETS LOADED     >     12/30/2021, 15:24:23
+OPPURTUNITY FOUND AFTER 1 COMPROMISE(S)!  >  {'USDT': 'ETH', 'USDC': 'USDT', 'ETH': 'USDC', 'stable': 'USDC'}
+ > 1.0 USDC converts to: 1.006149813489263 USDT
+ > 1.006149813489263 USDT converts to: 0.0002705855363980095 ETH
+ > 0.0002705855363980095 ETH converts to: 1.0014244230410612 USDC
+So we can go from 1.0 USDC to 1.0014244230410612 USDC, an increase of 0.14244230410611625%     >     12/30/2021, 15:24:25
+We can move 2.1269311699999998 USDC through this conversion for a final profit of approximately: 0.003029649765299176 USDC
+The conversion which limits our transaction size the most is: USDC to USDT
+SEARCHING FOR COMPROMISE ON USDT/USDC >  RECURSIVE CALLS: 1
+MARKETS LOADED     >     12/30/2021, 15:24:25
+  >   NO OPPURTUNITIES POSSIBLE WITH COMPROMISE.
+
+binance     >     12/30/2021, 15:24:27
+MARKETS LOADED     >     12/30/2021, 15:24:29
+CONVERSION RATES LOADED (28)     >      (30.54s elapsed)
+NO ARBITRAGE OPPURTUNITIES :(
+
+btcalpha     >     12/30/2021, 15:25:00
+MARKETS LOADED     >     12/30/2021, 15:25:00
