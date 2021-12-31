@@ -10,9 +10,9 @@ currencies = ['ETH', 'BTC', 'ADA', 'XLM', 'XMR', 'SOL', 'LTC', 'USDK', 'DAI', 'U
 quote_currencies = ['ETH', 'BTC', 'USDT', 'USDC', 'USDK', 'DAI', 'USD', 'UST', 'EUR'] #quote currencies
 stable_currencies = ['USDT', 'USD', 'USDC'] #all conversions start and end in these currencies (what we can trade with)
 maxTransactionSizeCurrency = 'USD'
-maxCompromises = 2 # how many maximum compromises (a compromise is when we take the next best price on the most limiting conversion rather than just the best price)
+maxCompromises = 3 # how many maximum compromises (a compromise is when we take the next best price on the most limiting conversion rather than just the best price)
 currency_pairs = [ x + '/'+ y for x in currencies for y in currencies if x != y ]
-min_profit = 0.05 #the conversion must make at least this USD profit to be considered worht it
+min_profit = 0.01 #the conversion must make at least one cent USD profit to be considered worth it
 min_investment = 5.01 #we'll only consider transactions we can invest at least 5.01 dollars into
 useAllExchangeCurrencies = False #uses all available currency pairs that have a quote currency in our quote currencies list
 
@@ -197,7 +197,7 @@ def findOppurtunity(conversion_rates, startingVertex=None):
 
     return oppurtunities
 
-def loadConversionRates(exchange, transactionFee, compromiseConversion=None, compromise_index=0, old_conversion_rates=None, old_max_size=None):
+def loadConversionRates(exchange, transactionFee, specificConversion=None, compromise_index=0, old_conversion_rates=None, old_max_size=None):
     markets = exchange.load_markets()
     log("MARKETS LOADED", False, True)
     if old_conversion_rates != None:
@@ -218,7 +218,7 @@ def loadConversionRates(exchange, transactionFee, compromiseConversion=None, com
         currency_pairs = markets.keys()
 
     for pair in currency_pairs:
-        if compromiseConversion == None or pair == compromiseConversion:
+        if specificConversion == None or pair == specificConversion:
             if pair in markets.keys():
                 try:
                     orderbook = exchange.fetch_order_book (pair)
@@ -226,6 +226,8 @@ def loadConversionRates(exchange, transactionFee, compromiseConversion=None, com
                     log("  >   CONVERSION LOADING ERROR ")
                     continue
                 if orderbook == None: continue
+
+
                 #BTC/USD
                 #bid = best price (USD) you can sell 1 BTC at
                 #ask = best price (USD) you can buy 1 BTC at
@@ -234,7 +236,7 @@ def loadConversionRates(exchange, transactionFee, compromiseConversion=None, com
                 maxAskSize = orderbook['asks'][index][1] if len (orderbook['asks']) > index else None
                 if maxBidSize == None or maxAskSize == None: continue
 
-                if (compromiseConversion == pair):
+                if (specificConversion == pair):
                     if len(orderbook['bids']) <= compromise_index or len(orderbook['asks']) <= compromise_index:
                         log("  >   COMPROMISE IMPOSSIBLE. NO BETTER PRICE AVAILABLE.")
                         return None, None
@@ -400,7 +402,6 @@ def exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize, rec
             log("  >   OPPURTUNITY EXPLORATION ERROR " + str(traceback.format_exc()))
             continue
 
-
 def convert(fromCurrency, toCurrency, exchange, conversion_rates, maxSize, stableCurrency):
     try:
         status = None
@@ -409,9 +410,9 @@ def convert(fromCurrency, toCurrency, exchange, conversion_rates, maxSize, stabl
             print("MaxSize in " + fromCurrency + ": " + str(maxSize))
             symbol = fromCurrency + "/" + toCurrency
             price = (math.exp(-1*conversion_rates[fromCurrency][toCurrency]) / (1-conversion_rates['fee']) )
-            price = math.floor(price * 100000000.0)/100000000.0 #round price down to 8th decimal place
+            price = exchange.price_to_precision(symbol, price)
             amount = min(exchange.fetch_balance()[fromCurrency]['free'], maxSize)
-            amount = math.floor(amount * 100000000.0)/100000000.0 #round amount down to 8th decimal place
+            amount = exchange.amount_to_precision(symbol, amount)
             print("sell", amount, fromCurrency, 'for', price, toCurrency, 'a pop')
             status = exchange.create_limit_sell_order(symbol, amount, price, {"timeInForce":"FOK"})
             #turn it into a limit order with a slightly lower price and make it FOK
@@ -421,10 +422,10 @@ def convert(fromCurrency, toCurrency, exchange, conversion_rates, maxSize, stabl
             print("MaxSize in " + fromCurrency + ": " + str(maxSize))
             symbol = toCurrency + "/" + fromCurrency
             price = 1/(math.exp(-1*conversion_rates[fromCurrency][toCurrency]) / (1-conversion_rates['fee']) )
-            price = math.ceil(price * 100000000.0)/100000000.0 #round price up to 8th decimal place
+            price = exchange.price_to_precision(symbol, price)
             cost = exchange.fetch_balance()[fromCurrency]['free']
             amount = min(cost/price, maxSize/price)
-            amount = math.ceil(amount * 100000000.0)/100000000.0 #round amount down to 8th decimal place
+            amount = exchange.amount_to_precision(symbol, amount)
             print("buy", amount, toCurrency, "for", price, fromCurrency, "a pop")
             status = exchange.create_limit_buy_order(symbol,  amount, price, {"timeInForce":"FOK"})
             #turn it into a limit order with a slightly higher price and make it FOK
@@ -521,4 +522,8 @@ def keepExploitingOppurtunity(exchange, transactionFee):
 ############################################
 
 if __name__ == "__main__":
-    search()   
+    try:
+        search()   
+    except KeyboardInterrupt:
+        log("     >     USER INTERRUPTION ", False, True)
+        log('     >     USER INTERRUPTION', False, True, "profitable_exchanges.txt")
