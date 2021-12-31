@@ -525,5 +525,5 @@ if __name__ == "__main__":
     try:
         search()   
     except KeyboardInterrupt:
-        log("     >     USER INTERRUPTION ", False, True)
-        log('     >     USER INTERRUPTION', False, True, "profitable_exchanges.txt")
+        log("\n>>>>>>>>>>> USER INTERRUPTION \n", False, True)
+        log("\n>>>>>>>>>>> USER INTERRUPTION \n", False, True, "profitable_exchanges.txt")

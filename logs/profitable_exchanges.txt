@@ -251,12 +251,10 @@ delta  >  profit of 3.558056477906378 USDT with investment of 3076.365 USDT. (0.
  >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/31/2021, 12:26:05
  >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/31/2021, 12:33:04
  >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/31/2021, 12:40:00
+
      >     USER INTERRUPTION     >     12/31/2021, 12:42:46
-     >     USER INTERRUPTION     >     12/31/2021, 12:44:58
-     >     USER INTERRUPTION     >     12/31/2021, 12:45:49
-     >     USER INTERRUPTION     >     12/31/2021, 12:46:07
- >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/31/2021, 12:59:13
-     >     USER INTERRUPTION     >     12/31/2021, 12:59:15
- >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/31/2021, 12:59:32
-     >     USER INTERRUPTION     >     12/31/2021, 12:59:33
+
  >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/31/2021, 13:02:54
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/31/2021, 13:10:15
+bibox  >  profit of 0.022073640693708603 USDT with investment of 5.984527819799999 USDT. (0.3688451513363722% increase). Limited by DOGE to BIX conversion.     >     12/31/2021, 13:15:34
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     12/31/2021, 13:17:32
