@@ -8,13 +8,15 @@ import traceback
 
 currencies = ['ETH', 'BTC', 'ADA', 'XLM', 'XMR', 'SOL', 'LTC', 'USDK', 'DAI', 'USDC', 'USDT', 'AVAX', 'BNB', 'XRP', 'DOT', 'BCH', 'USD', 'UST', 'MATIC', 'SHIB', 'DOGE', 'LINK', 'BIX', 'TRX', 'SAND', 'BAC', 'JWL', 'WEC', 'AAVE', 'ZEC', '1INCH', 'GERA', 'REV', 'SPUT', 'EUR'] #currencies we care about
 quote_currencies = ['ETH', 'BTC', 'USDT', 'USDC', 'USDK', 'DAI', 'USD', 'UST', 'EUR'] #quote currencies
-stable_currencies = ['USDT', 'USD', 'USDC'] #all conversions start and end in these currencies (what we can trade with)
-maxTransactionSizeCurrency = 'USD'
+stable_currencies = ['USDT'] #all conversions start and end in these currencies (what we can trade with)
 maxCompromises = 3 # how many maximum compromises (a compromise is when we take the next best price on the most limiting conversion rather than just the best price)
 currency_pairs = [ x + '/'+ y for x in currencies for y in currencies if x != y ]
 min_profit = 0.01 #the conversion must make at least one cent USD profit to be considered worth it
 min_investment = 5.01 #we'll only consider transactions we can invest at least 5.01 dollars into
 useAllExchangeCurrencies = False #uses all available currency pairs that have a quote currency in our quote currencies list
+
+simulateWithTestFunds = True
+initialTestFundsDefault = 100
 
 actuallyMakeTransactions = False
 
@@ -135,13 +137,9 @@ zipmex = ccxt.zipmex()
 zonda = ccxt.zonda()
 
 
-other_exchanges = { kucoin:0.001, ascendex:0.002, bequant:0.001, bitbank:0.0015, bitbns:0.0025, bitcoincom:0.0075, bitfinex:0.002, bitfinex2:0.002, bitflyer:0.002, bitforex:0.001, bitget:0.001, bithumb:0.0015, bitmart:0.0025, bitpanda:0.0015, bitso:0.001, bitstamp:0.005, bittrex:0.0035, bitvavo:0.0025, bl3p:0.0026, btcmarkets:0.002, btctradeua:0.001, buda:0.008, bw:0.002, bybit:0.001, cdax:0.002, cex:0.0025, coinbasepro:0.005, coinex:0.002, coinfalcon:0.002, coinmate:0.0035, crex24:0.001, eqonex:0.0009, equos:0.0009, ftx:0.0007, ftxus:0.004, gateio:0.002, huobi:0.002, huobijp:0.002, independentreserve:0.005, indodax:0.003, itbit:0.0035, kraken:0.015, kuna:0.0025, latoken:0.005, latoken1:0.005, liquid:0.0015, luno:0.001, mexc:0.002, ndax:0.002, novadax:0.0025, oceanex:0.001, okcoin:0.0125, okex3:0.001, okex5:0.001, paymium:0.005, phemex:0.001, poloniex:0.00155, probit:0.002, ripio:0, therock:0.002, tidebit:0.003, tidex:0.001, timex:0.005, xena:0.001, zaif:0.002, zb:0.002, zipmex:0.002, zonda:0.0043, lykke:0.0, btcturk:0.0009 }
+other_exchanges = { kucoin:0.001, ascendex:0.002, bequant:0.001, bitbank:0.0015, bitbns:0.0025, bitcoincom:0.0075, bitfinex:0.002, bitfinex2:0.002, bitflyer:0.002, bitforex:0.001, bitget:0.001, bithumb:0.0015, bitmart:0.0025, bitpanda:0.0015, bitso:0.001, bitstamp:0.005, bittrex:0.0035, bitvavo:0.0025, bl3p:0.0026, btcmarkets:0.002, btctradeua:0.001, buda:0.008, bw:0.002, bybit:0.001, cdax:0.002, cex:0.0025, coinbasepro:0.005, coinex:0.002, coinfalcon:0.002, coinmate:0.0035, crex24:0.001, eqonex:0.0009, equos:0.0009, ftx:0.0007, ftxus:0.004, gateio:0.002, huobi:0.002, huobijp:0.002, independentreserve:0.005, indodax:0.003, itbit:0.0035, kraken:0.015, kuna:0.0025, latoken:0.005, latoken1:0.005, liquid:0.0015, luno:0.001, mexc:0.002, ndax:0.002, novadax:0.0025, oceanex:0.001, okcoin:0.0125, okex3:0.001, okex5:0.001, paymium:0.005, phemex:0.001, poloniex:0.00155, probit:0.002, ripio:0, therock:0.002, tidebit:0.003, tidex:0.001, timex:0.005, xena:0.001, zaif:0.002, zb:0.002, zipmex:0.002, zonda:0.0043, lykke:0.0, btcturk:0.0009, btcalpha:0.002, aax:0.001, exmo:0.003, hitbtc3:0.0009, hitbtc:0.0009, whitebit:0.001, yobit:0.002, gemini:0.0035, binanceus:0.001, upbit:0.002, bigone:0.002, idex:0.0025, stex:0.002, okex:0.001, digifinex:0.002, binance:0.001 }
 
-tryout_exchanges = { exmo:0.003, hitbtc3:0.0009, hitbtc:0.0009, whitebit:0.001, yobit:0.002, gemini:0.0035, binanceus:0.001, upbit:0.002, bigone:0.002, idex:0.0025, stex:0.002, okex:0.001, digifinex:0.002 }
-
-confirmed_exchanges = { bitmex:0.0005, bitrue:0.0015, bibox:0.002, binance:0.001, lbank:0.001, delta:0.0005 }
-
-usable_exchanges = { btcalpha:0.002, aax:0.001 }
+confirmed_exchanges = { bitmex:0.0005, lbank:0.001, bitrue:0.0015, bibox:0.002, delta:0.0005 }
 
 def findOppurtunity(conversion_rates, startingVertex=None):
 
@@ -225,6 +223,7 @@ def loadConversionRates(exchange, transactionFee, specificConversion=None, compr
                 except Exception as e:
                     log("  >   CONVERSION LOADING ERROR ")
                     continue
+
                 if orderbook == None: continue
 
 
@@ -301,6 +300,33 @@ def log(text, showTimeElapsed=False, showTime=False, filename="log.txt"):
     log.close()
     lastLog = time.time()
 
+def updateTestFunds(growthPercent, maxTransaction, name):
+    try:
+        funds = open("test_funds/" + name + ".txt", 'r')
+        for line in funds.readlines():
+            if line.split(' : ')[0] == 'startDate': startDate = line.split(' : ')[1].rstrip("\n")
+            if line.split(' : ')[0] == 'initial': initial = float(line.split(' : ')[1])
+            if line.split(' : ')[0] == 'current': current = float(line.split(' : ')[1])
+            if line.split(' : ')[0] == 'numTrades': numTrades = int(line.split(' : ')[1])
+        funds.close()
+    except Exception:
+        startDate = datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
+        initial = initialTestFundsDefault
+        current = initial
+        numTrades = 0
+    
+    numTrades += 1
+    amountToInvest = min(current, maxTransaction)
+    current = current + amountToInvest*(growthPercent/100)
+
+    funds = open("test_funds/" + name + ".txt", 'w+')
+    funds.write("startDate : " + startDate)
+    funds.write("\ninitial : " + str(initial))
+    funds.write("\ncurrent : " + str(current))
+    funds.write("\nnumTrades : " + str(numTrades))
+    funds.write("\nlastTradeDate : " + datetime.now().strftime("%m/%d/%Y, %H:%M:%S"))
+
+
 def findStartingCurrency(oppurtunity):
     for key in reversed(list(oppurtunity.keys())):
         if key in stable_currencies: return key
@@ -374,6 +400,7 @@ def exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize, rec
 
             if possible_profit >= min_profit and maxAmount >= min_investment:
                 log(exchange.id + "  >  profit of " + str(possible_profit) + " " + stableCurrency + " with investment of " + str(maxAmount) + " " + stableCurrency + ". (" + str(growth) + '% increase). Limited by ' + limiting_conversion + " conversion.", False, True, "profitable_exchanges.txt")
+                if simulateWithTestFunds: updateTestFunds(growth, maxAmount, exchange.id + "_" + stableCurrency)
                 if not actuallyMakeTransactions: return False
                 return doTransactions(oppurtunityCopy, exchange, maxAmount, stableCurrency, conversion_rates)
             else:
@@ -489,7 +516,7 @@ def doTransactions(oppurtunity, exchange, maxAmount, stableCurrency, conversion_
 def search():
     while True:
         log(' >>>>>>>>>> NEXT ITERATION <<<<<<<<<<', False, True, "profitable_exchanges.txt")
-        for exchange, transactionFee in list(usable_exchanges.items()) + list(confirmed_exchanges.items()):
+        for exchange, transactionFee in list(confirmed_exchanges.items()):
             log("\n" + exchange.id, False, True)
             try:
                 conversion_rates, maxSize = loadConversionRates(exchange, transactionFee)
@@ -525,5 +552,5 @@ if __name__ == "__main__":
     try:
         search()   
     except KeyboardInterrupt:
-        log("\n>>>>>>>>>>> USER INTERRUPTION \n", False, True)
-        log("\n>>>>>>>>>>> USER INTERRUPTION \n", False, True, "profitable_exchanges.txt")
+        log(">>>>>>>>>>> USER INTERRUPTION", False, True)
+        log("USER INTERRUPTION", False, True, "profitable_exchanges.txt")
