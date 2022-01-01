@@ -349,11 +349,11 @@ def findStartingCurrency(oppurtunity):
 
 def getConvRateToStable(fromC, toC, conversion_rates):
     try:
-        return math.exp(-1*conversion_rates[fromC][toC])
+        return math.exp(-1*conversion_rates[fromC][toC]), toC
     except Exception:
         for toCurrency in stable_currencies:
             try:
-                return math.exp(-1*conversion_rates[fromC][toCurrency])
+                return math.exp(-1*conversion_rates[fromC][toCurrency]), toCurrency
             except Exception:
                 continue
 
@@ -396,15 +396,16 @@ def exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize, rec
                 if nextCurrency == None: break
                 log(" > " + str(value) + " " + currentCurrency + " converts to: " + str(value*math.exp(-1*conversion_rates[currentCurrency][nextCurrency])) + " " + nextCurrency, False, False)
                 value = value*math.exp(-1*conversion_rates[currentCurrency][nextCurrency])
-                rate = getConvRateToStable(currentCurrency, stableCurrency, conversion_rates)
+                rate, newStable = getConvRateToStable(currentCurrency, stableCurrency, conversion_rates)
                 if (maxAmount > maxSize[currentCurrency][nextCurrency] * rate / (1-conversion_rates['fee'])): limiting_conversion = currentCurrency + " to " + nextCurrency
                 maxAmount = min(maxAmount, maxSize[currentCurrency][nextCurrency] * rate / (1-conversion_rates['fee']))
                 currentCurrency = nextCurrency
 
             #make sure we end up with a stable currency (in case we had to append entry conversion)
             if (currentCurrency != stableCurrency):
-                log(" > " + str(value) + " " + currentCurrency + " converts to: " + str(value*math.exp(-1*conversion_rates[currentCurrency][stableCurrency])) + " " + stableCurrency, False, False)
-                rate = getConvRateToStable(currentCurrency, stableCurrency, conversion_rates)
+                rate, newStable = getConvRateToStable(currentCurrency, stableCurrency, conversion_rates)
+                stableCurrency = newStable
+                log(" > " + str(value) + " " + currentCurrency + " converts to: " + str(value*rate) + " " + stableCurrency, False, False)
                 value = value*rate
                 if (maxAmount > maxSize[currentCurrency][nextCurrency] * rate / (1-conversion_rates['fee'])): limiting_conversion = currentCurrency + " to " + stableCurrency
                 maxAmount = min(maxAmount, maxSize[currentCurrency][stableCurrency] * rate / (1-conversion_rates['fee']))
@@ -535,7 +536,7 @@ def search():
     while True:
         log(' >>>>>>>>>> NEXT ITERATION <<<<<<<<<<', False, True, "profitable_exchanges.txt")
         for exchange, transactionFee in list(confirmed_exchanges.items()):
-            log(exchange.id + "\n", False, True)
+            log("\n" + exchange.id, False, True)
             try:
                 conversion_rates, maxSize = loadConversionRates(exchange, transactionFee)
                 log("CONVERSION RATES LOADED (" + str(len(conversion_rates.keys())) + ")", True, False)
@@ -550,7 +551,7 @@ def search():
 def keepExploitingOppurtunity(exchange, transactionFee):
     while True:
         try:
-            log(exchange.id + "\n", False, True)
+            log("\n" + exchange.id, False, True)
             conversion_rates, maxSize = loadConversionRates(exchange, transactionFee)
             log("CONVERSION RATES LOADED (" + str(len(conversion_rates.keys())) + ")", True, False)
             oppurtunities = findOppurtunity(conversion_rates)
