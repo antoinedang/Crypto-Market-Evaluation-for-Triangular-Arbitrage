@@ -377,8 +377,11 @@ def exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize, rec
             if stableCurrency not in oppurtunity.keys():
                 stableCurrency = findStartingCurrency(oppurtunity)
             if stableCurrency == None:
-                log("  >   OPPURTUNITY HAS NO STABLE STARTING POINT.")
-                continue
+                stableCurrency = 'USDT'
+                entryCurrency = oppurtunity.keys()[0]
+                oppurtunity[stableCurrency] = entryCurrency
+                log("  >   OPPURTUNITY HAS NO STABLE STARTING POINT. APPENDING ENTRY CONVERSION: " + stableCurrency + " to " + entryCurrency)
+
             currentCurrency = stableCurrency
 
             #while there are still conversions left, pop the next step and convert
@@ -392,11 +395,11 @@ def exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize, rec
                 maxAmount = min(maxAmount, maxSize[currentCurrency][nextCurrency] * rate / (1-conversion_rates['fee']))
                 currentCurrency = nextCurrency
 
-            #make sure we end up with a stable currency
+            #make sure we end up with a stable currency (in case we had to append entry conversion)
             if (currentCurrency != stableCurrency):
-                log(" 1> " + str(value) + " " + currentCurrency + " converts to: " + str(value*math.exp(-1*conversion_rates[currentCurrency][stableCurrency])) + " " + stableCurrency, False, False)
-                value = value*math.exp(-1*conversion_rates[currentCurrency][stableCurrency])
+                log(" > " + str(value) + " " + currentCurrency + " converts to: " + str(value*math.exp(-1*conversion_rates[currentCurrency][stableCurrency])) + " " + stableCurrency, False, False)
                 rate = getConvRateToStable(currentCurrency, stableCurrency, conversion_rates)
+                value = value*rate
                 if (maxAmount > maxSize[currentCurrency][nextCurrency] * rate / (1-conversion_rates['fee'])): limiting_conversion = currentCurrency + " to " + stableCurrency
                 maxAmount = min(maxAmount, maxSize[currentCurrency][stableCurrency] * rate / (1-conversion_rates['fee']))
                 currentCurrency = stableCurrency
