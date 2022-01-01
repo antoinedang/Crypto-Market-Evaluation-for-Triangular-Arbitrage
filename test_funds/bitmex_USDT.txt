@@ -1,6 +1,0 @@
-startDate : 01/01/2022, 19:16:51
-initial : 100.0
-current : 100.01223616355391
-numTrades : 2
-lastTradeDate : 01/01/2022, 19:54:37
-timeElapsed : 0:37:46.486325

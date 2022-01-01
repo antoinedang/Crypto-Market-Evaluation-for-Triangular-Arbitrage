@@ -12,7 +12,7 @@ stable_currencies = ['USDT', 'USDC', 'USD'] #all conversions start and end in th
 maxCompromises = 3 # how many maximum compromises (a compromise is when we take the next best price on the most limiting conversion rather than just the best price)
 currency_pairs = [ x + '/'+ y for x in currencies for y in currencies if x != y ]
 min_profit = 0.01 #the conversion must make at least one cent USD profit to be considered worth it
-min_investment = 5.01 #we'll only consider transactions we can invest at least 5.01 dollars into
+min_investment = { 'bitmex':100, 'bitrue':38, 'bibox':1, 'lbank':50, 'delta':50 } #we'll only consider transactions we can invest at least this amount of US dollars into
 useAllExchangeCurrencies = False #uses all available currency pairs that have a quote currency in our quote currencies list
 
 simulateWithTestFunds = True
@@ -407,7 +407,7 @@ def exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize, rec
             log("We can move "+ str(maxAmount) + " " + stableCurrency + " through this conversion for a final profit of approximately: " + str(possible_profit) + " " + stableCurrency )
             log("The conversion which limits our transaction size the most is: " + limiting_conversion)
 
-            if possible_profit >= min_profit and maxAmount >= min_investment:
+            if possible_profit >= min_profit and maxAmount >= min_investment[exchange.id]:
                 log(exchange.id + "  >  profit of " + str(possible_profit) + " " + stableCurrency + " with investment of " + str(maxAmount) + " " + stableCurrency + ". (" + str(growth) + '% increase). Limited by ' + limiting_conversion + " conversion.", False, True, "profitable_exchanges.txt")
                 if simulateWithTestFunds: updateTestFunds(growth, maxAmount, exchange.id + "_" + stableCurrency)
                 if not actuallyMakeTransactions: return True
