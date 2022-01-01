@@ -8,7 +8,7 @@ import traceback
 
 currencies = ['ETH', 'BTC', 'ADA', 'XLM', 'XMR', 'SOL', 'LTC', 'USDK', 'DAI', 'USDC', 'USDT', 'AVAX', 'BNB', 'XRP', 'DOT', 'BCH', 'USD', 'UST', 'MATIC', 'SHIB', 'DOGE', 'LINK', 'BIX', 'TRX', 'SAND', 'BAC', 'JWL', 'WEC', 'AAVE', 'ZEC', '1INCH', 'GERA', 'REV', 'SPUT', 'EUR'] #currencies we care about
 quote_currencies = ['ETH', 'BTC', 'USDT', 'USDC', 'USDK', 'DAI', 'USD', 'UST', 'EUR'] #quote currencies
-stable_currencies = ['USDT'] #all conversions start and end in these currencies (what we can trade with)
+stable_currencies = ['USDT', 'USDC', 'USD'] #all conversions start and end in these currencies (what we can trade with)
 maxCompromises = 3 # how many maximum compromises (a compromise is when we take the next best price on the most limiting conversion rather than just the best price)
 currency_pairs = [ x + '/'+ y for x in currencies for y in currencies if x != y ]
 min_profit = 0.01 #the conversion must make at least one cent USD profit to be considered worth it
@@ -204,11 +204,11 @@ def loadConversionRates(exchange, transactionFee, specificConversion=None, compr
     else:
         conversion_rates = {}
         conversion_rates['fee'] = transactionFee
-        for stableCurr in stable_currencies:
-            conversion_rates[stableCurr] = {stableCurr: np.log(1-transactionFee)*-1 }
+        for curr in currencies:
+            conversion_rates[curr] = {curr: np.log(1-transactionFee)*-1 }
         maxSize = {}
-        for stableCurr in stable_currencies:
-            maxSize[stableCurr] = { stableCurr:9999 }
+        for curr in currencies:
+            maxSize[curr] = { curr:9999 }
 
     global currency_pairs
 
@@ -327,12 +327,13 @@ def updateTestFunds(growthPercent, maxTransaction, name, countAsTrade=True):
     funds.write("\nnumTrades : " + str(numTrades))
     if countAsTrade:
         funds.write("\nlastTradeDate : " + datetime.now().strftime("%m/%d/%Y, %H:%M:%S"))
+        start = datetime.strptime(startDate,"%m/%d/%Y, %H:%M:%S")
+        now = datetime.now()
+        timeElapsed = now-start
+        funds.write("\ntimeElapsed : " + str(timeElapsed))
     else:
-        funds.write("\nlastTradeDate : " + lastTradeDate)
-    start = datetime.strptime(startDate,"%m/%d/%Y, %H:%M:%S")
-    now = datetime.now()
-    timeElapsed = now-start
-    funds.write("\ntimeElapsed : " + str(timeElapsed))
+        funds.write("\nlastTradeDate : ")
+        funds.write("\ntimeElapsed : ")
 
 
 def findStartingCurrency(oppurtunity):
@@ -559,7 +560,8 @@ def keepExploitingOppurtunity(exchange, transactionFee):
 if __name__ == "__main__":
     try:
         for exchange in confirmed_exchanges:
-            updateTestFunds(0, 0, exchange.id + "_USDT", False)
+            for stable in stable_currencies:
+                updateTestFunds(0, 0, exchange.id + "_" + stable, False)
         search()   
     except KeyboardInterrupt:
         log(">>>>>>>>>>> USER INTERRUPTION", False, True)
