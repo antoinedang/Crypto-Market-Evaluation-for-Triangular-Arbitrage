@@ -534,7 +534,7 @@ def search():
                 if len(oppurtunities) == 0:
                     log("NO ARBITRAGE OPPURTUNITIES :(", False, False)
                 else:
-                    if (exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize)): keepExploitingOppurtunity(exchange, transactionFee)
+                    if (exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize) and actuallyMakeTransactions): keepExploitingOppurtunity(exchange, transactionFee)
             except Exception as e:
                 log("  >   SEARCH ERROR: " + str(traceback.format_exc()))
 

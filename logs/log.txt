@@ -1,7 +1,0 @@
-bitmex     >     01/01/2022, 19:05:04
-MARKETS LOADED     >     01/01/2022, 19:05:04
-CONVERSION RATES LOADED (36)     >      (46.02s elapsed)
-NO ARBITRAGE OPPURTUNITIES :(
-
-lbank     >     01/01/2022, 19:05:50
-MARKETS LOADED     >     01/01/2022, 19:05:51

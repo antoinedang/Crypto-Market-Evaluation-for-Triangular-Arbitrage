@@ -5,6 +5,8 @@ exchanges = [ "bibox", "bitmex", "bitrue", "delta", "lbank" ]
 
 def assess():
         assessment = open("assessment.txt", 'w+')
+        overallCentsPerHour = 0
+        overallTradesPerHour = 0
         for exchange in exchanges:
                 totalCentsPerHour = 0
                 totalTradesPerHour = 0
@@ -36,9 +38,12 @@ def assess():
                         except Exception:
                                 continue
                 
-                assessment.write("Exchange: " + exchange + "\n   >   Cents Per Hour: " + str(totalCentsPerHour) + "\n   >   Trades Per Hour: " + str(totalTradesPerHour) + "\n\n")
+                overallCentsPerHour += totalCentsPerHour
+                overallTradesPerHour += totalTradesPerHour
+                assessment.write(exchange + "\n   >   Cents Per Hour: " + str(totalCentsPerHour) + "\n   >   Trades Per Hour: " + str(totalTradesPerHour) + "\n\n")
 
 
+        assessment.write("\n\n All Exchanges Combined:\n   >   Cents Per Hour: " + str(overallCentsPerHour) + "\n   >   Trades Per Hour: " + str(overallTradesPerHour) + "\n\n")
         assessment.write("\n\nMeasurement Period: " + str(datetime.utcfromtimestamp(measurementPeriod.total_seconds()).strftime("%H hours, %M minutes, %S seconds")))
         assessment.close()
 
