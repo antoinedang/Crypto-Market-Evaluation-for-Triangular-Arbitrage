@@ -1054,3 +1054,56 @@ USER INTERRUPTION     >     01/01/2022, 14:03:08
  >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 14:16:30
  >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 14:21:02
  >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 14:25:34
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 14:30:16
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 14:34:48
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 14:39:20
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 14:43:54
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 14:48:37
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 14:53:15
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 14:57:50
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 15:02:22
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 15:06:55
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 15:11:33
+bibox  >  profit of 0.14147589587975226 USDT with investment of 29.254896290763792 USDT. (0.4835973249524672% increase). Limited by BIX to DOGE conversion.     >     01/01/2022, 15:16:01
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 15:16:11
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 15:20:46
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 15:25:24
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 15:29:58
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 15:34:33
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 15:39:07
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 15:43:41
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 15:48:13
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 15:52:47
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 15:57:21
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 16:01:53
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 16:06:25
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 16:10:57
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 16:15:29
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 16:20:01
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 16:24:40
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 16:29:20
+bibox  >  profit of 0.0624481844600065 USDT with investment of 50.250132 USDT. (0.12427466749740379% increase). Limited by LINK to USDT conversion.     >     01/01/2022, 16:33:49
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 16:33:59
+bibox  >  profit of 0.044185264289195655 USDT with investment of 24.555544999999995 USDT. (0.17994006766779425% increase). Limited by USDT to BIX conversion.     >     01/01/2022, 16:38:25
+delta  >  profit of 0.036657237333524016 USDT with investment of 520.2199999999999 USDT. (0.007046487511730426% increase). Limited by BNB to USDT conversion.     >     01/01/2022, 16:38:35
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 16:38:35
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 16:43:09
+bibox  >  profit of 0.14383742507690672 USDT with investment of 289.79999999999995 USDT. (0.04963334198651026% increase). Limited by LINK to USDT conversion.     >     01/01/2022, 16:47:39
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 16:47:49
+bibox  >  profit of 0.02713373987728737 USDT with investment of 18.045900000000003 USDT. (0.15035958238318603% increase). Limited by LINK to USDT conversion.     >     01/01/2022, 16:52:17
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 16:52:27
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 16:57:01
+bibox  >  profit of 0.020392384440395823 USDT with investment of 8.854398 USDT. (0.230307971703958% increase). Limited by LINK to USDT conversion.     >     01/01/2022, 17:01:29
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 17:01:40
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 17:06:13
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 17:10:51
+bibox  >  profit of 0.06096125280586317 USDT with investment of 13.070274748699998 USDT. (0.4664114104558248% increase). Limited by BIX to BTC conversion.     >     01/01/2022, 17:15:15
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 17:15:25
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 17:19:58
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 17:24:32
+bibox  >  profit of 0.021690695106872562 USDT with investment of 31.029130776600002 USDT. (0.0699042949769968% increase). Limited by BIX to BTC conversion.     >     01/01/2022, 17:28:57
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 17:29:08
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 17:33:42
+USER INTERRUPTION     >     01/01/2022, 17:34:29
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 17:34:55
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 17:39:41

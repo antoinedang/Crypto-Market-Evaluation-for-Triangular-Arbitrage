@@ -300,7 +300,7 @@ def log(text, showTimeElapsed=False, showTime=False, filename="log.txt"):
     log.close()
     lastLog = time.time()
 
-def updateTestFunds(growthPercent, maxTransaction, name):
+def updateTestFunds(growthPercent, maxTransaction, name, countAsTrade=True):
     try:
         funds = open("test_funds/" + name + ".txt", 'r')
         for line in funds.readlines():
@@ -308,6 +308,7 @@ def updateTestFunds(growthPercent, maxTransaction, name):
             if line.split(' : ')[0] == 'initial': initial = float(line.split(' : ')[1])
             if line.split(' : ')[0] == 'current': current = float(line.split(' : ')[1])
             if line.split(' : ')[0] == 'numTrades': numTrades = int(line.split(' : ')[1])
+            if not countAsTrade and line.split(' : ')[0] == 'lastTradeDate': lastTradeDate = line.split(' : ')[1].rstrip("\n")
         funds.close()
     except Exception:
         startDate = datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
@@ -315,7 +316,7 @@ def updateTestFunds(growthPercent, maxTransaction, name):
         current = initial
         numTrades = 0
     
-    numTrades += 1
+    if countAsTrade: numTrades += 1
     amountToInvest = min(current, maxTransaction)
     current = current + amountToInvest*(growthPercent/100)
 
@@ -324,7 +325,14 @@ def updateTestFunds(growthPercent, maxTransaction, name):
     funds.write("\ninitial : " + str(initial))
     funds.write("\ncurrent : " + str(current))
     funds.write("\nnumTrades : " + str(numTrades))
-    funds.write("\nlastTradeDate : " + datetime.now().strftime("%m/%d/%Y, %H:%M:%S"))
+    if countAsTrade:
+        funds.write("\nlastTradeDate : " + datetime.now().strftime("%m/%d/%Y, %H:%M:%S"))
+    else:
+        funds.write("\nlastTradeDate : " + lastTradeDate)
+    start = datetime.strptime(startDate,"%m/%d/%Y, %H:%M:%S")
+    now = datetime.now()
+    timeElapsed = now-start
+    funds.write("\ntimeElapsed : " + str(timeElapsed))
 
 
 def findStartingCurrency(oppurtunity):
@@ -550,6 +558,8 @@ def keepExploitingOppurtunity(exchange, transactionFee):
 
 if __name__ == "__main__":
     try:
+        for exchange in confirmed_exchanges:
+            updateTestFunds(0, 0, exchange.id + "_USDT", False)
         search()   
     except KeyboardInterrupt:
         log(">>>>>>>>>>> USER INTERRUPTION", False, True)
