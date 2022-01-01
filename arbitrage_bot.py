@@ -296,7 +296,7 @@ def log(text, showTimeElapsed=False, showTime=False, filename="log.txt"):
 
     log = open("logs/"+filename, 'a+')
     print(text + timeString)
-    log.write("\n" + text + timeString)
+    log.write(text + timeString + "\n")
     log.close()
     lastLog = time.time()
 
@@ -308,15 +308,20 @@ def updateTestFunds(growthPercent, maxTransaction, name, countAsTrade=True):
             if line.split(' : ')[0] == 'initial': initial = float(line.split(' : ')[1])
             if line.split(' : ')[0] == 'current': current = float(line.split(' : ')[1])
             if line.split(' : ')[0] == 'numTrades': numTrades = int(line.split(' : ')[1])
-            if not countAsTrade and line.split(' : ')[0] == 'lastTradeDate': lastTradeDate = line.split(' : ')[1].rstrip("\n")
+            if line.split(' : ')[0] == 'averageGrowthPercent': avgGrowth = float( line.split(' : ')[1].rstrip("%\n") )
         funds.close()
     except Exception:
         startDate = datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
         initial = initialTestFundsDefault
         current = initial
         numTrades = 0
+        avgGrowth = 0
     
-    if countAsTrade: numTrades += 1
+    if countAsTrade:
+        sumGrowth = avgGrowth*numTrades + growthPercent
+        numTrades += 1
+        avgGrowth = sumGrowth/numTrades
+
     amountToInvest = min(current, maxTransaction)
     current = current + amountToInvest*(growthPercent/100)
 
@@ -325,6 +330,7 @@ def updateTestFunds(growthPercent, maxTransaction, name, countAsTrade=True):
     funds.write("\ninitial : " + str(initial))
     funds.write("\ncurrent : " + str(current))
     funds.write("\nnumTrades : " + str(numTrades))
+    funds.write("\naverageGrowthPercent : " + str(avgGrowth) + "%")
     if countAsTrade:
         funds.write("\nlastTradeDate : " + datetime.now().strftime("%m/%d/%Y, %H:%M:%S"))
         start = datetime.strptime(startDate,"%m/%d/%Y, %H:%M:%S")
@@ -529,7 +535,7 @@ def search():
     while True:
         log(' >>>>>>>>>> NEXT ITERATION <<<<<<<<<<', False, True, "profitable_exchanges.txt")
         for exchange, transactionFee in list(confirmed_exchanges.items()):
-            log("\n" + exchange.id, False, True)
+            log(exchange.id + "\n", False, True)
             try:
                 conversion_rates, maxSize = loadConversionRates(exchange, transactionFee)
                 log("CONVERSION RATES LOADED (" + str(len(conversion_rates.keys())) + ")", True, False)
@@ -544,7 +550,7 @@ def search():
 def keepExploitingOppurtunity(exchange, transactionFee):
     while True:
         try:
-            log("\n" + exchange.id, False, True)
+            log(exchange.id + "\n", False, True)
             conversion_rates, maxSize = loadConversionRates(exchange, transactionFee)
             log("CONVERSION RATES LOADED (" + str(len(conversion_rates.keys())) + ")", True, False)
             oppurtunities = findOppurtunity(conversion_rates)
@@ -565,6 +571,7 @@ if __name__ == "__main__":
         for exchange in confirmed_exchanges:
             for stable in stable_currencies:
                 updateTestFunds(0, 0, exchange.id + "_" + stable, False)
+
         search()   
     except KeyboardInterrupt:
         log(">>>>>>>>>>> USER INTERRUPTION", False, True)

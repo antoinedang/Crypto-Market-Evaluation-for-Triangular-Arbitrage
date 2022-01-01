@@ -1,3 +1,11 @@
+INSTRUCTIONS:
+
+run arbitrage_bot.py to start polling exchanges, detecting oppurtunities, and then exploiting them for profit
+
+run assess.py to assess the performance of each exchange indvidually and the overall performance of the bot
+
+
+
 confirmed:
         BITMEX IS THE MOVE
 
