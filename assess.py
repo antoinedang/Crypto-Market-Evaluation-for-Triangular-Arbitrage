@@ -26,7 +26,7 @@ def assess():
 
                                 start = datetime.strptime(startDate,"%m/%d/%Y, %H:%M:%S")
                                 now = datetime.now()
-                                measurementPeriodHours = (now-start).total_seconds()/360
+                                measurementPeriodHours = (now-start).total_seconds()/3600
 
                                 profit = current - initial
                                 centsPerHour = (profit/measurementPeriodHours)*100

@@ -1,0 +1,21 @@
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 19:16:51
+lbank  >  profit of 0.5082400096747395 USDT with investment of 417.684591 USDT. (0.12168033502455433% increase). Limited by USDT to TRX conversion.     >     01/01/2022, 19:18:52
+bibox  >  profit of 0.10028912926199646 USDT with investment of 29.320969988840325 USDT. (0.34203892060926666% increase). Limited by ETH to LINK conversion.     >     01/01/2022, 19:21:30
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 19:21:42
+bitmex  >  profit of 0.09666826288812634 USDT with investment of 8887.599999999995 USDT. (0.0010876756704636392% increase). Limited by BNB to USD conversion.     >     01/01/2022, 19:22:27
+lbank  >  profit of 0.16423592336782075 USDT with investment of 417.95774100000006 USDT. (0.03929486339333543% increase). Limited by USDT to TRX conversion.     >     01/01/2022, 19:23:40
+bibox  >  profit of 0.126228627387532 USDT with investment of 29.346709284926078 USDT. (0.43012872810366254% increase). Limited by ETH to LINK conversion.     >     01/01/2022, 19:26:07
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 19:26:17
+bibox  >  profit of 0.1076078654719711 USDT with investment of 29.327698193896175 USDT. (0.3669154829694987% increase). Limited by ETH to LINK conversion.     >     01/01/2022, 19:30:55
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 19:31:05
+bibox  >  profit of 0.23743723887889245 USDT with investment of 19.6002519732 USDT. (1.2113989106035339% increase). Limited by BIX to ETH conversion.     >     01/01/2022, 19:35:31
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 19:35:41
+bibox  >  profit of 0.28367392357203897 USDT with investment of 18.09621 USDT. (1.5675874869491402% increase). Limited by LINK to USDT conversion.     >     01/01/2022, 19:40:06
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 19:40:16
+bibox  >  profit of 0.2615934626641837 USDT with investment of 19.526154129 USDT. (1.3397080701911923% increase). Limited by BIX to ETH conversion.     >     01/01/2022, 19:44:38
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 19:44:48
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 19:49:21
+bibox  >  profit of 0.35334250766472924 USDT with investment of 19.526154129 USDT. (1.8095857757260525% increase). Limited by BIX to ETH conversion.     >     01/01/2022, 19:53:43
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 19:53:53
+bitmex  >  profit of 5.068835657413007 USDT with investment of 45467.06999999998 USDT. (0.011148366625368666% increase). Limited by BNB to USD conversion.     >     01/01/2022, 19:54:37
+ >>>>>>>>>> NEXT ITERATION <<<<<<<<<<     >     01/01/2022, 19:58:25
