@@ -410,7 +410,7 @@ def exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize, rec
             if possible_profit >= min_profit and maxAmount >= min_investment:
                 log(exchange.id + "  >  profit of " + str(possible_profit) + " " + stableCurrency + " with investment of " + str(maxAmount) + " " + stableCurrency + ". (" + str(growth) + '% increase). Limited by ' + limiting_conversion + " conversion.", False, True, "profitable_exchanges.txt")
                 if simulateWithTestFunds: updateTestFunds(growth, maxAmount, exchange.id + "_" + stableCurrency)
-                if not actuallyMakeTransactions: return False
+                if not actuallyMakeTransactions: return True
                 return doTransactions(oppurtunityCopy, exchange, maxAmount, stableCurrency, conversion_rates)
             else:
                 if possible_profit < 0 and not reverse and abs(possible_profit) > min_profit:
