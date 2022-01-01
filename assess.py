@@ -39,7 +39,7 @@ def assess():
                 assessment.write("Exchange: " + exchange + "\n   >   Cents Per Hour: " + str(totalCentsPerHour) + "\n   >   Trades Per Hour: " + str(totalTradesPerHour) + "\n\n")
 
 
-        assessment.write("\n\nMeasurement Period: " + str(datetime.utcfromtimestamp(measurementPeriod.total_seconds()).strftime("%d days, %H hours, %M minutes, %S seconds")))
+        assessment.write("\n\nMeasurement Period: " + str(datetime.utcfromtimestamp(measurementPeriod.total_seconds()).strftime("%H hours, %M minutes, %S seconds")))
         assessment.close()
 
 
