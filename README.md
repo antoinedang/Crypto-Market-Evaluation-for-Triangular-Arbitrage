@@ -5,4 +5,4 @@ INSTRUCTIONS:
  > run assess.py to assess the performance of each exchange individually and the overall performance of the bot. (will generate detailed assessment.txt file)
 
 
-This project was designed and programmed entirely by me (Antoine Dangeard) as a side project throughout winter vacation (20th December to 4th January).
+This project was designed and programmed entirely by me (Antoine Dangeard) as a side project throughout winter vacation (20th December '21 to 4th January '22).
