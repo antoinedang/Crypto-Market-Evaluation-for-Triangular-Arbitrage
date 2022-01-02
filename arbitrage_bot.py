@@ -11,6 +11,7 @@ quote_currencies = ['ETH', 'BTC', 'USDT', 'USDC', 'USDK', 'DAI', 'USD', 'UST', '
 stable_currencies = ['USDT', 'USDC', 'USD'] #all conversions start and end in these currencies (what we can trade with)
 maxCompromises = 3 # how many maximum compromises (a compromise is when we take the next best price on the most limiting conversion rather than just the best price)
 currency_pairs = [ x + '/'+ y for x in currencies for y in currencies if x != y ]
+min_growth = 0.02 # the conversion must yield a profit of at least 0.02%
 min_profit = 0.01 #the conversion must make at least one cent USD profit to be considered worth it
 min_investment = { 'bitmex':100.01, 'bibox':1.01, 'lbank':50, 'aax':10, 'btcalpha':5.01 } #we'll only consider transactions we can invest at least this amount of US dollars into
 useAllExchangeCurrencies = False #uses all available currency pairs that have a quote currency in our quote currencies list
@@ -417,7 +418,7 @@ def exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize, rec
             log("We can move "+ str(maxAmount) + " " + stableCurrency + " through this conversion for a final profit of approximately: " + str(possible_profit) + " " + stableCurrency )
             log("The conversion which limits our transaction size the most is: " + limiting_conversion)
 
-            if possible_profit >= min_profit and maxAmount >= min_investment[exchange.id]:
+            if growth >= min_growth and possible_profit >= min_profit and maxAmount >= min_investment[exchange.id]:
                 log(exchange.id + "  >  profit of " + str(possible_profit) + " " + stableCurrency + " with investment of " + str(maxAmount) + " " + stableCurrency + ". (" + str(growth) + '% increase). Limited by ' + limiting_conversion + " conversion.", False, True, "profitable_exchanges.txt")
                 if simulateWithTestFunds: updateTestFunds(growth, maxAmount, exchange.id + "_" + stableCurrency)
                 if not actuallyMakeTransactions: return True
@@ -429,7 +430,7 @@ def exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize, rec
                     if exploreOppurtunities(reverse_path, conversion_rates, exchange, maxSize, 0, True): return True
                     log("  >   REVERSE OPPURTUNITY FAILED. MOVING ON.")
                     continue
-                if recursiveCall < maxCompromises: 
+                if recursiveCall < maxCompromises and possible_profit > 0: 
                     if (limiting_conversion.split(' to ')[0] + '/' + limiting_conversion.split(' to ')[1]) in exchange.symbols:
                         compromiseConversion = limiting_conversion.split(' to ')[0] + '/' + limiting_conversion.split(' to ')[1]
                     else:
