@@ -12,7 +12,7 @@ stable_currencies = ['USDT', 'USDC', 'USD'] #all conversions start and end in th
 maxCompromises = 3 # how many maximum compromises (a compromise is when we take the next best price on the most limiting conversion rather than just the best price)
 currency_pairs = [ x + '/'+ y for x in currencies for y in currencies if x != y ]
 min_profit = 0.01 #the conversion must make at least one cent USD profit to be considered worth it
-min_investment = { 'bitmex':100, 'bitrue':38, 'bibox':1, 'lbank':50, 'delta':50 } #we'll only consider transactions we can invest at least this amount of US dollars into
+min_investment = { 'bitmex':100.01, 'bibox':1.01, 'lbank':50, 'aax':10, 'btcalpha':5.01 } #we'll only consider transactions we can invest at least this amount of US dollars into
 useAllExchangeCurrencies = False #uses all available currency pairs that have a quote currency in our quote currencies list
 
 simulateWithTestFunds = True
@@ -25,10 +25,12 @@ lastLog = time.time()
 
 aax = ccxt.aax({'secret':'f7591aa3c2c63c52110cf87cb98a6ed1', 'apiKey':'a0zty4VLfxxqOOQ1gQgnJ9URNo'})
 btcalpha = ccxt.btcalpha({'secret':'63hWe1ydFj8L9t6vspZbawYhmmD9WT9xdgy5175XZv8s93SvsNddaMVv6B1irf1mxqknWksEYAhCv7BTQu2pmkJx', 'apiKey':'4poAAqfmJGq3bQEzcWdC9m4wx7bXnLGyuuQyQqgUvikdheAoV8B2orgQiMrVaEA8HAYVc3SDRh92'})
+bibox = ccxt.bibox({})
+bitmex = ccxt.bitmex({})
+lbank = ccxt.lbank({})
 
 
 bigone = ccxt.bigone()
-bibox = ccxt.bibox()
 binance = ccxt.binance({
     #'apiKey':'CVmVNcQEK9JK3XxoDZq6KGuUmEkvJhhxuTpmyD35SDaey4ASetMEHLaXX4kLZTGk',
     #'secret':'ShmGL7VxeVlDTFjJuOGFGuFf2kHaki8Ub0LM08YINwFtyRIm7pcq9emuXzfgeMEn',
@@ -51,7 +53,6 @@ bitforex = ccxt.bitforex()
 bitget = ccxt.bitget()
 bithumb = ccxt.bithumb()
 bitmart = ccxt.bitmart()
-bitmex = ccxt.bitmex()
 bitpanda = ccxt.bitpanda()
 bitrue = ccxt.bitrue()
 bitso = ccxt.bitso()
@@ -103,7 +104,6 @@ kucoin = ccxt.kucoin({'password':'Ilove2fly%percent%', 'secret':'25608af7-631f-4
 kuna = ccxt.kuna()
 latoken = ccxt.latoken()
 latoken1 = ccxt.latoken1()
-lbank = ccxt.lbank()
 liquid = ccxt.liquid()
 luno = ccxt.luno()
 lykke = ccxt.lykke()
@@ -137,9 +137,9 @@ zipmex = ccxt.zipmex()
 zonda = ccxt.zonda()
 
 
-other_exchanges = { kucoin:0.001, ascendex:0.002, bequant:0.001, bitbank:0.0015, bitbns:0.0025, bitcoincom:0.0075, bitfinex:0.002, bitfinex2:0.002, bitflyer:0.002, bitforex:0.001, bitget:0.001, bithumb:0.0015, bitmart:0.0025, bitpanda:0.0015, bitso:0.001, bitstamp:0.005, bittrex:0.0035, bitvavo:0.0025, bl3p:0.0026, btcmarkets:0.002, btctradeua:0.001, buda:0.008, bw:0.002, bybit:0.001, cdax:0.002, cex:0.0025, coinbasepro:0.005, coinex:0.002, coinfalcon:0.002, coinmate:0.0035, crex24:0.001, eqonex:0.0009, equos:0.0009, ftx:0.0007, ftxus:0.004, gateio:0.002, huobi:0.002, huobijp:0.002, independentreserve:0.005, indodax:0.003, itbit:0.0035, kraken:0.015, kuna:0.0025, latoken:0.005, latoken1:0.005, liquid:0.0015, luno:0.001, mexc:0.002, ndax:0.002, novadax:0.0025, oceanex:0.001, okcoin:0.0125, okex3:0.001, okex5:0.001, paymium:0.005, phemex:0.001, poloniex:0.00155, probit:0.002, ripio:0, therock:0.002, tidebit:0.003, tidex:0.001, timex:0.005, xena:0.001, zaif:0.002, zb:0.002, zipmex:0.002, zonda:0.0043, lykke:0.0, btcturk:0.0009, btcalpha:0.002, aax:0.001, exmo:0.003, hitbtc3:0.0009, hitbtc:0.0009, whitebit:0.001, yobit:0.002, gemini:0.0035, binanceus:0.001, upbit:0.002, bigone:0.002, idex:0.0025, stex:0.002, okex:0.001, digifinex:0.002, binance:0.001 }
+other_exchanges = { kucoin:0.001, ascendex:0.002, bequant:0.001, bitbank:0.0015, bitbns:0.0025, bitcoincom:0.0075, bitfinex:0.002, bitfinex2:0.002, bitflyer:0.002, bitforex:0.001, bitget:0.001, bithumb:0.0015, bitmart:0.0025, bitpanda:0.0015, bitso:0.001, bitstamp:0.005, bittrex:0.0035, bitvavo:0.0025, bl3p:0.0026, btcmarkets:0.002, btctradeua:0.001, buda:0.008, bw:0.002, bybit:0.001, cdax:0.002, cex:0.0025, coinbasepro:0.005, coinex:0.002, coinfalcon:0.002, coinmate:0.0035, crex24:0.001, eqonex:0.0009, equos:0.0009, ftx:0.0007, ftxus:0.004, gateio:0.002, huobi:0.002, huobijp:0.002, independentreserve:0.005, indodax:0.003, itbit:0.0035, kraken:0.015, kuna:0.0025, latoken:0.005, latoken1:0.005, liquid:0.0015, luno:0.001, mexc:0.002, ndax:0.002, novadax:0.0025, oceanex:0.001, okcoin:0.0125, okex3:0.001, okex5:0.001, paymium:0.005, phemex:0.001, poloniex:0.00155, probit:0.002, ripio:0, therock:0.002, tidebit:0.003, tidex:0.001, timex:0.005, xena:0.001, zaif:0.002, zb:0.002, zipmex:0.002, zonda:0.0043, lykke:0.0, btcturk:0.0009, btcalpha:0.002, aax:0.001, exmo:0.003, hitbtc3:0.0009, hitbtc:0.0009, whitebit:0.001, yobit:0.002, gemini:0.0035, binanceus:0.001, upbit:0.002, bigone:0.002, idex:0.0025, stex:0.002, okex:0.001, digifinex:0.002, binance:0.001, delta:0.0005, bitrue:0.0015 }
 
-confirmed_exchanges = { bitmex:0.0005, lbank:0.001, bitrue:0.0015, bibox:0.002, delta:0.0005 }
+exchanges = { bitmex:0.0005, lbank:0.001, bibox:0.002, aax:0.001, btcalpha:0.002 }
 
 def findOppurtunity(conversion_rates, startingVertex=None):
 
@@ -535,7 +535,7 @@ def doTransactions(oppurtunity, exchange, maxAmount, stableCurrency, conversion_
 def search():
     while True:
         log(' >>>>>>>>>> NEXT ITERATION <<<<<<<<<<', False, True, "profitable_exchanges.txt")
-        for exchange, transactionFee in list(confirmed_exchanges.items()):
+        for exchange, transactionFee in list(exchanges.items()):
             log("\n" + exchange.id, False, True)
             try:
                 conversion_rates, maxSize = loadConversionRates(exchange, transactionFee)
@@ -569,7 +569,7 @@ def keepExploitingOppurtunity(exchange, transactionFee):
 
 if __name__ == "__main__":
     try:
-        for exchange in confirmed_exchanges:
+        for exchange in exchanges:
             for stable in stable_currencies:
                 updateTestFunds(0, 0, exchange.id + "_" + stable, False)
 

@@ -2,7 +2,7 @@ from datetime import datetime
 import traceback
 
 stable_currencies = ['USDT', 'USDC', 'USD']
-exchanges = [ "bibox", "bitmex", "bitrue", "delta", "lbank" ]
+exchanges = [ "bibox", "bitmex", "aax", "btcalpha", "lbank" ]
 
 def assess():
         assessment = open("assessment.txt", 'w+')
