@@ -1,0 +1,14 @@
+bibox
+   >   Cents Per Hour: 0.0
+   >   Trades Per Hour: 0.0
+   >   Average Growth Per Trade: 0%
+
+
+ All Exchanges Combined:
+   >   Cents Per Hour: 0.0
+   >   Trades Per Hour: 0.0
+
+
+Total Profit: 0.0
+
+Measurement Period: 00 hours, 00 minutes, 36 seconds

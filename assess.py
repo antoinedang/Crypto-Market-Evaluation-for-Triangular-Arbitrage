@@ -1,8 +1,8 @@
 from datetime import datetime
 import traceback
 
-stable_currencies = ['USDT', 'USDC', 'USD']
-exchanges = [ "bibox", "lbank" ]
+stable_currencies = ['USDT', 'USDC']
+exchanges = [ "bibox" ]
 
 def assess():
         assessment = open("assessment.txt", 'w+')

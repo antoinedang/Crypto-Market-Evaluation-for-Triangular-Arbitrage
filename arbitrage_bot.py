@@ -9,10 +9,11 @@ import json
 
 
 inf = 9999999
-currencies = ['ETH', 'BTC', 'ADA', 'XLM', 'XMR', 'SOL', 'LTC', 'USDK', 'DAI', 'USDC', 'USDT', 'AVAX', 'BNB', 'XRP', 'DOT', 'BCH', 'USD', 'UST', 'MATIC', 'SHIB', 'DOGE', 'LINK', 'BIX', 'TRX', 'SAND', 'BAC', 'JWL', 'WEC', 'AAVE', 'ZEC', '1INCH', 'GERA', 'REV', 'SPUT', 'EUR'] #currencies we care about
-stable_currencies = ['USDT', 'USDC', 'USD'] #all conversions start and end in these currencies (what we can trade with)
-maxCompromises = 10 # how many maximum compromises (a compromise is when we take the next best price on the most limiting conversion rather than just the best price)
-currency_pairs = [ x + '/'+ y for x in currencies for y in currencies if x != y ]
+quotes = [ 'USDT', 'USDC', 'BTC', 'ETH', 'LTC', 'BIX', 'CHS' ]
+currencies = ['USDT', 'USDC', 'BTC', 'ETH', 'LTC', 'ETC', 'EOS', 'BIX', 'QTUM', 'NEO', 'DASH', 'HT', 'BCH', 'ONT', 'XRP', 'ATOM', 'IRIS', 'ALGO', 'OMG', 'BAT', 'KSM', 'BSV', 'TRX', 'AAVE', 'COMP', 'LINK', 'CKB', 'HPB', 'BTM', 'ONG', 'DOGE', 'VNT', 'CHS', 'PLC', 'PHA', 'CRV', 'MKR' ] #currencies we care about
+stable_currencies = ['USDT', 'USDC'] #all conversions start and end in these currencies (what we can trade with)
+maxCompromises = inf # how many maximum compromises (a compromise is when we take the next best price on the most limiting conversion rather than just the best price)
+currency_pairs = [ x + '/'+ y for x in currencies for y in quotes if x != y ]
 min_growth = 0.02 # the conversion must yield a profit of at least 0.02%
 min_profit = 0.01 #the conversion must make at least one cent USD profit to be considered worth it
 min_investment = { 'bibox':5 } #we'll only consider transactions we can invest at least this amount of US dollars into
