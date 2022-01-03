@@ -2,10 +2,11 @@ from datetime import datetime
 import traceback
 
 stable_currencies = ['USDT', 'USDC', 'USD']
-exchanges = [ "bibox", "bitmex" ]
+exchanges = [ "bibox", "lbank" ]
 
 def assess():
         assessment = open("assessment.txt", 'w+')
+        totalProfit = 0
         overallCentsPerHour = 0
         overallTradesPerHour = 0
         for exchange in exchanges:
@@ -36,6 +37,7 @@ def assess():
                                 totalTrades += numTrades
 
                                 profit = current - initial
+                                totalProfit += profit
                                 centsPerHour = (profit/measurementPeriodHours)*100
                                 tradesPerHour = numTrades/measurementPeriodHours
                                 measurementPeriod = now-start
@@ -57,7 +59,7 @@ def assess():
 
 
 
-        assessment.write("\n All Exchanges Combined:\n   >   Cents Per Hour: " + str(overallCentsPerHour) + "\n   >   Trades Per Hour: " + str(overallTradesPerHour) + "\n\n")
+        assessment.write("\n All Exchanges Combined:\n   >   Cents Per Hour: " + str(overallCentsPerHour) + "\n   >   Trades Per Hour: " + str(overallTradesPerHour) + "\n\n\nTotal Profit: " + str(totalProfit) + "\n\n")
         assessment.write("Measurement Period: " + str(datetime.utcfromtimestamp(measurementPeriod.total_seconds()).strftime("%H hours, %M minutes, %S seconds")))
         assessment.close()
 

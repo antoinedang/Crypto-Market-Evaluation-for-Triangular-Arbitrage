@@ -5,25 +5,26 @@ import time
 from datetime import datetime
 import copy
 import traceback
+import json
+
 
 inf = 9999999
 currencies = ['ETH', 'BTC', 'ADA', 'XLM', 'XMR', 'SOL', 'LTC', 'USDK', 'DAI', 'USDC', 'USDT', 'AVAX', 'BNB', 'XRP', 'DOT', 'BCH', 'USD', 'UST', 'MATIC', 'SHIB', 'DOGE', 'LINK', 'BIX', 'TRX', 'SAND', 'BAC', 'JWL', 'WEC', 'AAVE', 'ZEC', '1INCH', 'GERA', 'REV', 'SPUT', 'EUR'] #currencies we care about
 stable_currencies = ['USDT', 'USDC', 'USD'] #all conversions start and end in these currencies (what we can trade with)
-maxCompromises = 3 # how many maximum compromises (a compromise is when we take the next best price on the most limiting conversion rather than just the best price)
+maxCompromises = 10 # how many maximum compromises (a compromise is when we take the next best price on the most limiting conversion rather than just the best price)
 currency_pairs = [ x + '/'+ y for x in currencies for y in currencies if x != y ]
 min_growth = 0.02 # the conversion must yield a profit of at least 0.02%
 min_profit = 0.01 #the conversion must make at least one cent USD profit to be considered worth it
 min_investment = { 'bibox':5 } #we'll only consider transactions we can invest at least this amount of US dollars into
 max_investment = { 'bibox':inf } #maximimum transaction size for each exchange
 logConversionRates = False
-
-
 simulateWithTestFunds = True
 initialTestFunds ={"bibox":100}
-
 actuallyMakeTransactions = False
-
 lastLog = time.time()
+precisionJSON = open('biboxPrecisions.json')
+precisionData = json.load(precisionJSON)['result']
+
 
 bibox = ccxt.bibox({})
 
@@ -415,20 +416,39 @@ def getMaxes(oppurtunity, conversion_rates, exchange, maxSize, stableCurrency):
         
         return maxPracticalAmount, maxTheoreticalAmount, limiting_conversion
 
-def exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize, recursiveCall=0):
+def priceToPrecision(symbol, x):
+    pair = symbol.replace("/", "_")
+    for dic in precisionData:
+            if pair == dic['pair']:
+                precision = dic['decimal']
+    return floor_decimal(x, precision)
+
+def floor_decimal(x, places):
+    return int(x * (10 ** places)) / 10 ** places
+
+def amountToPrecision(symbol, x):
+    pair = symbol.replace("/", "_")
+    for dic in precisionData:
+            if pair == dic['pair']:
+                precision = dic['amount_scale']
+    return floor_decimal(x, precision)
+
+def exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize, recursiveCall=0, unexplored=False):
     for oppurtunity in oppurtunities:
         try:
             limiting_conversion = ""
-            if recursiveCall > 0: 
+            if unexplored:
+                log("UNEXPLORED OPPURTUNITY!  >  " + str(oppurtunity), False, False)
+            elif recursiveCall > 0: 
                 log("OPPURTUNITY FOUND AFTER " + str(recursiveCall) + " COMPROMISE(S)!  >  " + str(oppurtunity), False, False)
             else:
                 log("OPPURTUNITY!  >  " + str(oppurtunity), False, False)
-            stableCurrency = oppurtunity.pop('stable')
+            stableCurrency = oppurtunity.pop('stable', None)
             if stableCurrency not in oppurtunity.keys():
                 stableCurrency = findStartingCurrency(oppurtunity)
             if stableCurrency == None:
                 stableCurrency = 'USDT'
-                entryCurrency = list(oppurtunity.keys())[0]
+                entryCurrency = list(oppurtunity.keys())[ len(list(oppurtunity.keys()))-1 ]
                 oppurtunity[stableCurrency] = entryCurrency
                 log("  >   OPPURTUNITY HAS NO STABLE STARTING POINT. APPENDING ENTRY CONVERSION: " + stableCurrency + " to " + entryCurrency)
 
@@ -437,6 +457,9 @@ def exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize, rec
             currentCurrency = stableCurrency
 
             maxPracticalAmount, maxTheoreticalAmount, limiting_conversion = getMaxes(copy.deepcopy(oppurtunity), conversion_rates, exchange, maxSize, stableCurrency)
+            symbol = getSymbol(currentCurrency, oppurtunity[currentCurrency], exchange)
+            maxPracticalAmount = amountToPrecision(symbol, maxPracticalAmount)
+            maxTheoreticalAmount = amountToPrecision(symbol, maxTheoreticalAmount)
             log("    INFO >  STABLE: " + stableCurrency + ", MAX_PRACTICAL: " + str(maxPracticalAmount) + ", MAX_THEORETICAL: " + str(maxTheoreticalAmount), ", LIMITING: " + limiting_conversion)
             value = maxPracticalAmount
 
@@ -464,13 +487,14 @@ def exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize, rec
             while(len(oppurtunity.items()) > 0):
                 nextCurrency = oppurtunity.pop(currentCurrency, None)
                 if nextCurrency == None: break
+                symbol = getSymbol(currentCurrency, nextCurrency, exchange)
+                if currentCurrency == stableCurrency:
+                    maxPracticalAmount = amountToPrecision(symbol, maxPracticalAmount)
+                    maxTheoreticalAmount = amountToPrecision(symbol, maxTheoreticalAmount)
+                value = amountToPrecision(symbol, value)
                 log(" > " + str(value) + " " + currentCurrency + " converts to: " + str(value*math.exp(-1*conversion_rates[currentCurrency][nextCurrency])) + " " + nextCurrency, False, False)
                 value = value*math.exp(-1*conversion_rates[currentCurrency][nextCurrency])
-                symbol = getSymbol(currentCurrency, nextCurrency, exchange)
-                try:
-                    value = float(exchange.amount_to_precision(symbol, value))
-                except Exception:
-                    value = value
+                value = amountToPrecision(symbol, value)
                 currentCurrency = nextCurrency
 
             #make sure we end up with a stable currency (in case we had to append entry conversion)
@@ -480,10 +504,7 @@ def exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize, rec
                 log(" > " + str(value) + " " + currentCurrency + " converts to: " + str(value*rate) + " " + stableCurrency, False, False)
                 value = value*rate
                 symbol = getSymbol(currentCurrency, stableCurrency, exchange)
-                try:
-                    value = float(exchange.amount_to_precision(symbol, value))
-                except Exception:
-                    value = value
+                value = amountToPrecision(symbol, value)
                 currentCurrency = stableCurrency
 
             true_profit = value-maxPracticalAmount
@@ -498,6 +519,11 @@ def exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize, rec
                 if simulateWithTestFunds: updateTestFunds(growth, maxPracticalAmount, exchange.id + "_" + stableCurrency)
                 if not actuallyMakeTransactions: return True
                 return doTransactions(oppurtunityCopy, exchange, maxPracticalAmount, stableCurrency, conversion_rates)
+            elif len(oppurtunity.items()) >= 3:
+                if (exploreOppurtunities([oppurtunity], conversion_rates, exchange, maxSize, recursiveCall, True)): return True
+            else:
+                log("  >   OPPURTUNITY IS NOT WORTH EXPLOITING.")
+
 
         except Exception as e:
             log("  >   OPPURTUNITY EXPLORATION ERROR " + str(traceback.format_exc()))
@@ -511,11 +537,9 @@ def convert(fromCurrency, toCurrency, exchange, conversion_rates, maxSize, stabl
             print("MaxSize in " + fromCurrency + ": " + str(maxSize))
             symbol = fromCurrency + "/" + toCurrency
             price = (math.exp(-1*conversion_rates[fromCurrency][toCurrency]) / (1-conversion_rates['fee']) )
-            if exchange.markets[symbol]['precision']['price']:
-                price = float(exchange.price_to_precision(symbol, price))
             amount = min(exchange.fetch_balance()[fromCurrency]['free'], maxSize)
-            if exchange.markets[symbol]['precision']['amount']:
-                amount = float(exchange.amount_to_precision(symbol, amount))
+            price = priceToPrecision(symbol, price)
+            amount = amountToPrecision(symbol, amount)
             print("sell", amount, fromCurrency, 'for', price, toCurrency, 'a pop')
             status = exchange.create_limit_sell_order(symbol, amount, price, {"timeInForce":"FOK"})
 
@@ -524,12 +548,10 @@ def convert(fromCurrency, toCurrency, exchange, conversion_rates, maxSize, stabl
             print("MaxSize in " + fromCurrency + ": " + str(maxSize))
             symbol = toCurrency + "/" + fromCurrency
             price = 1/(math.exp(-1*conversion_rates[fromCurrency][toCurrency]) / (1-conversion_rates['fee']) )
-            if exchange.markets[symbol]['precision']['price']:
-                price = float(exchange.price_to_precision(symbol, price))
             cost = exchange.fetch_balance()[fromCurrency]['free']
             amount = min(cost/price, maxSize/price)
-            if exchange.markets[symbol]['precision']['amount']:
-                amount = float(exchange.amount_to_precision(symbol, amount))
+            price = priceToPrecision(symbol, price)
+            amount = amountToPrecision(symbol, amount)
             print("buy", amount, toCurrency, "for", price, fromCurrency, "a pop")
             status = exchange.create_limit_buy_order(symbol,  amount, price, {"timeInForce":"FOK"})
         
@@ -630,7 +652,7 @@ if __name__ == "__main__":
             for stable in stable_currencies:
                 updateTestFunds(0, 0, exchange.id + "_" + stable, False)
 
-        search()   
+        search()
     except KeyboardInterrupt:
         log(">>>>>>>>>>> USER INTERRUPTION", False, True)
         log("USER INTERRUPTION", False, True, "profitable_exchanges.txt")

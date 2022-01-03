@@ -6,3 +6,6 @@ INSTRUCTIONS:
 
 
 This project was designed and programmed entirely by me (Antoine Dangeard) as a side project throughout winter vacation (20th December '21 to 4th January '22).
+
+TODO:
+maybe add bitcoin or ethereum as a stable starting point
