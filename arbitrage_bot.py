@@ -9,12 +9,13 @@ import json
 
 
 inf = 9999999
-quotes = [ 'USDT', 'USDC', 'BTC', 'ETH', 'LTC', 'BIX', 'CHS' ]
-currencies = ['USDT', 'USDC', 'BTC', 'ETH', 'LTC', 'ETC', 'EOS', 'BIX', 'QTUM', 'NEO', 'DASH', 'HT', 'BCH', 'ONT', 'XRP', 'ATOM', 'IRIS', 'ALGO', 'OMG', 'BAT', 'KSM', 'BSV', 'TRX', 'AAVE', 'COMP', 'LINK', 'CKB', 'HPB', 'BTM', 'ONG', 'DOGE', 'VNT', 'CHS', 'PLC', 'PHA', 'CRV', 'MKR' ] #currencies we care about
+quotes = [ 'USDT', 'USDC', 'ETH', 'LTC', 'BIX', 'CHS' ]
+currencies = ['USDT', 'USDC', 'ETH', 'LTC', 'ETC', 'EOS', 'BIX', 'QTUM', 'NEO', 'HT', 'BCH', 'ONT', 'XRP', 'ATOM', 'IRIS', 'ALGO', 'OMG', 'BAT', 'KSM', 'BSV', 'TRX', 'AAVE', 'COMP', 'LINK', 'CKB', 'HPB', 'BTM', 'ONG', 'DOGE', 'VNT', 'CHS', 'PLC', 'PHA', 'CRV', 'MKR' ] #currencies we care about
 stable_currencies = ['USDT', 'USDC'] #all conversions start and end in these currencies (what we can trade with)
 maxCompromises = inf # how many maximum compromises (a compromise is when we take the next best price on the most limiting conversion rather than just the best price)
 currency_pairs = [ x + '/'+ y for x in currencies for y in quotes if x != y ]
 min_growth = 0.02 # the conversion must yield a profit of at least 0.02%
+max_growth = 10 #any growth above 10% is unrealistic and probalby an error
 min_profit = 0.01 #the conversion must make at least one cent USD profit to be considered worth it
 min_investment = { 'bibox':5 } #we'll only consider transactions we can invest at least this amount of US dollars into
 max_investment = { 'bibox':inf } #maximimum transaction size for each exchange
@@ -515,7 +516,7 @@ def exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize, rec
             log("We can theoretically move "+ str(maxTheoreticalAmount) + " " + stableCurrency + " through this conversion for a final profit of approximately: " + str(possible_profit) + " " + stableCurrency )
             log("The conversion which limits our transaction size the most is: " + limiting_conversion)
 
-            if growth >= min_growth and true_profit >= min_profit and maxPracticalAmount >= min_investment[exchange.id]:
+            if growth <= max_growth and growth >= min_growth and true_profit >= min_profit and maxPracticalAmount >= min_investment[exchange.id]:
                 log(exchange.id + "  >  profit of " + str(possible_profit) + " " + stableCurrency + " with investment of " + str(maxTheoreticalAmount) + " " + stableCurrency + ". (" + str(growth) + '% increase). Limited by ' + limiting_conversion + " conversion.", False, True, "profitable_exchanges.txt")
                 if simulateWithTestFunds: updateTestFunds(growth, maxPracticalAmount, exchange.id + "_" + stableCurrency)
                 if not actuallyMakeTransactions: return True
@@ -530,12 +531,10 @@ def exploreOppurtunities(oppurtunities, conversion_rates, exchange, maxSize, rec
             log("  >   OPPURTUNITY EXPLORATION ERROR " + str(traceback.format_exc()))
             continue
 
-def convert(fromCurrency, toCurrency, exchange, conversion_rates, maxSize, stableCurrency):
+def convert(fromCurrency, toCurrency, exchange, conversion_rates, maxSize):
     try:
         status = None
         if (fromCurrency + "/" + toCurrency) in exchange.symbols:
-            maxSize = maxSize / (math.exp(-1*conversion_rates[fromCurrency][stableCurrency]) / (1-conversion_rates['fee']))
-            print("MaxSize in " + fromCurrency + ": " + str(maxSize))
             symbol = fromCurrency + "/" + toCurrency
             price = (math.exp(-1*conversion_rates[fromCurrency][toCurrency]) / (1-conversion_rates['fee']) )
             amount = min(exchange.fetch_balance()[fromCurrency]['free'], maxSize)
@@ -545,8 +544,6 @@ def convert(fromCurrency, toCurrency, exchange, conversion_rates, maxSize, stabl
             status = exchange.create_limit_sell_order(symbol, amount, price, {"timeInForce":"FOK"})
 
         elif (toCurrency + "/" + fromCurrency) in exchange.symbols:
-            maxSize = maxSize * (math.exp(-1*conversion_rates[stableCurrency][fromCurrency]) / (1-conversion_rates['fee']))
-            print("MaxSize in " + fromCurrency + ": " + str(maxSize))
             symbol = toCurrency + "/" + fromCurrency
             price = 1/(math.exp(-1*conversion_rates[fromCurrency][toCurrency]) / (1-conversion_rates['fee']) )
             cost = exchange.fetch_balance()[fromCurrency]['free']
@@ -581,11 +578,13 @@ def doTransactions(oppurtunity, exchange, maxAmount, stableCurrency, conversion_
         while(len(oppurtunity.items()) > 0):
             nextCurrency = oppurtunity.pop(currentCurrency, None)
             if nextCurrency == None: break
-            success = convert(currentCurrency, nextCurrency, exchange, conversion_rates, maxAmount, stableCurrency)
+            if currentCurrency in stable_currencies: success = convert(currentCurrency, nextCurrency, exchange, conversion_rates, maxAmount)
+            else: success = convert(currentCurrency, nextCurrency, exchange, conversion_rates, inf)
+
             if not success:
-                success = convert(currentCurrency, stableCurrency, exchange, conversion_rates, exchange.fetch_balance()[currentCurrency]['free'], currentCurrency)
+                if currentCurrency not in stable_currencies: backup = convert(currentCurrency, stableCurrency, exchange, conversion_rates, maxAmount)
                 log("  >>>> CONVERSION STEP FAILED: " + currentCurrency + " TO " + nextCurrency + ". ABORTING. CURRENT BALANCE AT: " + exchange.fetch_balance()) 
-                if not success: log("  >>>> COULD NOT RETURN TO STABLE CURRENCY!! (MANUAL FIX REQUIRED) CURRENT CURRENCY: " + currentCurrency + " CURRENT BALANCE AT: " + exchange.fetch_balance())
+                if not backup: log("  >>>> COULD NOT RETURN TO STABLE CURRENCY!! (MANUAL FIX REQUIRED) CURRENT CURRENCY: " + currentCurrency + " CURRENT BALANCE AT: " + exchange.fetch_balance())
                 return False
             else:
                 log("  >>>>  BALANCE AFTER " + currentCurrency + " TO " + nextCurrency + ": " + exchange.fetch_balance())
@@ -593,12 +592,11 @@ def doTransactions(oppurtunity, exchange, maxAmount, stableCurrency, conversion_
 
         #make sure we end up with a stable currency
         if (currentCurrency != stableCurrency):
-            success = convert(currentCurrency, stableCurrency, exchange, conversion_rates, exchange.fetch_balance()[currentCurrency]['free'], currentCurrency)
+            success = convert(currentCurrency, stableCurrency, exchange, conversion_rates, inf)
             if not success:
-                success = convert(currentCurrency, stableCurrency, exchange, conversion_rates, exchange.fetch_balance()[currentCurrency]['free'], currentCurrency)
-                if not success: 
-                    log("  >>>> CONVERSION STEP FAILED: " + currentCurrency + " TO " + stableCurrency + ". ABORTING. CURRENT BALANCE AT: " + exchange.fetch_balance()) 
-                    return False
+                log("  >>>> CONVERSION STEP FAILED: " + currentCurrency + " TO " + stableCurrency + ". ABORTING. CURRENT BALANCE AT: " + exchange.fetch_balance()) 
+                log("  >>>> COULD NOT RETURN TO STABLE CURRENCY!! (MANUAL FIX REQUIRED) CURRENT CURRENCY: " + currentCurrency + " CURRENT BALANCE AT: " + exchange.fetch_balance())
+                return False
             log("  >>>>  BALANCE AFTER " + currentCurrency + " TO " + stableCurrency + ": " + exchange.fetch_balance())
             currentCurrency = stableCurrency
         

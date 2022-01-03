@@ -1,14 +1,14 @@
 bibox
-   >   Cents Per Hour: 0.0
-   >   Trades Per Hour: 0.0
-   >   Average Growth Per Trade: 0%
+   >   Cents Per Hour: 22.03682945667855
+   >   Trades Per Hour: 2.592568171373921
+   >   Average Growth Per Trade: 0.28921401837359934%
 
 
  All Exchanges Combined:
-   >   Cents Per Hour: 0.0
-   >   Trades Per Hour: 0.0
+   >   Cents Per Hour: 22.03682945667855
+   >   Trades Per Hour: 2.592568171373921
 
 
-Total Profit: 0.0
+Total Profit: 0.1700000000000017
 
-Measurement Period: 00 hours, 00 minutes, 36 seconds
+Measurement Period: 00 hours, 46 minutes, 17 seconds
