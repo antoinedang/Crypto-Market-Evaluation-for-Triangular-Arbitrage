@@ -1,0 +1,7 @@
+startDate : 01/03/2022, 16:59:25
+initial : 100
+current : 100.0
+numTrades : 0
+averageGrowthPercent : 0%
+lastTradeDate : 
+timeElapsed : 
